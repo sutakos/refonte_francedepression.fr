@@ -48,13 +48,12 @@
     border-radius: 15px;
     cursor: pointer;
     background-color: #74bfc4;
-    color: var(--color-white);
     font-size: 20px;
-    transition: background-color 0.3s;
 }
 
 .btn button:hover {
     background-color: #3e949a;
+    transition: background-color 0.3s;
 }
 /*FIN DU NUMERO D'ECOUTE*/
 
@@ -134,8 +133,25 @@
 }
 /*FIN DU CARROUSEL*/
 
-/*EDITO*/
-/*FIN DE L'EDITO*/
+
+/*MISE EN FORME COMMUNE*/
+.Info{
+    margin:0 90px 0 90px;
+    padding:20px 0 20px 0;
+    border-top: 2px solid #A3C7C2;
+    text-align: center;
+}
+
+.InfoStyle{
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+}
+
+.backColor{
+    background-color: #E9F1F1;
+    padding: 20px 0 20px 0;
+}
 
 /*ACTU*/
 /*FIN DE L'ACTU*/
