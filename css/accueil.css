@@ -1,0 +1,144 @@
+:root {
+    --color-white: white;
+    --color-black: black;
+
+}
+
+/*NUMERO D'ECOUTE*/
+/*BANNIERE*/
+.banniereEcoute {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+/*CADRE D'APPEL*/
+.appel{
+    position: absolute;
+    padding: 50px 40px 50px 40px;
+    margin: -500px 0 0 700px;
+    border: 2px solid var(--color-white);
+    border-radius: 15px;
+    width: 740px;
+    font-size: 30px;
+    color: var(--color-white);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contact-info {
+    font-size: 50px;
+    display: flex;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 0 10px 130px;
+}
+
+/*BOUTONS*/
+.btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.btn button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #74bfc4;
+    color: var(--color-white);
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn button:hover {
+    background-color: #3e949a;
+}
+/*FIN DU NUMERO D'ECOUTE*/
+
+/*CARROUSEL*/
+.InfoCarrousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px 0 20px 90px;
+}
+
+.InfoCarrousel a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px 0 0 0;
+    color: var(--color-black);
+    font-size: 19px;
+}
+
+.carousel {
+    position: relative;
+    width: 1500px;
+    height: 500px;
+    overflow: hidden; /*cache les images qui dépassent*/
+    margin-top: 70px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease; /*animation changement d'images*/
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+.partenariat {
+    display: flex;
+    flex-direction: column;
+    margin: 200px 110px 0 80px;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.partenariat img {
+    margin-top: 10px;
+    height: auto;
+}
+/*FIN DU CARROUSEL*/
+
+/*EDITO*/
+/*FIN DE L'EDITO*/
+
+/*ACTU*/
+/*FIN DE L'ACTU*/
+
+/*THEATRE*/
+/*FIN DU THEATRE*/
