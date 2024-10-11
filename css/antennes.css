@@ -1,0 +1,151 @@
+
+.map_image{
+    width: 50%;
+    float: left;
+}
+
+/* ------------------- REGION NON CLICKABLE ---------------- */
+.map_image path{
+     fill: #CCCCCC;
+     fill-opacity: 100;
+     stroke:white;
+     stroke-opacity: 1;
+     stroke-width:0.5;
+    transition: fill .5s;
+}
+
+.map_image path:hover{
+    fill:#A8A8A8FF ;
+
+}
+
+/*------------------- FIN REGION NON CLICKABLE -------------------*/
+/*-------------------- REGION CLICKABLE -----------------*/
+.map_clickable path{
+    fill:#506FA5;
+}
+
+.map_clickable path:hover{
+    fill:#77A5F5;
+}
+
+.clicked{
+    fill: #77A5F5 !important;
+}
+/*---------------- FIN REGION CLICKABLE -----------------*/
+
+
+/*------------- DEBUT OVERLAY ----------------------*/
+
+
+
+
+.Overlay > div{
+    transition: opacity 0.5s ease-in-out;
+    background:#ffffff;
+    border-radius:8px;
+    border-style: solid;
+    border-color: #d9d9d9;
+    border-width: 1px;
+    padding:24px;
+    height: fit-content;
+    width: 40%;
+    position: absolute;
+    font-family: "Inter-SemiBold", sans-serif;
+}
+
+.hide{
+    display: none;
+
+
+}
+
+.show{
+    display: block;
+}
+
+
+.text {
+    width: 87%;
+    height: fit-content;
+    position: relative;
+    word-break: break-word;
+    left: 15%;
+    top: 0;
+}
+
+
+.voir_plus{
+    background: #e3e3e3;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #767676;
+    border-width: 1px;
+    padding: 12px;
+    position: relative;
+    left: 40%;
+
+}
+.antenne{
+    width: 37px;
+    height: 29px;
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    overflow: visible;
+
+}
+.phone {
+    width: 24.66px;
+    height: 26.22px;
+    position: absolute;
+    left: 10%;
+    top: 55%;
+    overflow: visible;
+}
+.location-on {
+    width: 24.66px;
+    height: 25.97px;
+    position: absolute;
+    left: 10%;
+    top: 33%;
+    overflow: visible;
+}
+
+/* -------------------------- FIN OVERLAY ------------------*/
+
+/* ------------------- PLACEMENT OVERLAY -----------------*/
+
+.Ide{
+    top: 10%;
+    left: 30%;
+
+}
+
+.Var{
+    top:55%;
+    left:44%;
+
+}
+
+.Charente{
+    top: 37%;
+    left: 22%;
+
+}
+
+.Savoie{
+    top:40%;
+    left: 42%;
+
+}
+.Normandie{
+    top: 5%;
+    left: 24%;
+
+}
+.Lorraine{
+    top:10%;
+    left: 44%;
+
+}
