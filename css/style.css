@@ -152,7 +152,14 @@ footer {
      color: var(--color-white);
 }
 
-.contenu a:hover{
+footer a:hover{
     text-decoration: underline;
+}
+
+.mention a, 
+.mention p{
+    color: var(--color-white);
+    text-align: center;
+    text-decoration: none;
 }
 /*FIN DU FOOTER*/
