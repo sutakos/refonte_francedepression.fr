@@ -32,6 +32,8 @@ nav {
 .divLogo {
     display: flex;
     align-items: center;
+    margin-left: 20px; 
+    margin-right: 10px;
 }
 
 .divLogo a {
@@ -116,24 +118,40 @@ nav {
 
 
 /*FOOTER*/
-footer{
-	background-color: #A3C7C2;
+footer {
+    background-color: #A3C7C2;
+}
+
+.logoFooter {
+    display: flex;
+    margin-left: 20px; 
 }
 
 .divFooter {
-	padding: 20px 0 0 0;
-    display: flex;
-    align-items: center;
-
+    padding: 30px 20px;                   
+    display: flex;                       
+    align-items: flex-start;              
+    gap:100px;
+           
 }
 
-.divFooter img {
-    margin-left: 90px;
-}
-
-.divFooter span {
-    font-size: 15px;
+.titre-footer{
     color: #6C6873;
-    margin-left: 15px;
+}
+
+.contenu{
+    color: var(--color-white);
+    font-size: 14px;                 
+    margin: 0;                           
+    line-height: 1.5;  
+}
+
+.contenu a{
+    text-decoration: none;
+     color: var(--color-white);
+}
+
+.contenu a:hover{
+    text-decoration: underline;
 }
 /*FIN DU FOOTER*/
