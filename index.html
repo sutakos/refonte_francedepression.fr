@@ -1,13 +1,13 @@
 <!DOCTYPE HTML>
 
-<html>
+<html lang="en">
 	<head>
 		<title>Accueil</title>
 		<meta charset = "utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!--COMMUN AUX PAGES-->
+		<!--CSS COMMUN AUX PAGES-->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<!--FQUE L'Accueil-->
+		<!--CCS QUE DE L'Accueil-->
 		<link rel="stylesheet" type="text/css" href="css/accueil.css">
 		<!--FONT-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +36,7 @@
 		                        <li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a></li>
 		                    </ul>
 		                </li>
-		                <li class="section"><a href="#">Antennes</a></li>
+		                <li class="section"><a href="Antennes.html">Antennes</a></li>
 		                <li class="section"><a href="#">Ressources</a></li>
 		            </ul>
 		        </div>
@@ -61,7 +61,7 @@
 
 
 					<div class="btn">
-						<a href="#"><button>Association ➜</button></a>
+						<a href="quiSommesNous.html"><button>Association ➜</button></a>
 
 						<a href="#"><button>Ressources ➜</button></a>
 					</div>
@@ -126,40 +126,86 @@
 				
 			</section>
 
-			<section class="Info/Actu">
+			<section class="InfoActu">
 				<div class="Info">
-					<div class="backColor">
-						<div>
+					<div class="Contenu">
+						<div class="InfoContenu">
 							<span class="InfoStyle">Infolettre</span></br></br>
+							<p>Retrouvez nos bulletins d'information </br>
+								et abonnez vous à notre infolettre !
+							</p>
 							<div class="btn">
 								<a href="https://francedepression.fr/index.php/content-page/item/49-bulletin-d-information"><button>S'abonner ➜</button></a>
-						</div>
+							</div>
 						</div>
 
-						<div>
+						<div class="ActuContenu">
 							<span class="InfoStyle">Actualités</span></br></br>
+							<p>Suivez les actualités !</p>
+							</br>
 							<div class="btn">
 								<a href="https://francedepression.fr/index.php/content-page/25-actualite"><button>Voir ➜</button></a>	
 							</div>				
 						</div>
 					</div>
 				</div>
-				
 			</section>
 
 			<section class="Theatre">
 				<div class="Info">
 					<div class="backColor">
-						<div>
-							<span class="InfoStyle">Pièce de théâtre</span></br></br>
-						</div>
-						
-						<div class="btn">
-							<a href="https://francedepression.fr/index.php/content-page/item/321-on-nest-pas-serieux-quand-on-a-17-ans"><button>Découvrir ➜</button></a>
+						<div class="ContenuT">
+							<div class="imageTheatre">	
+								<a href="https://www.francebleu.fr/emissions/l-invite-du-8-9/veronique-balme-metteur-en-scene-et-comedienne-4664568"><img src="images/accueil/theatre.PNG" alt="On n’est pas sérieux quand on a 17 ans !"></a>
+							</div>
+
+							<div class="TheatreContenu">
+								<span class="InfoStyle">Pièce de théâtre</span></br></br>
+
+								<p class="titre">On n’est pas sérieux quand on a 17 ans !</br>
+	                                <span class="auteur">De Nathalie BECKER</span>
+    							</p>
+    
+    							<p class="resume">
+    								</br>
+							        Se construire, grandir. L’insouciance.</br>
+							        Les Premières fois. Mais quand construction rime avec destruction, comment dissocier la crise d’ado du mal-être profond ?</br>
+							        Sorti de l’obscurité, Tristan nous livre son vécu, ses angoisses existentielles.</br>
+							        Une maladie, quatre parcours. Quand tout s’embrouille, il faut semer des mots pour trouver son chemin.</br></br>
+							    </p>
+
+								<div class="btn">
+									<a href="https://francedepression.fr/index.php/content-page/item/321-on-nest-pas-serieux-quand-on-a-17-ans"><button>Découvrir ➜</button></a>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				
+			</section>
+
+			<section class="action">
+				<div class="Info">
+					<div class="contenuA">
+					    <span class="InfoStyle">Vous souhaitez créer une antenne ? </br>Vous souhaitez nous soutenir ?</br></br></span>
+
+					    <div class="btnAction">
+					        <a href="https://francedepression.fr/index.php/l-association/creer-une-antenne" class="button-container">
+					            <span>Créer une antenne</span>
+					            <img src="images/accueil/antenne.PNG" alt="Créer une antenne" class="button-image">
+					        </a>
+
+					        <a href="https://francedepression.fr/index.php/l-association/devenir-adherent" class="button-container">
+					            <span>Devenir adhérent</span>
+					            <img src="images/accueil/adherent.PNG" alt="Devenir adhérent" class="button-image">
+					        </a>
+
+					        <a href="https://francedepression.fr/index.php/l-association/faire-un-don" class="button-container">
+					            <span>Faire un don</br></br></span>
+					            <img src="images/accueil/don.PNG" alt="Faire un don" class="button-image">
+					        </a>
+					    </div>
+					</div>
+				</div>
 			</section>
 		</main>
 
@@ -172,7 +218,6 @@
 						</span>
 		            </span>
 		    </div>
-			
 		</footer>
 	</body>
 </html>
