@@ -1,7 +1,6 @@
 :root {
     --color-white: white;
     --color-black: black;
-
 }
 
 /*NUMERO D'ECOUTE*/
@@ -133,7 +132,7 @@
 }
 /*FIN DU CARROUSEL*/
 
-
+/*SECTIONS*/
 /*MISE EN FORME COMMUNE*/
 .Info{
     margin:0 90px 0 90px;
@@ -143,9 +142,8 @@
 }
 
 .InfoStyle{
-    font-size: 30px;
+    font-size: 35px;
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: bold;
 }
 
 .backColor{
@@ -153,8 +151,73 @@
     padding: 20px 0 20px 0;
 }
 
-/*ACTU*/
-/*FIN DE L'ACTU*/
+/*INFOLETTRE ET ACTU*/
+.Contenu{
+    display: flex;
+    justify-content: center; 
+    gap: 260px; 
+}
+/*FIN DE L'INFOLETTRE ET DE L'ACTU*/
+
 
 /*THEATRE*/
+.ContenuT {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.imageTheatre img {
+    width: 200; 
+    height: auto;
+    margin-left: 120px;
+}
+
+.TheatreContenu {
+    max-width: 500px; 
+}
+
+.titre{
+    font-size: 22px;
+}
+.auteur {
+    font-size: 15px;
+}
+
+.resume {
+    text-align: left; 
+}
 /*FIN DU THEATRE*/
+
+/*ACTION*/
+.btnAction {
+    display: flex;                   
+    justify-content: center;        
+    gap: 20px;                      
+}
+
+.btnAction a {
+    display: flex;                   
+    flex-direction: column;          
+    align-items: center;             
+    text-decoration: none;           
+    color: var(--color-black);       
+    background-color: #efe8c5;       
+    padding: 20px;                   
+    width: 150px;                    
+    border-radius: 10px;             
+    text-align: center;             
+}
+
+.btnAction a:hover{
+    background-color: #f8ebac;
+}
+
+.button-image {
+    max-width: 100%;                
+    height: auto;                    
+    margin-top: 10px;                
+}
+/*FIN DE ACTION*/
+/*FIN DES SECTIONS*/
