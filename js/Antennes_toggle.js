@@ -69,5 +69,8 @@ document.addEventListener('click', (e) => {
             overlay.classList.remove('show');
             overlay.classList.add('hide');
         });
+        paths.forEach((paths) => {
+            paths.classList.remove('clicked')
+        })
     }
 });
