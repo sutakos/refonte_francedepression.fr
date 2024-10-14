@@ -72,17 +72,22 @@ nav {
 
 .navbar a:hover {
     color: #bcd6f7;
+    transition: .3s;
 }
 
 #drop{
-	padding: 24px 0 25px 0;	
+	padding: 29px 0 25px 0;
 }
 
 #dropDown{
     display: none;
+    border-style: solid;
+    border-color: #baeef8;
+    border-width: 1px;
     position: absolute;
     background-color: #bfe8f4;
-    border-radius: 15px;
+    border-radius: 0px 8px 8px 8px;
+    padding: 9px 12px 9px 12px;
     margin-top: 25px;
 }
 
@@ -92,6 +97,7 @@ nav {
 
 #dropDown a{
 	color: black;
+
 }
 
 #drop:hover #dropDown{
@@ -100,7 +106,8 @@ nav {
 }
 
 #dropDown li:hover {
-	background-color: #70defe;
+    transition: .3s;
+	background-color: #77A5F5;
 	border-radius: 15px;
 }
 
