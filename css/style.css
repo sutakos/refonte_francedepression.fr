@@ -18,7 +18,7 @@ body{
 header {
     position: sticky;
     top: 0;
-    z-index: 1000; 
+    z-index: 10; 
     background-color: var(--color-white);
 }
 
@@ -32,8 +32,8 @@ nav {
 .divLogo {
     display: flex;
     align-items: center;
-    margin-left: 20px; 
-    margin-right: 10px;
+    margin-left: 1.25em; 
+    margin-right: 0.625em;
 }
 
 .divLogo a {
@@ -41,13 +41,13 @@ nav {
 }
 
 .divLogo img {
-    margin-left: 90px;
+    margin-left: 5.625em;
 }
 
 .divLogo span {
-    font-size: 15px;
+    font-size: 0.938em;
     color: #506FA5;
-    margin-left: 15px;
+    margin-left: 0.938em;
 }
 
 /*PARTIE CENTRE*/
@@ -58,11 +58,11 @@ nav {
 }
 
 .navbar ul .section { 
-    margin: 0 70px; 
+    margin: 0 4.375rem; 
     text-align: center;
     display: inline; 
     position: relative;
-    font-size: 19px;
+    font-size: 1.188em;
 }
 
 .navbar a {
@@ -72,32 +72,26 @@ nav {
 
 .navbar a:hover {
     color: #bcd6f7;
-    transition: .3s;
 }
 
 #drop{
-	padding: 29px 0 25px 0;
+	padding: 1.5em 0 1.563em 0;	
 }
 
 #dropDown{
     display: none;
-    border-style: solid;
-    border-color: #baeef8;
-    border-width: 1px;
     position: absolute;
     background-color: #bfe8f4;
-    border-radius: 0px 8px 8px 8px;
-    padding: 9px 12px 9px 12px;
-    margin-top: 25px;
+    border-radius: 0.938em;
+    margin-top: 1.563em;
 }
 
 #dropDown li{
-	padding: 10px;
+	padding: 0.625em;
 }
 
 #dropDown a{
 	color: black;
-
 }
 
 #drop:hover #dropDown{
@@ -106,14 +100,13 @@ nav {
 }
 
 #dropDown li:hover {
-    transition: .3s;
-	background-color: #77A5F5;
-	border-radius: 15px;
+	background-color: #70defe;
+	border-radius: 0.938em;
 }
 
 /*PARTIE DROITE*/
 #login {
-    margin-right: 110px;
+    margin-right: 6.25em;
     display: flex;
     align-items: center;
 }
@@ -123,33 +116,49 @@ nav {
 }
 /*FIN DE LA BARRE DE NAVIGATION*/
 
+/*BOUTON POUR REMONTER*/
+#retourHaut {
+    display: none;
+    position: fixed;
+    bottom: 14em; 
+    right: 1.25em;  
+    z-index: 2; 
+    padding: 1em 1.25em;
+    cursor: pointer;
+    width: 5em;
+
+}
+
+#retourHaut:hover {
+    opacity: 0.5; 
+}
+/*FIN DU BOUTON*/
 
 /*FOOTER*/
 footer {
     background-color: #A3C7C2;
+    width: 100%;
 }
 
 .logoFooter {
-    display: flex;
-    margin-left: 20px; 
+    margin-left: 1.25em; 
 }
 
 .divFooter {
-    padding: 30px 20px;                   
+    padding: 1.875em 1.25em;                   
     display: flex;                       
     align-items: flex-start;              
-    gap:100px;
-           
+    gap:6.25rem;     
 }
 
 .titre-footer{
     color: #6C6873;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 .contenu{
     color: var(--color-white);
-    font-size: 14px;                 
+    font-size: 0.875em;                 
     margin: 0;                           
     line-height: 1.5;  
 }
