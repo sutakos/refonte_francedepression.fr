@@ -1,58 +1,67 @@
-:root {
-    --color-white: white;
-    --color-black: black;
-}
-
 /*NUMERO D'ECOUTE*/
 /*BANNIERE*/
+.ecoute {
+    position: relative; /* Permet au bloc .appel de se positionner correctement */
+    width: 100%;
+    height: 600px; /* Ajuste selon la taille de ta bannière */
+}
 .banniereEcoute {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 100%;
     object-fit: cover;
 }
 
-/*CADRE D'APPEL*/
-.appel{
+/*CADRE D'APPEL*/   
+.appel {
     position: absolute;
-    padding: 50px 40px 50px 40px;
-    margin: -500px 0 0 700px;
-    border: 2px solid var(--color-white);
-    border-radius: 15px;
-    width: 740px;
-    font-size: 30px;
+    top: 50%; 
+    right: 5%; 
+    transform: translateY(-50%);
+    padding: 2.5rem;
+    border: 0.125em solid var(--color-white);
+    border-radius: 0.938em;
+    width: 600px;
+    font-size: 1.7em;
     color: var(--color-white);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6); 
+    text-align: center;
 }
 
 .contact-info {
-    font-size: 50px;
     display: flex;
-    text-align: center;
-    margin-top: 10px;
-    padding: 0 0 10px 130px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.numtel {
+    font-size: 2em;
+    margin-left: 10px;
 }
 
 /*BOUTONS*/
 .btn {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 80px;
+    margin-top: 1.5rem;
+}
+
+.btn a {
+    margin: 0 0.5rem;
 }
 
 .btn button {
-    padding: 10px 20px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9em;
+    background-color: #74BFC4;
+    color: var(--color-white);
     border: none;
-    border-radius: 15px;
+    border-radius: 0.5rem;
     cursor: pointer;
-    background-color: #74bfc4;
-    font-size: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .btn button:hover {
-    background-color: #3e949a;
-    transition: background-color 0.3s;
+    background-color: #506FA5;
 }
 /*FIN DU NUMERO D'ECOUTE*/
 
@@ -91,6 +100,12 @@
 }
 
 .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel a {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -221,3 +236,5 @@
 }
 /*FIN DE ACTION*/
 /*FIN DES SECTIONS*/
+
+/*RESPONSIVE*/
