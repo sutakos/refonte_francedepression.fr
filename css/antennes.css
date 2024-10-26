@@ -1,7 +1,10 @@
-
+.map{
+    display: flex;
+    justify-content: space-between;
+}
 .map_images{
-    height: fit-content;
-    width: 40%;
+    order: -1;
+    width: 55%;
     float: left;
 }
 
@@ -13,16 +16,29 @@
     height: 150px;
 }
 
-/* ----------- MAIN -------------- */
+/*------------- FIN BANNIERE -------------*/
+
+/* ----------- COMMUN A TOUS -------------- */
 
 main{
     min-height: 80vh;
     position: relative;
+    margin : 2em 8em 8em 8em;
 }
 
-/* ----------- FIN MAIN -------------- */
 
-/*------------- FIN BANNIERE -------------*/
+.chemin{
+    margin : 0 0 2em 0;
+    text-decoration: none;
+    font-size: large;
+}
+.chemin a{
+    color: black;
+    text-decoration: none;
+}
+
+
+/* ----------- FIN COMMUN A TOUS -------------- */
 
 
 
@@ -64,42 +80,50 @@ main{
 /*------------- DEBUT OVERLAY ----------------------*/
 
 
-
-
-.Overlay > div{
-    z-index: 1;
-    transition: opacity 0.5s ease-in-out;
-    background:#ffffff;
-    border-radius:8px;
+.selecRegion{
     border-style: solid;
+    border-radius:8px;
     border-color: #d9d9d9;
+    width: 32%;
     border-width: 1px;
-    padding:24px;
-    height: fit-content;
-    width: 40%;
-    position: absolute;
-    font-family: "Inter-SemiBold", sans-serif;
+    overflow:auto ;
+    display: flex;
+    justify-content: center;
+    flex-flow: column
 }
 
-.hide{
-    display: none;
-
-
+.selectedRegion{
+    fill: #77A5F5 !important;
 }
 
-.show{
-    display: block;
+.titreContainer {
+    margin: 1em 1em 0em 1em;
+    bottom:50px;
+    font-size: 15px;
+    text-align: center;
 }
 
+.imageTitre{
+    width: 13%;
+    margin: 1em;
+}
+.default{
+    text-align: center;
+    font-size: 24px;
+    color:#757575;
+}
 
-.text {
-    width: 87%;
-    height: fit-content;
-    position: relative;
+.contentContainer {
+    display: flex;
+    justify-content: left;
+    gap: 10%;
+    margin: 2.5em 1em 1em 4em;
+    color:#757575;
+    font-size: 15px;
+    text-align: left;
     word-break: break-word;
-    left: 15%;
-    top: 0;
 }
+
 
 
 .voir_plus{
@@ -113,66 +137,74 @@ main{
     left: 40%;
 
 }
-.antenne{
-    width: 37px;
-    height: 29px;
-    position: absolute;
-    left: 24px;
-    top: 24px;
-    overflow: visible;
 
-}
-.phone {
-    width: 24.66px;
-    height: 26.22px;
-    position: absolute;
-    left: 10%;
-    top: 55%;
-    overflow: visible;
-}
-.location-on {
-    width: 24.66px;
-    height: 25.97px;
-    position: absolute;
-    left: 10%;
-    top: 33%;
-    overflow: visible;
+button{
+    margin: 5em 5em 2em 7em;
+    background: #d1d1d1;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #767676;
+    border-width: 1px;
+    padding: 12px;
 }
 
-/* -------------------------- FIN OVERLAY ------------------*/
-
-/* ------------------- PLACEMENT OVERLAY -----------------*/
-
-.Ide{
-    top: 13vh;
-    left: 57vh;
-
+button:hover {
+    background-color: #c6c6c6; /* Couleur de fond au survol */
+    transform: translateY(-1px); /* Légère élévation au survol */
 }
 
-.Var{
-    top:55%;
-    left:44%;
-
+/*ACTION*/
+.action{
+    display: flex;
+    justify-content: right;
+}
+.Info{
+    margin-top: 2em;
+    border-style: solid;
+    border-radius:8px;
+    border-width: 1px;
+    border-color: #d9d9d9;
+    display: flex;
+    width: fit-content;
 }
 
-.Charente{
-    top: 37%;
-    left: 22%;
-
+.InfoStyle{
+    margin-top: 1em;
+    font-size: larger;
+    text-align: center;
 }
 
-.Savoie{
-    top:40%;
-    left: 42%;
-
+.btnAction {
+    margin: 1em 1em 1em 1em ;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    gap: 20px;
 }
-.Normandie{
-    top: 5%;
-    left: 24%;
 
+.btnAction a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-black);
+    background-color: #efe8c5;
+    padding: 20px;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
 }
-.Lorraine{
-    top:10%;
-    left: 44%;
 
+.btnAction a:hover{
+    background-color: #f8ebac;
 }
+
+.button-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+/*FIN DE ACTION*/
+
+
+
