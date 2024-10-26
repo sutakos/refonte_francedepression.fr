@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
-<html lang="en">
+<html lang="fr">
 	<head>
 		<title>Accueil</title>
 		<meta charset = "utf-8">
@@ -12,14 +12,17 @@
 		<!--FONT-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<!--FONT Inter-->
-		<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 		<!--FONT Josefin-->
 		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+		<!--SCRIPT JS DE L'Accueil-->
+		<script src="js/accueil.js" type="module"></script>
+		<!--SCRIPT JS COMMUN-->
+		<script src="js/style.js" type="module"></script>
 	</head>
 
 	<body>
 		<header>
+			<!--BARRE DE NAVIGATION-->
 		    <nav>
 		        <div class="divLogo">
 		            <a href="index.html"><img src="images/accueil/logoSF.PNG" width="90px" alt="Logo"></a>
@@ -29,11 +32,13 @@
 		        <div class="navbar">
 		            <ul>
 		                <li class="section"><a href="index.html">Accueil</a></li>
-		                <li class="section" id="drop"><a href="#">L'association  ⌵</a>
+		                <li class="section" id="drop"><a href="quiSommesNous.html">L'association  ⌵</a>
 		                    <ul id="dropDown">
 		                        <li><a href="quiSommesNous.html">Qui sommes-nous</a></li>
 		                        <li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a></li>
 		                        <li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a></li>
+		                        <li><a href="https://francedepression.fr/index.php/l-association/faire-un-don">Faire un don</a></li>
+		                        <li><a href="https://francedepression.fr/index.php/l-association/creer-une-antenne">Créer une antenne</a></li>
 		                    </ul>
 		                </li>
 		                <li class="section"><a href="Antennes.html">Antennes</a></li>
@@ -45,11 +50,14 @@
 		            <a href="https://francedepression.fr/index.php/component/users/login?Itemid=139"><img src="images/accueil/connexion.PNG" width="60px" alt="Connexion"></a>
 		        </div>
 		    </nav>
+		    <!--FIN DE LA BARRE DE NAVIGATION-->
 		</header>
 
 		<main>
+			<!--BANNIERE-->
 			<section class="ecoute">
 				<img src="images/accueil/ecoute.JPG" class="banniereEcoute"  alt="Bannière d'écoute">
+
 				<div class="appel">
 					<p>Une écoute, un sourire, une force </br></br>
 					   L’association propose une écoute du lundi au samedi entre 10h et 20h et le dimanche de 14h à 20h </br>
@@ -68,6 +76,7 @@
 				</div>
 			</section>
 
+			<!--CARROUSEL-->
 			<section class="InfoCarrousel">
 			    <a href="index.html">Accueil</a>
 			    <div class="carousel">
@@ -93,7 +102,7 @@
 			            </div>
 			        </div>
 
-			        <script src="js/accueil.js"></script>
+			        
 			        <button class="carousel-control-prev" onclick="prevSlide()">❮</button>
 			        <button class="carousel-control-next" onclick="nextSlide()">❯</button>
 			    </div>
@@ -105,7 +114,7 @@
 			    </div>
 			</section>
 
-
+			<!--EDITO-->
 			<section class="Edito">
 				<div class="Info">
 					<div class="backColor">
@@ -126,6 +135,7 @@
 				
 			</section>
 
+			<!--INFOLETTRE ET ACTUALITE-->
 			<section class="InfoActu">
 				<div class="Info">
 					<div class="Contenu">
@@ -151,6 +161,7 @@
 				</div>
 			</section>
 
+			<!--THEATRE-->
 			<section class="Theatre">
 				<div class="Info">
 					<div class="backColor">
@@ -183,6 +194,7 @@
 				</div>
 			</section>
 
+			<!--ACTION-->
 			<section class="action">
 				<div class="Info">
 					<div class="contenuA">
@@ -207,8 +219,13 @@
 					</div>
 				</div>
 			</section>
+
+			
+			<img src="images/accueil/fleche.PNG" id="retourHaut" onclick="retourneHaut()">
+
 		</main>
 
+		<!--FOOTER-->
 		<footer>
 			<div class="divFooter">
 				
@@ -219,7 +236,7 @@
 		       	 <div>
 		       	 	<span class="titre-footer">Vous êtes concerné(e) ?</br></br></span>
 		            <p class="contenu">	Ecoute patients : 07 84 96 88 28 </br></br>
-						France Dépression – 10 rue de Norvège </br> – 54500 Vandœuvre 
+						France Dépression </br> 10 rue de Norvège, 54500 Vandœuvre 
 					</p></div>
 
 		       	 <div>
@@ -238,15 +255,16 @@
 
 		       	 <div>
 		            <span class="titre-footer">Réseaux</br></br></span>
-		            <p class="contenu">blabla </br></br>
+		            <p class="contenu"><a href="https://www.facebook.com/Francedeplorraine">Loraine</a> </br></br>
 		            	blabla2 
 					</p>
 		       	 </div>
 		    </div>
-			
-		    <div class="mention">
-		    	<p>| <a href="#">Accès réservé</a> | <a href="#">Mentions légales</a> |</p>
-		    </div>
+
+			<div class="mention">
+			    <p>| <a href="https://francedepression.fr/index.php/component/users/login?Itemid=139">Accès réservé</a> | <a href="https://francedepression.fr/index.php/content-page/item/66-mentions-legales">Mentions légales</a> |</p>
+			</div>
 		</footer>
+		<!--FIN DU FOOTER-->
 	</body>
 </html>
