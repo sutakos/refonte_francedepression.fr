@@ -14,10 +14,9 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<!--FONT Josefin-->
 		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-		<!--SCRIPT JS DE L'Accueil-->
-		<script src="js/accueil.js" type="module"></script>
-		<!--SCRIPT JS COMMUN-->
-		<script src="js/style.js" type="module"></script>
+		<!--SCRIPT JS-->
+		<script src="js/accueil.js" defer></script>
+		<script src="js/style.js" defer></script>
 	</head>
 
 	<body>
@@ -25,7 +24,7 @@
 			<!--BARRE DE NAVIGATION-->
 		    <nav>
 		        <div class="divLogo">
-		            <a href="index.html"><img src="images/accueil/logoSF.PNG" width="90px" alt="Logo"></a>
+		            <a href="index.html"><img src="images/commun/logoSF.PNG" width="90px" alt="Logo"></a>
 		            <a href="index.html"><span>France Dépression</span></a>
 		        </div>
 
@@ -47,7 +46,7 @@
 		        </div>
 
 		        <div id="login">
-		            <a href="https://francedepression.fr/index.php/component/users/login?Itemid=139"><img src="images/accueil/connexion.PNG" width="60px" alt="Connexion"></a>
+		            <a href="https://francedepression.fr/index.php/component/users/login?Itemid=139"><img src="images/commun/connexion.PNG" width="60px" alt="Connexion"></a>
 		        </div>
 		    </nav>
 		    <!--FIN DE LA BARRE DE NAVIGATION-->
@@ -81,28 +80,23 @@
 			    <a href="index.html">Accueil</a>
 			    <div class="carousel">
 			        <div class="carousel-inner">
-			            <div class="carousel-item active">
-			                <img src="images/accueil/partenariat.PNG" alt="Partenariat avec PsychoDon" width="900px" height="500px">
+			            <div class="carousel-item">
+			                <img src="images/accueil/partenariat.PNG" alt="Partenariat avec PsychoDon">
 			            </div>
 
 			            <div class="carousel-item">
-			                <img src="images/accueil/" alt="Image 2">
+			                <a href="https://www.helloasso.com/associations/association-france-depression/formulaires/2" target="_blank"><img src="images/accueil/affichedon.PNG" alt="Affiche Don"></a>
 			            </div>
 
 			            <div class="carousel-item">
-			                <img src="images/accueil/" alt="Image 3">
+			                <a href="https://www.francebleu.fr/emissions/l-invite-du-8-9/veronique-balme-metteur-en-scene-et-comedienne-4664568" target="_blank"><img src="images/accueil/affichetheatre.PNG" alt="Affiche Theatre"></a>
 			            </div>
 
 			            <div class="carousel-item">
-			                <img src="images/accueil/" alt="Image 4">
-			            </div>
-
-			            <div class="carousel-item">
-			                <img src="images/accueil/" alt="Image 5">
+			                <a href="https://www.youtube.com/watch?v=n3uA2UPknfE" target="_blank"><img src="images/accueil/maletre.PNG" alt="Reportage"></a>
 			            </div>
 			        </div>
-
-			        
+	        
 			        <button class="carousel-control-prev" onclick="prevSlide()">❮</button>
 			        <button class="carousel-control-next" onclick="nextSlide()">❯</button>
 			    </div>
@@ -167,7 +161,7 @@
 					<div class="backColor">
 						<div class="ContenuT">
 							<div class="imageTheatre">	
-								<a href="https://www.francebleu.fr/emissions/l-invite-du-8-9/veronique-balme-metteur-en-scene-et-comedienne-4664568"><img src="images/accueil/theatre.PNG" alt="On n’est pas sérieux quand on a 17 ans !"></a>
+								<a href="https://www.francebleu.fr/emissions/l-invite-du-8-9/veronique-balme-metteur-en-scene-et-comedienne-4664568"target="_blank"><img src="images/accueil/theatre.PNG" alt="On n’est pas sérieux quand on a 17 ans !"></a>
 							</div>
 
 							<div class="TheatreContenu">
@@ -203,17 +197,17 @@
 					    <div class="btnAction">
 					        <a href="https://francedepression.fr/index.php/l-association/creer-une-antenne" class="button-container">
 					            <span>Créer une antenne</span>
-					            <img src="images/accueil/antenne.PNG" alt="Créer une antenne" class="button-image">
+					            <img src="images/commun/antenne.PNG" alt="Créer une antenne" class="button-image">
 					        </a>
 
 					        <a href="https://francedepression.fr/index.php/l-association/devenir-adherent" class="button-container">
 					            <span>Devenir adhérent</span>
-					            <img src="images/accueil/adherent.PNG" alt="Devenir adhérent" class="button-image">
+					            <img src="images/commun/adherent.PNG" alt="Devenir adhérent" class="button-image">
 					        </a>
 
 					        <a href="https://francedepression.fr/index.php/l-association/faire-un-don" class="button-container">
 					            <span>Faire un don</br></br></span>
-					            <img src="images/accueil/don.PNG" alt="Faire un don" class="button-image">
+					            <img src="images/commun/don.PNG" alt="Faire un don" class="button-image">
 					        </a>
 					    </div>
 					</div>
@@ -221,7 +215,7 @@
 			</section>
 
 			
-			<img src="images/accueil/fleche.PNG" id="retourHaut" onclick="retourneHaut()">
+			<img src="images/commun/fleche.PNG" id="retourHaut" onclick="retourneHaut()">
 
 		</main>
 
@@ -230,7 +224,7 @@
 			<div class="divFooter">
 				
 				<div class="divLogo">
-		        	<a href="index.html"><img src="images/accueil/logoSF.PNG" width="150px" alt="Logo"></a>	
+		        	<a href="index.html"><img src="images/commun/logoSF.PNG" width="150px" alt="Logo"></a>	
 		       	 </div>
 
 		       	 <div>
