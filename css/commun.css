@@ -145,23 +145,20 @@ footer {
 }
 
 .divFooter {
-
-    display: flex;
-    justify-content: space-between;
-    padding: 1.875em 1.25em;                   
-    display: flex;                       
-    align-items: flex-start;              
+    display: flex;     
+    flex-direction: row;                  
+    align-items: flex-start;
+    padding: 1.875em 1.25em;       
     gap:6.25rem;     
+    flex-wrap: wrap;     
 }
 
 .titre-footer{
-
     color: #6C6873;
     font-size: 1.25em;
 }
 
 .contenu{
-
     color: var(--color-white);
     font-size: 0.875em;                 
     margin: 0;                           
