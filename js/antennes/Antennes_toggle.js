@@ -1,4 +1,4 @@
-import { AntennesData } from './AntennesData.js'; // Assurez-vous que le chemin est correct
+import { AntennesData } from './js/antennes/AntennesData.js'; // Assurez-vous que le chemin est correct
 
 const antenneContainer = document.querySelector('.selecRegion');
 const paths = document.querySelectorAll('#map .map_clickable path');
