@@ -1,16 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>test</title>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!-- FONT -->
     <link rel="stylesheet" type="text/css" href="css/commun.css">
     <link rel="stylesheet" href="css/antennes.css">
     <script src="js/antennes/Antennes_toggle.js" type="module"></script>
+    <script src="js/commun.js" type="module"></script>
 </head>
 <body>
 
     <header>
         <nav>
+            <!-- NAV BURGER -->
+            <div id="mySidenav" class="sidenav">
+                <a id="closeBtn" href="#" class="close">×</a>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">L'association</a>
+                        <ul id="dropDown">
+                            <li><a href="quiSommesNous.html">Qui sommes-nous</a>
+                            <li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a>
+                            <li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a>
+                        </ul>
+
+                    </li>
+                    <li><a href="Antennes.html">Antennes</a></li>
+                    <li><a href="#">Ressources</a></li>
+                </ul>
+            </div>
+
+            <a href="#" id="openBtn" class="openBtn">
+              <span class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </a>
+
+
+            <!-- FIN NAV BURGER -->
+
             <div class="divLogo">
                 <a href="index.html"><img src="images/commun/logoSF.PNG" width="90px" alt="Logo"></a>
                 <a href="index.html"><span>France Dépression</span></a>
@@ -31,10 +66,14 @@
                 </ul>
             </div>
 
+
+
             <div id="login">
                 <a href="https://francedepression.fr/index.php/component/users/login?Itemid=139"><img src="images/commun/connexion.PNG" width="60px" alt="Connexion"></a>
             </div>
         </nav>
+
+
     </header>
 
     <div class="banniere">
@@ -103,7 +142,7 @@
                 <div class="btnAction">
                     <a href="https://francedepression.fr/index.php/l-association/creer-une-antenne" class="button-container">
                         <span>Créer une antenne</span>
-                        <img src="images/commun/antenne.PNG" alt="Créer une antenne" class="button-image">
+                        <img src="images/commun/antenne.png" alt="Créer une antenne" class="button-image">
                     </a>
 
                     <a href="https://francedepression.fr/index.php/l-association/devenir-adherent" class="button-container">
