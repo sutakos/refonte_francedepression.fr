@@ -160,7 +160,7 @@ blocs{
 
 /*RESPONSIVE*/
 /*FORMAT MOYEN ECRAN*/
-@media (min-width: 795px) and (max-width: 1140px){
+@media (min-width: 795px) and (max-width: 1000px){
     .paragraphe{
         font-size: medium;
     }
