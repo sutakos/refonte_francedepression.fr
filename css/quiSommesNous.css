@@ -1,6 +1,4 @@
 :root {
-    --color-white: white;
-    --color-black: black;
     --color-gray: #888787;
     --color-orange: #FDC14E;
     --color-blue: #4F9FFF;
@@ -34,7 +32,6 @@ main{
     color: black;
     text-decoration: none;
 }
-
 
 /* ----------- FIN COMMUN A TOUS -------------- */
 
@@ -159,4 +156,16 @@ blocs{
     font-size: large;
     margin: 2em;
 }
+
+/*RESPONSIVE*/
+/*FORMAT MOYEN ECRAN*/
+@media (min-width: 601px) and (max-width: 1310px){
+
+}
+/*FIN FORMAT MOYEN ECRAN*/
+/*FORMAT PETIT ECRAN*/
+@media (max-width: 600px){
+
+}
+/*FIN FORMAT PETIT ECRAN*/
 

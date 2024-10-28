@@ -108,31 +108,6 @@ nav {
 	border-radius: 0.938em;
 }
 
-#dropD{
-    display: none;
-    position: absolute;
-    background-color: #bfe8f4;
-    border-radius: 0.938em;
-    margin-top: 1.563em;
-}
-
-#dropD li{
-    padding: 0.625em;
-}
-
-#dropD a{
-    color: black;
-}
-
-#dropBurger:hover #dropD{
-    display: block;
-    white-space: nowrap;
-}
-
-#dropD li:hover {
-    background-color: #70defe;
-    border-radius: 0.938em;
-}
 
 /*PARTIE DROITE*/
 #login {

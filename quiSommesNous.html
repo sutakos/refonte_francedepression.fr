@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <title>Qui sommes-nous?</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--CSS COMMUN AUX PAGES-->
     <link rel="stylesheet" type="text/css" href="css/commun.css">
-    <link rel="stylesheet" type="text/css" href="css/quiSommesNous.css">
     <link rel="stylesheet" type="text/css" href="css/media.css">
+    <!--CCS QUE DE QUI SOMMES NOUS-->
+    <link rel="stylesheet" type="text/css" href="css/quiSommesNous.css">
+    <!--SCRIPT JS-->
     <script src="js/commun.js" type="module"></script>
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,35 +18,35 @@
 </head>
 <body>
     <header>
-        <!-- NAV BURGER -->
-        <div id="mySidenav" class="sidenav">
-            <a id="closeBtn" href="#" class="close">×</a>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li id="dropBurger"><a href="#">L'association</a>
-                    <ul id="dropDown">
-                        <li><a href="quiSommesNous.html">Qui sommes-nous</a>
-                        <li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a>
-                        <li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a>
-                    </ul>
-
-                </li>
-                <li><a href="Antennes.html">Antennes</a></li>
-                <li><a href="#">Ressources</a></li>
-            </ul>
-        </div>
-
-        <a href="#" id="openBtn" class="openBtn">
-              <span class="burger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-        </a>
-        <!-- FIN NAV BURGER -->
-
         <!--BARRE DE NAVIGATION-->
         <nav>
+            <!-- NAV BURGER -->
+            <div id="mySidenav" class="sidenav">
+                <a id="closeBtn" href="#" class="close">×</a>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#">L'association</a>
+                        <ul id="dropBurger">
+                            <li><a href="quiSommesNous.html">Qui sommes-nous</a>
+                            <li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a>
+                            <li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a>
+                        </ul>
+
+                    </li>
+                    <li><a href="Antennes.html">Antennes</a></li>
+                    <li><a href="#">Ressources</a></li>
+                </ul>
+            </div>
+
+            <a href="#" id="openBtn" class="openBtn">
+                        <span class="burger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+            </a>
+            <!-- FIN NAV BURGER -->
+
             <div class="divLogo">
                 <a href="index.html"><img src="images/commun/logoSF.png" width="90px" alt="Logo"></a>
                 <a href="index.html"><span>France Dépression</span></a>
@@ -52,8 +55,8 @@
             <div class="navbar">
                 <ul>
                     <li class="section"><a href="index.html">Accueil</a></li>
-                    <li class="section" id="drop"><a href="#">L'association  ⌵</a>
-                        <ul id="dropD">
+                    <li class="section" id="drop"><a href="quiSommesNous.html">L'association  ⌵</a>
+                        <ul id="dropDown">
                             <li><a href="quiSommesNous.html">Qui sommes-nous</a></li>
                             <li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a></li>
                             <li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a></li>
@@ -62,7 +65,7 @@
                         </ul>
                     </li>
                     <li class="section"><a href="Antennes.html">Antennes</a></li>
-                    <li class="section"><a href="ressources.html">Ressources</a></li>
+                    <li class="section"><a href="#">Ressources</a></li>
                 </ul>
             </div>
 
