@@ -1,8 +1,8 @@
 :root {
     --color-gray: #888787;
-    --color-orange: #FDC14E;
-    --color-blue: #4F9FFF;
-    --color-yellow:#FFFA8C;
+    --color-orange: #ffd07b;
+    --color-blue: #9ac7ff;
+    --color-yellow: #fffca0;
 }
 
 /* ----------- BANNIERE ------------- */
@@ -62,6 +62,7 @@ blocs{
     bottom: 30px;
     width: 100%;
 }
+
 
 .bloc{
     height: 200px;
@@ -167,6 +168,9 @@ blocs{
 /*FIN FORMAT MOYEN ECRAN*/
 /*FORMAT PETIT ECRAN*/
 @media (max-width: 794px){
+    .banniere{
+        height: 100px;
+    }
     .bloc img{
         display: none;
     }
@@ -176,3 +180,8 @@ blocs{
 }
 /*FIN FORMAT PETIT ECRAN*/
 
+@media (max-width: 600px){
+    .banniere {
+        height: 80px;
+    }
+}
