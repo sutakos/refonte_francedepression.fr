@@ -36,22 +36,15 @@ nav {
 .divLogo {
     display: flex;
     align-items: center;
-    margin-left: 1.25em; 
-    margin-right: 0.625em;
 }
 
 .divLogo a {
     text-decoration: none;
 }
 
-.divLogo img {
-    margin-left: 5.625em;
-}
-
 .divLogo span {
     font-size: 0.938em;
     color: #506FA5;
-    margin-left: 0.938em;
 }
 
 /*PARTIE CENTRE*/
@@ -145,17 +138,11 @@ footer {
     width: 100%;
 }
 
-.logoFooter {
-    margin-left: 1.25em; 
-}
-
 .divFooter {
-    display: flex;     
-    flex-direction: row;                  
+    display: flex;
+    justify-content: space-between;
     align-items: flex-start;
-    padding: 1.875em 1.25em;       
-    gap:6.25rem;     
-    flex-wrap: wrap;     
+    padding: 1.5em 6em;
 }
 
 .titre-footer{
