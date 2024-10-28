@@ -9,8 +9,6 @@
 		<link rel="stylesheet" type="text/css" href="css/commun.css">
 		<!--CCS QUE DE L'Accueil-->
 		<link rel="stylesheet" type="text/css" href="css/accueil.css">
-		<!--CCS MEDIAS QUERIES COMMUN-->
-		<link rel="stylesheet" type="text/css" href="css/media.css">
 		<!--FONT-->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +23,33 @@
 		<header>
 			<!--BARRE DE NAVIGATION-->
 		    <nav>
+				<!-- NAV BURGER -->
+				<div id="mySidenav" class="sidenav">
+					<a id="closeBtn" href="#" class="close">×</a>
+					<ul>
+						<li><a href="index.html">Accueil</a></li>
+						<li><a href="#">L'association</a>
+							<ul id="dropBurger">
+								<li><a href="quiSommesNous.html">Qui sommes-nous</a>
+								<li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a>
+								<li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a>
+							</ul>
+
+						</li>
+						<li><a href="Antennes.html">Antennes</a></li>
+						<li><a href="#">Ressources</a></li>
+					</ul>
+				</div>
+
+				<a href="#" id="openBtn" class="openBtn">
+				  	<span class="burger-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+				  	</span>
+				</a>
+				<!-- FIN NAV BURGER -->
+
 		        <div class="divLogo">
 		            <a href="index.html"><img src="images/commun/logoSF.png" width="90px" alt="Logo"></a>
 		            <a href="index.html"><span>France Dépression</span></a>
@@ -53,17 +78,17 @@
 		    </nav>
 		    <!--FIN DE LA BARRE DE NAVIGATION-->
 		</header>
-
+		<!--MAIN-->
 		<main>
 			<!--BANNIERE-->
 			<section class="ecoute">
 				<img src="images/accueil/ecoute.JPG" class="banniereEcoute"  alt="Bannière d'écoute">
 
 				<div class="appel">
-					<p>Une écoute, un sourire, une force </br></br>
-					   L’association propose une écoute du lundi au samedi entre 10h et 20h et le dimanche de 14h à 20h </br>
+					<p>Une écoute, un sourire, une force <br><br>
+					   L’association propose une écoute du lundi au samedi entre 10h et 20h et le dimanche de 14h à 20h <br>
 					   <span class="contact-info">
-							<img src="images/accueil/telephone.PNG" width="50px">
+							<img src="images/accueil/telephone.PNG" class="logoTel" width="50px">
 					   		<span class="numtel"> 07 84 96 88 28</span>
 					   	</span>
 					</p>
@@ -76,7 +101,7 @@
 					</div>
 				</div>
 			</section>
-
+			<!--FIN BANNIERE-->
 			<!--CARROUSEL-->
 			<section class="InfoCarrousel">
 			    <a href="index.html">Accueil</a>
@@ -99,28 +124,29 @@
 			            </div>
 			        </div>
 	        
-			        <button class="carousel-control-prev" onclick="prevSlide()">❮</button>
-			        <button class="carousel-control-next" onclick="nextSlide()">❯</button>
+			        <button class="carousel-control-prev">❮</button>
+			        <button class="carousel-control-next">❯</button>
 			    </div>
-
+				<!--PARTENARIAT-->
 			    <div class="partenariat">
 			    	<p>Psychodon et France Dépression en partenariat pour les marches nationales de la santé mental 2024 !</p>
 			    	<!--target="_blank" ouvre dans un autre onglet-->
 			    	<a href="https://www.psychodon.org/" target="_blank"><img src="images/accueil/psychodon.PNG" width="200px" alt="Logo Psychodon"></a>
 			    </div>
+				<!--FIN PARTENARIAT-->
 			</section>
-
+			<!--FIN CARROUSEL-->
 			<!--EDITO-->
 			<section class="Edito">
 				<div class="Info">
 					<div class="backColor">
-						<span class="InfoStyle">Edito</span></br></br>
-						<p>Présentation de nos co-présidentes !</br></br>
-							Claudie TONDON-BERNARD,</br>
-							présidente de France Dépression Lorraine depuis 2002</br></br>
+						<span class="InfoStyle">Edito</span><br><br>
+						<p>Présentation de nos co-présidentes !<br><br>
+							Claudie TONDON-BERNARD,<br>
+							présidente de France Dépression Lorraine depuis 2002<br><br>
 
-							Christine VILLELONGUE,</br>
-							co-présidente de France Dépression</br></br>
+							Christine VILLELONGUE,<br>
+							co-présidente de France Dépression<br><br>
 						</p>
 
 						<div class="btn">
@@ -128,16 +154,15 @@
 						</div>
 					</div>
 				</div>
-				
 			</section>
-
+			<!--FIN EDITO-->
 			<!--INFOLETTRE ET ACTUALITE-->
 			<section class="InfoActu">
 				<div class="Info">
 					<div class="Contenu">
 						<div class="InfoContenu">
-							<span class="InfoStyle">Infolettre</span></br></br>
-							<p>Retrouvez nos bulletins d'information </br>
+							<span class="InfoStyle">Infolettre</span><br><br>
+							<p>Retrouvez nos bulletins d'information <br>
 								et abonnez vous à notre infolettre !
 							</p>
 							<div class="btn">
@@ -146,9 +171,9 @@
 						</div>
 
 						<div class="ActuContenu">
-							<span class="InfoStyle">Actualités</span></br></br>
+							<span class="InfoStyle">Actualités</span><br><br>
 							<p>Suivez les actualités !</p>
-							</br>
+							<br>
 							<div class="btn">
 								<a href="https://francedepression.fr/index.php/content-page/25-actualite"><button>Voir ➜</button></a>	
 							</div>				
@@ -156,7 +181,7 @@
 					</div>
 				</div>
 			</section>
-
+			<!--FIN INFOLETTRE ET ACTUALITE-->
 			<!--THEATRE-->
 			<section class="Theatre">
 				<div class="Info">
@@ -167,18 +192,18 @@
 							</div>
 
 							<div class="TheatreContenu">
-								<span class="InfoStyle">Pièce de théâtre</span></br></br>
+								<span class="InfoStyle">Pièce de théâtre</span><br><br>
 
-								<p class="titre">On n’est pas sérieux quand on a 17 ans !</br>
+								<p class="titre">On n’est pas sérieux quand on a 17 ans !<br>
 	                                <span class="auteur">De Nathalie BECKER</span>
     							</p>
     
     							<p class="resume">
-    								</br>
-							        Se construire, grandir. L’insouciance.</br>
-							        Les Premières fois. Mais quand construction rime avec destruction, comment dissocier la crise d’ado du mal-être profond ?</br>
-							        Sorti de l’obscurité, Tristan nous livre son vécu, ses angoisses existentielles.</br>
-							        Une maladie, quatre parcours. Quand tout s’embrouille, il faut semer des mots pour trouver son chemin.</br></br>
+    								<br>
+							        Se construire, grandir. L’insouciance.<br>
+							        Les Premières fois. Mais quand construction rime avec destruction, comment dissocier la crise d’ado du mal-être profond ?<br>
+							        Sorti de l’obscurité, Tristan nous livre son vécu, ses angoisses existentielles.<br>
+							        Une maladie, quatre parcours. Quand tout s’embrouille, il faut semer des mots pour trouver son chemin.<br><br>
 							    </p>
 
 								<div class="btn">
@@ -189,12 +214,12 @@
 					</div>
 				</div>
 			</section>
-
+			<!--FIN THEATRE-->
 			<!--ACTION-->
 			<section class="action">
 				<div class="Info">
 					<div class="contenuA">
-					    <span class="InfoStyle">Vous souhaitez créer une antenne ? </br>Vous souhaitez nous soutenir ?</br></br></span>
+					    <span class="InfoStyle">Vous souhaitez créer une antenne ? <br>Vous souhaitez nous soutenir ?<br><br></span>
 
 					    <div class="btnAction">
 					        <a href="https://francedepression.fr/index.php/l-association/creer-une-antenne" class="button-container">
@@ -208,50 +233,53 @@
 					        </a>
 
 					        <a href="https://francedepression.fr/index.php/l-association/faire-un-don" class="button-container">
-					            <span>Faire un don</br></br></span>
+					            <span>Faire un don<br><br></span>
 					            <img src="images/commun/don.PNG" alt="Faire un don" class="button-image">
 					        </a>
 					    </div>
 					</div>
 				</div>
 			</section>
-
-			
-			<img src="images/commun/fleche.png" id="retourHaut" onclick="retourneHaut()">
-
+			<!--FIN ACTION-->
+			<!--BOUTON RETOUR VERS LE HAUT-->
+			<section>
+				<img id="retourHaut" src="images/commun/fleche.png">
+			</section>
+			<!--FIN BOUTON RETOUR VERS LE HAUT-->
 		</main>
-
+		<!--FIN MAIN-->
 		<!--FOOTER-->
 		<footer>
 			<div class="divFooter">
 				
 				<div class="divLogo">
 		        	<a href="index.html"><img src="images/commun/logoSF.png" width="150px" alt="Logo"></a>
-		       	 </div>
+				</div>
+
+				<div>
+		       	 	<span class="titre-footer">Vous êtes concerné(e) ?<br><br></span>
+		            <p class="contenu">	Ecoute patients : 07 84 96 88 28 <br><br>
+						France Dépression <br> 10 rue de Norvège, 54500 Vandœuvre 
+					</p>
+				</div>
 
 		       	 <div>
-		       	 	<span class="titre-footer">Vous êtes concerné(e) ?</br></br></span>
-		            <p class="contenu">	Ecoute patients : 07 84 96 88 28 </br></br>
-						France Dépression </br> 10 rue de Norvège, 54500 Vandœuvre 
-					</p></div>
-
-		       	 <div>
-		            <span class="titre-footer">À propos</br></br></span>
-		            <p class="contenu"><a href="quiSommesNous.html">L'association</a></br></br>
+		            <span class="titre-footer">À propos<br><br></span>
+		            <p class="contenu"><a href="quiSommesNous.html">L'association</a><br><br>
 						<a href="Antennes.html">Antennes</a>
 					</p>
 		       	 </div>
 
 		       	 <div>
-		            <span class="titre-footer">Contacts</br></br></span>
-		            <p class="contenu">06 03 89 34 47 </br></br>
+		            <span class="titre-footer">Contacts<br><br></span>
+		            <p class="contenu">06 03 89 34 47 <br><br>
 		            	contact@francedepression.fr 
 					</p>
 		       	 </div>
 
 		       	 <div>
-		            <span class="titre-footer">Réseaux</br></br></span>
-		            <p class="contenu"><a href="https://www.facebook.com/Francedeplorraine">Loraine</a> </br></br>
+		            <span class="titre-footer">Réseaux<br><br></span>
+		            <p class="contenu"><a href="https://www.facebook.com/Francedeplorraine">Loraine</a> <br><br>
 		            	blabla2 
 					</p>
 		       	 </div>
