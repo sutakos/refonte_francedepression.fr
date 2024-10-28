@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/commun.css">
     <link rel="stylesheet" type="text/css" href="css/quiSommesNous.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <script src="js/commun.js" type="module"></script>
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +15,33 @@
 </head>
 <body>
     <header>
+        <!-- NAV BURGER -->
+        <div id="mySidenav" class="sidenav">
+            <a id="closeBtn" href="#" class="close">×</a>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li id="dropBurger"><a href="#">L'association</a>
+                    <ul id="dropDown">
+                        <li><a href="quiSommesNous.html">Qui sommes-nous</a>
+                        <li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a>
+                        <li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a>
+                    </ul>
+
+                </li>
+                <li><a href="Antennes.html">Antennes</a></li>
+                <li><a href="#">Ressources</a></li>
+            </ul>
+        </div>
+
+        <a href="#" id="openBtn" class="openBtn">
+              <span class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+        </a>
+        <!-- FIN NAV BURGER -->
+
         <!--BARRE DE NAVIGATION-->
         <nav>
             <div class="divLogo">
@@ -23,8 +52,8 @@
             <div class="navbar">
                 <ul>
                     <li class="section"><a href="index.html">Accueil</a></li>
-                    <li class="section" id="drop"><a href="quiSommesNous.html">L'association  ⌵</a>
-                        <ul id="dropDown">
+                    <li class="section" id="drop"><a href="#">L'association  ⌵</a>
+                        <ul id="dropD">
                             <li><a href="quiSommesNous.html">Qui sommes-nous</a></li>
                             <li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a></li>
                             <li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a></li>
@@ -33,7 +62,7 @@
                         </ul>
                     </li>
                     <li class="section"><a href="Antennes.html">Antennes</a></li>
-                    <li class="section"><a href="#">Ressources</a></li>
+                    <li class="section"><a href="ressources.html">Ressources</a></li>
                 </ul>
             </div>
 
@@ -43,6 +72,9 @@
         </nav>
         <!--FIN DE LA BARRE DE NAVIGATION-->
     </header>
+    <div class="banniere">
+        <img src="images/commun/Bannière.png" alt="Bannière" class="banniere">
+    </div>
     <main>
         <div class="chemin">
             <a href="quiSommesNous.html">L'association > Qui sommes-nous</a>
