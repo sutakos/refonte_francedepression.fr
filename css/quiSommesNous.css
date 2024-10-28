@@ -19,7 +19,7 @@
 main{
     min-height: 80vh;
     position: relative;
-    margin : 2em 8em 8em 8em;
+    margin : 2em 4em 4em 4em;
 }
 
 
@@ -53,7 +53,7 @@ main{
 }
 
 .paragraphe{
-    padding : 4em;
+    padding : 2em;
     font-size: x-large;
 }
 
@@ -159,13 +159,20 @@ blocs{
 
 /*RESPONSIVE*/
 /*FORMAT MOYEN ECRAN*/
-@media (min-width: 601px) and (max-width: 1310px){
-
+@media (min-width: 795px) and (max-width: 1140px){
+    .paragraphe{
+        font-size: medium;
+    }
 }
 /*FIN FORMAT MOYEN ECRAN*/
 /*FORMAT PETIT ECRAN*/
-@media (max-width: 600px){
-
+@media (max-width: 794px){
+    .bloc img{
+        display: none;
+    }
+    .paragraphe{
+        font-size: medium;
+    }
 }
 /*FIN FORMAT PETIT ECRAN*/
 
