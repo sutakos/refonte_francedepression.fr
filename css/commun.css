@@ -213,6 +213,7 @@ footer a:hover{
 }
 /*FIN DU FOOTER*/
 
+/*MEDIA QUERIES*/
 @media screen and (max-width: 1457px)
 {
     .navbar{
@@ -280,3 +281,51 @@ footer a:hover{
     }
 
 }
+
+@media (min-width: 601px) and (max-width: 1310px) {
+    /*FOOTER*/
+    .divFooter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    .divLogo img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .titre-footer {
+        font-size: 1em;
+    }
+
+    .contenu{
+        font-size: 0.85em;
+    }
+    /*FIN FOOTER*/
+}
+
+/*FORMAT PETIT ECRAN*/
+@media (max-width: 600px) {
+    /*FOOTER*/
+    .divFooter {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center; /*Aligne le texte au centre*/
+        width: 100%; /*Assure qu'il prenne toute la largeur de l’écran */
+    }
+
+    .divLogo img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .contenu, .titre-footer {
+        font-size: 1em;
+    }
+    /*FIN FOOTER*/
+}
+/*FIN FORMAT PETIT ECRAN*/
+/*FIN MEDIA QUERIES*/

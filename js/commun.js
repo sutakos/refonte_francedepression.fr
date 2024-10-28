@@ -5,13 +5,13 @@ window.onscroll = function() {
 
 //FONCTION QUI AFFICHE LA FLECHE QUAND ON ARRIVE A 90% DE LA PAGE
 function afficheBtn() {
-    const btn = document.getElementById("retourHaut");
+    const btn = document.getElementById('retourHaut');
     const tailleFenetre = window.innerHeight;
     const hauteurPage = document.body.scrollHeight;
     const defilement = window.scrollY + tailleFenetre; //window.scrollY RENVOIE LA DISTANCE EN PX A LAQUELLE L'UTILISATEUR A FAIT DEFILER LA PAGE DEPUIS LE HAUT
 
-    //SI DEFILEMENT >=90%
-    if (defilement >= hauteurPage * 0.9) {
+    //SI DEFILEMENT >=90% ET LARGEUR DE LA FENETRE >600
+    if (defilement >= hauteurPage * 0.9 && window.innerWidth > 600) {
         btn.style.display = "block"; //AFFICHE
     } else {
         btn.style.display = "none"; //CHACHE
@@ -22,6 +22,8 @@ function afficheBtn() {
 function retourneHaut() {
     window.scrollTo({ top: 0, behavior: 'smooth' }); 
 }
+
+document.querySelector('#retourHaut').addEventListener('click',retourneHaut);
 
 /* RESPONSIVE */
 

@@ -3,7 +3,7 @@
 .ecoute {
     position: relative; /* Permet au bloc .appel de se positionner correctement */
     width: 100%;
-    height: 600px; /* Ajuste selon la taille de ta bannière */
+    height: 37.5em; /* Ajuste selon la taille de ta bannière */
 }
 .banniereEcoute {
     position: relative;
@@ -15,14 +15,15 @@
 /*CADRE D'APPEL*/   
 .appel {
     position: absolute;
-    top: 50%; 
-    right: 5%; 
+    top: 50%;
+    right: 10%;
+    left: 10%;
     transform: translateY(-50%);
     padding: 2.5rem;
     border: 0.125em solid var(--color-white);
     border-radius: 0.938em;
-    width: 600px;
-    font-size: 1.7em;
+    width: auto;
+    font-size: 1.5em;
     color: var(--color-white);
     background-color: rgba(0, 0, 0, 0.6); 
     text-align: center;
@@ -37,12 +38,11 @@
 
 .numtel {
     font-size: 2em;
-    margin-left: 10px;
 }
 
 /*BOUTONS*/
 .btn {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .btn a {
@@ -50,8 +50,8 @@
 }
 
 .btn button {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.9em;
+    padding: 0.7rem 1rem;
+    font-size: 1em;
     background-color: #74BFC4;
     color: var(--color-white);
     border: none;
@@ -70,23 +70,22 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 20px 0 20px 90px;
+    margin: 1.25em 0 1.25em 5.625em;
 }
 
 .InfoCarrousel a {
     display: inline-block;
     text-decoration: none;
-    margin: 20px 0 0 0;
     color: var(--color-black);
-    font-size: 19px;
+    font-size: 1.1875em;
 }
 
 .carousel {
     position: relative;
-    width: 1500px;
-    height: 500px;
+    width: auto;
+    height: auto;
     overflow: hidden; /*cache les images qui dépassent*/
-    margin-top: 70px;
+    margin-top: 4.375em;
 }
 
 .carousel-inner {
@@ -124,53 +123,56 @@
 }
 
 .carousel-control-prev {
-    left: 10px;
+    left: 0.625em;
 }
 
 .carousel-control-next {
-    right: 10px;
+    right: 0.625em;
 }
+/*FIN DU CARROUSEL*/
 
+/*PARTENARIAT*/
 .partenariat {
     display: flex;
     flex-direction: column;
-    margin: 200px 110px 0 80px;
-    font-size: 18px;
+    margin: 12.5em 6.875em 0 5em;
+    font-size: 1.125em;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
 .partenariat img {
-    margin-top: 10px;
+    margin-top: 0.625em;
     height: auto;
 }
-/*FIN DU CARROUSEL*/
+/*FIN PARTENARIAT*/
 
 /*SECTIONS*/
 /*MISE EN FORME COMMUNE*/
 .Info{
-    margin:0 90px 0 90px;
-    padding:20px 0 20px 0;
-    border-top: 2px solid #A3C7C2;
+    margin:0 4em 0 4em;
+    padding:1.25em 0 1.25em 0;
+    border-top: 0.125em solid #A3C7C2;
     text-align: center;
 }
 
 .InfoStyle{
-    font-size: 35px;
+    font-size: 2.1875em;
     font-family: 'Josefin Sans', sans-serif;
 }
 
 .backColor{
     background-color: #E9F1F1;
-    padding: 20px 0 20px 0;
+    padding: 1.25em 0 1.25em 0;
 }
+/*FIN MISE EN FORME COMMUNE*/
 
 /*INFOLETTRE ET ACTU*/
 .Contenu{
     display: flex;
     justify-content: center; 
-    gap: 260px; 
+    gap: 16em;
 }
 /*FIN DE L'INFOLETTRE ET DE L'ACTU*/
 
@@ -180,24 +182,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 6.25em;
 }
 
 .imageTheatre img {
-    width: 200; 
+    width: auto;
     height: auto;
-    margin-left: 120px;
 }
 
 .TheatreContenu {
-    max-width: 500px; 
+    max-width: 31.25em;
 }
 
 .titre{
-    font-size: 22px;
+    font-size: 1.375em;
 }
 .auteur {
-    font-size: 15px;
+    font-size: 0.9375em;
 }
 
 .resume {
@@ -209,7 +210,7 @@
 .btnAction {
     display: flex;                   
     justify-content: center;        
-    gap: 20px;                      
+    gap: 1.25em;
 }
 
 .btnAction a {
@@ -219,9 +220,9 @@
     text-decoration: none;           
     color: var(--color-black);       
     background-color: #efe8c5;       
-    padding: 20px;                   
-    width: 150px;                    
-    border-radius: 10px;             
+    padding: 1.25em;
+    width: 9.375em;
+    border-radius: 0.625em;
     text-align: center;             
 }
 
@@ -232,9 +233,103 @@
 .button-image {
     max-width: 100%;                
     height: auto;                    
-    margin-top: 10px;                
+    margin-top: 0.625em;
 }
 /*FIN DE ACTION*/
 /*FIN DES SECTIONS*/
 
 /*RESPONSIVE*/
+/*FORMAT MOYEN ECRAN*/
+@media (min-width: 601px) and (max-width: 1310px){
+    /*CADRE D'APPEL*/
+    .numtel {
+        font-size: 1.7em;
+    }
+
+    .btn button {
+        font-size: 0.8em;
+    }
+    /*CARROUSEL*/
+    .carousel-control-prev,
+    .carousel-control-next{
+        display: none;
+    }
+
+    .InfoCarrousel{
+        flex-direction: column;
+        margin: 1em 4em 0 4em;
+        align-items: start;
+        justify-content: flex-start;
+    }
+    /*FIN CARROUSEL*/
+    /*PARTENARIAT*/
+    .partenariat {
+        margin: 1.5em;
+    }
+    /*FIN PARTENARIAT*/
+
+    /*THEATRE*/
+    .ContenuT{
+        flex-direction: column-reverse;
+        gap: 4em;
+    }
+    /*FIN THEATRE*/
+
+}
+/*FIN FORMAT MOYEN ECRAN*/
+/*FORMAT PETIT ECRAN*/
+@media (max-width: 600px){
+    /*CADRE D'APPEL*/
+    .appel {
+        right: 5%;
+        left: 5%;
+        padding: 0.5em 1rem 0.5em 1em;
+    }
+
+    .numtel {
+        font-size: 1.7em;
+    }
+
+    .logoTel{
+        display: none;
+    }
+
+    .btn button {
+        font-size: 0.8em;
+    }
+    /*FIN CADRE D'APPEL*/
+    /*CARROUSEL*/
+    .carousel-control-prev,
+    .carousel-control-next{
+        display: none;
+    }
+
+    .InfoCarrousel{
+        flex-direction: column;
+        margin: 1em 4em 0 4em;
+        align-items: start;
+        justify-content: flex-start;
+    }
+    /*FIN CARROUSEL*/
+    /*PARTENARIAT*/
+    .partenariat {
+        margin: 2em;
+    }
+    /*FIN PARTENARIAT*/
+    /*INFOLETTRE ET ACTU*/
+    .Contenu{
+        flex-direction: column;
+        gap: 2em;
+    }
+    /*FIN INFOLETTRE ET ACTU*/
+    /*THEATRE*/
+    .ContenuT {
+        gap: 0;
+    }
+
+    .imageTheatre img {
+        display: none;
+    }
+    /*FIN THEATRE*/
+}
+/*FIN FORMAT PETIT ECRAN*/

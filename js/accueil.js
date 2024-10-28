@@ -9,9 +9,12 @@ function defilement(index) {
     } else {
         slideActuelle = index;
     }
-    const offset = -slideActuelle * 100; //calcule le décalage
+    const offset = -slideActuelle * 100; //CALCULE LE DECALAGE
     document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
 }
+
+document.querySelector('.carousel-control-next').addEventListener('click', nextSlide);
+document.querySelector('.carousel-control-prev').addEventListener('click', prevSlide);
 
 function nextSlide() {
     defilement(slideActuelle + 1);
@@ -21,5 +24,5 @@ function prevSlide() {
     defilement(slideActuelle - 1);
 }
 
-//pour changer d'image toutes les 5 secondes
+//CHANGE TOUTE LES 5SEC
 setInterval(nextSlide, 5000);
