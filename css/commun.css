@@ -140,6 +140,23 @@ nav {
 #login:hover{
     opacity: 0.3; /*transparence*/
 }
+
+/*MENU BURGER*/
+/* Sous-menu caché par défaut */
+.dropD {
+    display: none;
+    margin-left: 20px;
+}
+
+.dropD li a {
+    font-size: 18px;
+    color: #111;
+}
+.dropD li a:hover {
+    color: #888787;
+}
+/*FIN MENU BURGER*/
+
 /*FIN DE LA BARRE DE NAVIGATION*/
 
 /*BOUTON POUR REMONTER*/
@@ -219,7 +236,7 @@ footer a:hover{
         z-index: 1;
         top: 0;
         left: -250px;
-        background-color: #e8e8e8;
+        background-color: #f0f0f2;
         padding-top: 60px;
         transition: left 0.5s ease;
     }
@@ -229,13 +246,13 @@ footer a:hover{
         padding: 8px 8px 8px 32px;
         text-decoration: none;
         font-size: 25px;
-        color: #818181;
+        color: #708090;
         display: block;
         transition: 0.3s;
     }
 
     .sidenav a:hover {
-        color: #111;
+        color: #b0c4de;
     }
 
     .sidenav ul {

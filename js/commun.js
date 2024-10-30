@@ -42,3 +42,17 @@ function openNav() {
 function closeNav() {
     sidenav.classList.remove("active");
 }
+
+
+
+// FONCTION POUR AFFICHER/CACHER LES SOUS-MENUS
+function toggleDropdown(dropdownId) {
+    const dropdown = document.getElementById(dropdownId);
+    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+}
+
+// AJOUT DE L'EVENEMENT AU CLIC POUR "L'ASSOCIATION" MENU BURGER
+document.getElementById('toggleDropdown').addEventListener('click', function(e) {
+    e.preventDefault(); // Empêche le lien de naviguer
+    toggleDropdown('dropBurger');
+});

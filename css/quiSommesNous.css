@@ -5,13 +5,6 @@
     --color-yellow: #fffca0;
 }
 
-
-main{
-    min-height: 80vh;
-    position: relative;
-    margin : 2em 4em 4em 4em;
-}
-
 .Intro-Association{
     display: flex;
     justify-content: center;
