@@ -322,6 +322,10 @@ footer a:hover{
 
 /*FORMAT PETIT ECRAN*/
 @media (max-width: 600px) {
+    main{
+        margin: 1em 2em 2em 2em;
+    }
+    
     /*FOOTER*/
     .divFooter {
         flex-direction: column;
