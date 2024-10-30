@@ -3,43 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Ressources</title>
-    <link href="style.css" rel="stylesheet">
+    <link href="ressources.css" rel="stylesheet">
     <script src="js/documentations.js" type="module"></script>
     <script src="js/filtre.js" type="module"></script>
+    <script src="js/fluxRSS.js" type="module"></script>
 </head>
 <body>
-<div class="titre">
+<div class="en-tête">
     <img src="images/francedepression_banniere.jpg">
     <h1>Ressources</h1>
 </div>
-<nav class="menu">
-    <ul>
-        <li><h2>Documentations</h2></li>
-        <li><h2>Vidéothèque</h2></li>
-        <li><h2>Audiothèque</h2></li>
-        <li><h2>Témoignages</h2></li>
-        <li><h2>Théâtre</h2></li>
-    </ul>
-</nav>
-
-<form>
-    <div class="navigation">
-        <input id="BarreDeRecherche" type="Search" placeholder="Rechercher">
+<section class="menu">
+    <li><h2>Documentations</h2></li>
+    <li><h2>Vidéothèque</h2></li>
+    <li><h2>Audiothèque</h2></li>
+    <li><h2>Témoignages</h2></li>
+    <li><h2>Théâtre</h2></li>
+</section>
+<br>
+<div class="navigation">
+    <div class="recherche">
+        <input type="Search" placeholder="Rechercher">
         <button><img src="images/loupeRecherche.png"></button>
     </div>
     <div class="dropdown">
-        <button type="button" id="dropdownMenuButton" value="desactive">
-            Dropdown button
-        </button>
+        <button type="button" id="dropdownMenuButton" value="desactive">Filtre</button>
         <div class="dropdown-menu">
-            <input type="checkbox" id="histoire" name="interest" value="histoire"/>
-            <label>Histoire</label>
-            <input type="checkbox" id="depression" name="interest" value="depression"/>
-            <label>Dépression</label>
+            <div class="options">
+                <input type="checkbox" id="histoire" value="histoire"/>
+                <label for="histoire">Histoire</label>
+            </div>
+            <div class="options">
+                <input type="checkbox" id="depression" value="depression"/>
+                <label for="depression">Dépression</label>
+            </div>
+            <div class="options">
+                <input type="checkbox" id="diabete" value="diabete"/>
+                <label for="diabete">Diabète</label>
+            </div>
+            <div class="options">
+                <input type="checkbox" id="troubles" value="troubles"/>
+                <label for="troubles">Troubles</label>
+            </div>
         </div>
     </div>
-</form>
-<div class="docs">
+    <img id="fluxRSS" src="images/fluxRSS.png">
+</div>
+<div class="carrousel">
+    <div class="contenu">
+        <button class="boutonCarrousel" id="btndroit"></button>
+        <button class="boutonCarrousel" id="btngauche"></button>
+    </div>
+</div>
+<div class="documentations">
 
 </div>
 </body>

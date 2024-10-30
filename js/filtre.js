@@ -1,18 +1,29 @@
+import {documents} from "./documents";
+
 const dropdownMenu = document.querySelector('#dropdownMenuButton')
-const checkboxes = document.querySelectorAll('div[class="dropdown-menu"]')
+const checkboxes = document.querySelectorAll('.options')
+
 
 dropdownMenu.addEventListener('click',afficherFiltre)
 
 function afficherFiltre(){
-   if(dropdownMenu.value === "desactive"){
-       dropdownMenu.value = "active"
-       checkboxes.forEach(checkbox => {
-           checkbox.style.visibility = 'hidden';
-       })
-   } else {
-       dropdownMenu.value = "desactive"
-       checkboxes.forEach(checkbox => {
-           checkbox.style.visibility = 'visible';
-       })
-   }
+    if(dropdownMenu.value === "desactive"){
+        dropdownMenu.value = "active"
+        checkboxes.forEach(checkbox => {
+            checkbox.style.visibility = 'hidden';
+        })
+    } else {
+        dropdownMenu.value = "desactive"
+        checkboxes.forEach(checkbox => {
+            checkbox.style.visibility = 'visible';
+        })
+    }
+}
+
+checkboxes.addEventListener('click',selectionDoc())
+
+function selectionDoc() {
+    if (checkboxes.id === documents.etiquettes){
+
+    }
 }
