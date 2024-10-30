@@ -64,6 +64,7 @@ nav {
 .divLogo {
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 .divLogo a {
