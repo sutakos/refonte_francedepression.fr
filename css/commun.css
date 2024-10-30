@@ -11,7 +11,14 @@
 }
 
 body{
-	font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+
+
+main{
+    min-height: 80vh;
+    position: relative;
+    margin : 2em 4em 4em 4em;
 }
 
 /* ----------- BANNIERE ------------- */
@@ -39,7 +46,7 @@ body{
 header {
     position: sticky;
     top: 0;
-    z-index: 10; 
+    z-index: 10;
     background-color: var(--color-white);
 }
 
@@ -49,7 +56,7 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -75,17 +82,17 @@ nav {
     align-items: center;
 }
 
-.navbar ul .section { 
-    margin: 0 4.375rem; 
+.navbar ul .section {
+    margin: 0 4.375rem;
     text-align: center;
-    display: inline; 
+    display: inline;
     position: relative;
     font-size: 1.188em;
 }
 
 .navbar a {
-	color: #506FA5;
-    text-decoration: none;  
+    color: #506FA5;
+    text-decoration: none;
 }
 
 .navbar a:hover {
@@ -93,7 +100,7 @@ nav {
 }
 
 #drop{
-	padding: 1.5em 0 1.563em 0;	
+    padding: 1.5em 0 1.563em 0;
 }
 
 #dropDown{
@@ -105,11 +112,11 @@ nav {
 }
 
 #dropDown li{
-	padding: 0.625em;
+    padding: 0.625em;
 }
 
 #dropDown a{
-	color: black;
+    color: black;
 }
 
 #drop:hover #dropDown{
@@ -118,8 +125,8 @@ nav {
 }
 
 #dropDown li:hover {
-	background-color: #70defe;
-	border-radius: 0.938em;
+    background-color: #70defe;
+    border-radius: 0.938em;
 }
 
 
@@ -131,7 +138,7 @@ nav {
 }
 
 #login:hover{
-	opacity: 0.3; /*transparence*/
+    opacity: 0.3; /*transparence*/
 }
 /*FIN DE LA BARRE DE NAVIGATION*/
 
@@ -139,9 +146,9 @@ nav {
 #retourHaut {
     display: none;
     position: fixed;
-    bottom: 14em; 
-    right: 1.25em;  
-    z-index: 2; 
+    bottom: 14em;
+    right: 1.25em;
+    z-index: 2;
     padding: 1em 1.25em;
     cursor: pointer;
     width: 5em;
@@ -149,7 +156,7 @@ nav {
 }
 
 #retourHaut:hover {
-    opacity: 0.5; 
+    opacity: 0.5;
 }
 /*FIN DU BOUTON*/
 
@@ -173,14 +180,14 @@ footer {
 
 .contenu{
     color: var(--color-white);
-    font-size: 0.875em;                 
-    margin: 0;                           
-    line-height: 1.5;  
+    font-size: 0.875em;
+    margin: 0;
+    line-height: 1.5;
 }
 
 .contenu a{
     text-decoration: none;
-     color: var(--color-white);
+    color: var(--color-white);
 }
 
 footer a:hover{
@@ -188,7 +195,7 @@ footer a:hover{
 }
 
 
-.mention a, 
+.mention a,
 .mention p{
     color: var(--color-white);
     text-align: center;
