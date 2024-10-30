@@ -149,11 +149,18 @@ nav {
 }
 
 .dropD li a {
-    font-size: 18px;
+    font-size: 17px;
     color: #111;
 }
 .dropD li a:hover {
     color: #888787;
+}
+
+#logoBurger{
+    position: absolute;
+    margin-left: 20%;
+    margin-right: 20%;
+    bottom: 2em;
 }
 /*FIN MENU BURGER*/
 
