@@ -11,7 +11,7 @@ function afficheBtn() {
     const defilement = window.scrollY + tailleFenetre; //window.scrollY RENVOIE LA DISTANCE EN PX A LAQUELLE L'UTILISATEUR A FAIT DEFILER LA PAGE DEPUIS LE HAUT
 
     //SI DEFILEMENT >=90% ET LARGEUR DE LA FENETRE >600
-    if (defilement >= hauteurPage * 0.9 && window.innerWidth > 600) {
+    if (defilement >= hauteurPage * 0.73 && window.innerWidth > 600) {
         btn.style.display = "block"; //AFFICHE
     } else {
         btn.style.display = "none"; //CHACHE
