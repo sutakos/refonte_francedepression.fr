@@ -21,27 +21,29 @@
 
 	<body>
 		<header>
-			<!--BARRE DE NAVIGATION-->
 		    <nav>
 				<!-- NAV BURGER -->
 				<div id="mySidenav" class="sidenav">
 					<a id="closeBtn" href="#" class="close">×</a>
 					<ul>
 						<li><a href="index.html">Accueil</a></li>
-						<li><a href="#">L'association</a>
-							<ul id="dropBurger">
+						<li><a href="#" id="toggleDropdown">L'association ⌵</a>
+							<ul id="dropBurger" class="dropD">
 								<li><a href="quiSommesNous.html">Qui sommes-nous</a>
 								<li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a>
 								<li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a>
+								<li><a href="https://francedepression.fr/index.php/l-association/faire-un-don">Faire un don</a></li>
+								<li><a href="https://francedepression.fr/index.php/l-association/creer-une-antenne">Créer une antenne</a></li>
 							</ul>
 
 						</li>
 						<li><a href="Antennes.html">Antennes</a></li>
-						<li><a href="#">Ressources</a></li>
+						<li><a href="ressources.html">Ressources</a></li>
 					</ul>
+					<a href="index.html"><img id="logoBurger" src="images/commun/logoSF.png" width="90px" alt="Logo"></a>
 				</div>
 
-				<a id="openBtn" class="openBtn">
+				<a href="#" id="openBtn" class="openBtn">
 				  	<span class="burger-icon">
 						<span></span>
 						<span></span>
@@ -49,7 +51,7 @@
 				  	</span>
 				</a>
 				<!-- FIN NAV BURGER -->
-
+				<!--BARRE DE NAVIGATION-->
 		        <div class="divLogo">
 		            <a href="index.html"><img src="images/commun/logoSF.png" width="90px" alt="Logo"></a>
 		            <a href="index.html"><span>France Dépression</span></a>
@@ -68,7 +70,7 @@
 		                    </ul>
 		                </li>
 		                <li class="section"><a href="Antennes.html">Antennes</a></li>
-		                <li class="section"><a href="#">Ressources</a></li>
+		                <li class="section"><a href="ressources.html">Ressources</a></li>
 		            </ul>
 		        </div>
 
@@ -78,37 +80,41 @@
 		    </nav>
 		    <!--FIN DE LA BARRE DE NAVIGATION-->
 		</header>
-		<!--MAIN-->
-		<main>
-			<!--BANNIERE-->
-			<section class="ecoute">
-				<img src="images/accueil/ecoute.JPG" class="banniereEcoute"  alt="Bannière d'écoute">
 
-				<div class="appel">
-					<p>Une écoute, un sourire, une force <br><br>
-					   L’association propose une écoute du lundi au samedi entre 10h et 20h et le dimanche de 14h à 20h <br>
-					   <span class="contact-info">
+		<!--BANNIERE-->
+		<section class="ecoute">
+			<img src="images/accueil/ecoute.JPG" class="banniereEcoute" alt="Bannière d'écoute">
+			<div class="appel">
+				<p>Une écoute, un sourire, une force <br><br>
+					L’association propose une écoute du lundi au samedi entre 10h et 20h et le dimanche de 14h à 20h <br>
+					<span class="contact-info">
 							<img src="images/accueil/telephone.PNG" class="logoTel" width="50px">
 					   		<span class="numtel"> 07 84 96 88 28</span>
 					   	</span>
-					</p>
+				</p>
 
+				<div class="btn">
+					<a href="quiSommesNous.html"><button>Association ➜</button></a>
 
-					<div class="btn">
-						<a href="quiSommesNous.html"><button>Association ➜</button></a>
-
-						<a href="#"><button>Ressources ➜</button></a>
-					</div>
+					<a href="#"><button>Ressources ➜</button></a>
+				</div>
+			</div>
+		</section>
+		<!--FIN BANNIERE-->
+		<main>
+			<!--CHEMIN-->
+			<section>
+				<div class="chemin">
+					<a href="index.html">Accueil</a>
 				</div>
 			</section>
-			<!--FIN BANNIERE-->
+			<!--FIN CHEMIN-->
 			<!--CARROUSEL-->
 			<section class="InfoCarrousel">
-			    <a href="index.html">Accueil</a>
 			    <div class="carousel">
 			        <div class="carousel-inner">
 			            <div class="carousel-item">
-			                <img src="images/accueil/partenariat.PNG" alt="Partenariat avec PsychoDon">
+			                <a href="https://www.psychodon.org/" target="_blank"><img src="images/accueil/partenariat.PNG" alt="Partenariat avec PsychoDon"></a>
 			            </div>
 
 			            <div class="carousel-item">
@@ -123,7 +129,7 @@
 			                <a href="https://www.youtube.com/watch?v=n3uA2UPknfE" target="_blank"><img src="images/accueil/maletre.PNG" alt="Reportage"></a>
 			            </div>
 			        </div>
-	        
+
 			        <button class="carousel-control-prev">❮</button>
 			        <button class="carousel-control-next">❯</button>
 			    </div>
@@ -175,8 +181,8 @@
 							<p>Suivez les actualités !</p>
 							<br>
 							<div class="btn">
-								<a href="https://francedepression.fr/index.php/content-page/25-actualite"><button>Voir ➜</button></a>	
-							</div>				
+								<a href="https://francedepression.fr/index.php/content-page/25-actualite"><button>Voir ➜</button></a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -187,7 +193,7 @@
 				<div class="Info">
 					<div class="backColor">
 						<div class="ContenuT">
-							<div class="imageTheatre">	
+							<div class="imageTheatre">
 								<a href="https://www.francebleu.fr/emissions/l-invite-du-8-9/veronique-balme-metteur-en-scene-et-comedienne-4664568"target="_blank"><img src="images/accueil/theatre.PNG" alt="On n’est pas sérieux quand on a 17 ans !"></a>
 							</div>
 
@@ -197,7 +203,7 @@
 								<p class="titre">On n’est pas sérieux quand on a 17 ans !<br>
 	                                <span class="auteur">De Nathalie BECKER</span>
     							</p>
-    
+
     							<p class="resume">
     								<br>
 							        Se construire, grandir. L’insouciance.<br>
@@ -243,11 +249,11 @@
 			<!--FIN ACTION-->
 			<!--BOUTON RETOUR VERS LE HAUT-->
 			<section>
-				<img id="retourHaut" src="images/commun/fleche.png">
+				<img id="retourHaut" src="images/commun/fleche.png" alt="fleche retour">
 			</section>
 			<!--FIN BOUTON RETOUR VERS LE HAUT-->
 		</main>
-		<!--FIN MAIN-->
+
 		<!--FOOTER-->
 		<footer>
 			<div class="divFooter">
@@ -287,7 +293,7 @@
 			</div>
 
 			<div class="mention">
-				<p>| <a href="#">Accès réservé</a> | <a href="#">Mentions légales</a> |</p>
+				<p>| <a href="https://francedepression.fr/index.php/component/users/login?Itemid=139">Accès réservé</a> | <a href="https://francedepression.fr/index.php/content-page/item/66-mentions-legales">Mentions légales</a> |</p>
 			</div>
 		</footer>
 		<!--FIN FOOTER-->
