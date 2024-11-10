@@ -50,7 +50,7 @@ function creerDocLien(elementType, titre,lien) {
 function creerDocImage(elementType, image) {
     const elem = document.createElement(elementType);
     elem.src = image;
-    elem.style.width = '38.5em';
+    elem.style.width = '100%';
     elem.style.height = '18em';
     return elem;
 }
@@ -87,7 +87,7 @@ function ajoutDocument(doc) {
     elemEtiquettes.classList.add('etiquettes');
 
     if(doc.image !== ""){
-        elemDocument.append(elemTitle, elemContent, elemImage ,elemEtiquettes);
+        elemDocument.append(elemTitle, elemImage, elemContent,elemEtiquettes);
     } else {
         elemDocument.append(elemTitle, elemContent,elemEtiquettes);
     }
