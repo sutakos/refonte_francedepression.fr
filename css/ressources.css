@@ -58,7 +58,7 @@
     list-style: none;
 }
 
-li:hover{
+.menu li:hover{
     color: #4c699d;
     font-weight: bold;
     text-decoration: underline;
