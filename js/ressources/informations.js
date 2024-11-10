@@ -6,13 +6,13 @@ export const informations = [
         lien:"https://www.santementale.fr/2021/09/3114-le-numero-national-de-prevention-du-suicide/?fbclid=IwAR3DKYjPvCbZ1Nq-FqbCcKp0C-4eHfmZ2wY_rm_ihPOJwzoNyBFlj06752c"
     },
     {
-        image:"images/professionnel.png",
+        image:"images/ressources/professionnel.png",
         titre:"Trouver un professionnel de santé",
         numero:"",
         lien:"https://annuairesante.ameli.fr/"
     },
     {
-        image:"images/ligne_ecoute.png",
+        image:"images/ressources/ligne_ecoute.png",
         titre:"Lignes d'écoute",
         numero:"09 72 39 40 50",
         lien:""

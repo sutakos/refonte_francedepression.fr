@@ -6,28 +6,28 @@ export const documents = [
             "Cet hiver, installez-vous confortablement et savourez 19 histoires pleines d'amour et de fantaisie pour passer le plus magique des Noëls\n" +
             "À l'approche de Noël, les rues se parent de lumière, les sapins de guirlandes.\n" +
             "Marc vous conte son histoire, Louise rêve du plus beau sapin, Elis-Ann retrouve son premier amour, Lia doit briser les défenses d'un loup solitaire, miss Peggy Love s'occupe de ses patients, Maxime se déguise pour de beaux yeux, Anyssa s’intéresse aux autres, Nora la pédopsychiatre reçoit une étrange visite, Kassie et son fils prennent la fuite, une petite étoile espère la lumière, les voeux de Maëva se réalisent, Alan et Clara n'ont rien oublié, Aaron cherche l'inspiration, une Babouchka fête des retrouvailles, un père veut avoir un sourire sur le visage de ses enfants, Ashley vivra un miracle grâce à une branche de gui, Nami rêve de fêter Noël en famille...",
-        image:"images/A_tes_souhaits.jpg",
+        image:"images/ressources/A_tes_souhaits.jpg",
         etiquettes:["histoires"]
     },
     {
         title:"Dépression et diabète",
         lien:"https://www.federationdesdiabetiques.org/information/risques/depression-diabete",
         content:"",
-        image:"images/depression_et_diabete.jpg",
+        image:"images/ressources/depression_et_diabète.jpg",
         etiquettes:["depression","diabete","angoisse"]
     },
     {
         title:"La dépression",
         lien:"https://igorthiriez.com/",
         content:"Symptôme et sous-types - Dr Igor THIRIEZ, psychiatre",
-        image:"images/depression.png",
+        image:"images/ressources/depression.png",
         etiquettes:["depression"]
     },
     {
         title:"Qu'est-ce que le trouble délirant?",
         lien:"https://www.psychomedia.qc.ca/",
         content:"",
-        image:"images/troublesdelirants.jpg",
+        image:"images/ressources/troublesdélirants.jpg",
         etiquettes:["troubles"]
     },
     {
