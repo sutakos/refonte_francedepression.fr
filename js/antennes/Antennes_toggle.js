@@ -1,9 +1,10 @@
-import { AntennesData } from './AntennesData.js'; // Assurez-vous que le chemin est correct
+import { AntennesData } from './AntennesData.js'; // Récupération des data sur les atennes
 
+// Création des variables qui contient les régions séléectionnables
 const antenneContainer = document.querySelector('.selecRegion');
 const paths = document.querySelectorAll('#map .map_clickable path');
 
-
+// Fonction ajoutant les informations des Antennes
 function ajoutElemAvecTexte(tagName, content, className) {
     const element = document.createElement(tagName);
     element.textContent = content;
@@ -11,6 +12,7 @@ function ajoutElemAvecTexte(tagName, content, className) {
     return element;
 }
 
+// Fonction ajoutant les images dans les informations des Antennes
 function ajoutElemAvecImage(src,className){
     const element = document.createElement("img");
     element.src = src;
@@ -19,27 +21,32 @@ function ajoutElemAvecImage(src,className){
     return element
 }
 
+// Pour tout les paths : Mettre un event click permettant d'afficher les info de l'antennes ET de colorer le path de la couleur hover
 paths.forEach(path => {
     path.addEventListener('click', function() {
         const id = this.id;
         console.log(`Path cliqué: ${id}`);
         const antenne = AntennesData.find(a => a.id === id);
         console.log('Antenne trouvée:', antenne);
+        // Si la région sélectionnée a déjà été sélectionnée alors enlever la sélection
         if (this.classList.contains('selectedRegion')){
             this.classList.remove('selectedRegion')
-            // Vider le contenu actuel en supprimant toutes les balises
+            // Vider les informations actuellement affichée
             while (antenneContainer.firstChild) {
                 antenneContainer.removeChild(antenneContainer.firstChild);
             }
             antenneContainer.appendChild(ajoutElemAvecTexte('p','Sélectionner une région','default'))
-        } else{
+            
+        } 
+        // Sinon la sélectionner
+        else{
 
             // Enlever la selection de tout les paths
             paths.forEach(p => p.classList.remove('selectedRegion'));
 
             this.classList.add('selectedRegion')
 
-            // Vider le contenu actuel en supprimant toutes les balises
+            // Vider les informations actuellement affichée
             while (antenneContainer.firstChild) {
                 antenneContainer.removeChild(antenneContainer.firstChild);
             }
@@ -68,13 +75,14 @@ paths.forEach(path => {
                         contentContainer.appendChild(ajoutElemAvecImage(`./images/Antennes/tel1.svg`));
                     }
 
-                    const content = `${antenne[key]}`; // Formater le contenu
+                    const content = `${antenne[key]}`; // Attribut de l'antenne dans "content"
                     const infoRegion = ajoutElemAvecTexte('p', content, 'content'); // Créer un nouvel élément <p> avec la classe "content"
                     contentContainer.appendChild(infoRegion)
                     antenneContainer.appendChild(contentContainer); // Ajouter au container
                     console.log(`Ajout de l'élément: ${content}`);
                 }
             }
+                // Création du bouton VoirPlus ramenant a la page de l'antenne
                 const VoirPlus = document.createElement('button');
                 VoirPlus.textContent = 'Voir plus';
                 VoirPlus.addEventListener('click', () => {
@@ -90,7 +98,7 @@ paths.forEach(path => {
     });
 });
 
-
+// Fonction permettant de rediriger la page vers les informations de la région sélectionnée doucement 
 function smoothScroll(){
     document.querySelector('.selecRegion').scrollIntoView({
         behavior: 'smooth', block:"center"
