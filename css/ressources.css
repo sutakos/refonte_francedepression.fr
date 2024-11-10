@@ -10,17 +10,12 @@
 }
 
 /* en-tête */
-.en-tête h1 {
+.banniere h1 {
     text-align: center;
-    color: whitesmoke;
-    background-color: #5d76a5;
-    margin: 0;
-    padding: 0;
+    font-family: 'Inter', sans-serif;
 }
-.en-tête img {
+.banniere img {
     width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 /* carrousel */
@@ -36,26 +31,13 @@
     justify-content: center;
 }
 
-.boutonCarrousel {
-    width: 3em;
-    height: 5em;
-    top:30%;
-}
-
-#btndroit {
-    left:0;
-}
-
-#btngauche {
-    right:0;
-}
-
 /* menu */
 .menu {
     display : flex;
     justify-content: space-evenly;
     flex-direction: row;
     list-style: none;
+    padding-top: 2em;
 }
 
 .menu li:hover{
@@ -68,6 +50,7 @@
 .navigation{
     display: flex;
     justify-content: space-evenly;
+    padding-top: 2em;
 }
 
 /* flux RSS */
@@ -87,17 +70,17 @@
 
 /* barre de recherche */
 .recherche img {
-    height: 1em;
-    padding-top: 10%;
+    height: 1.5em;
+    padding-top: 15%;
     align-items: center;
 }
 
 .recherche input {
-    height: 30px;
+    height: 3em;
     background-color: #e9e7ea;
     border: none;
     border-bottom: solid 2px;
-    width:15em;
+    width:20em;
 }
 
 /* filtre */
