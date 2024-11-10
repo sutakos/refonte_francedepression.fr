@@ -10,9 +10,10 @@
 }
 
 /* en-tête */
-.banniere h1 {
-    text-align: center;
-    font-family: 'Inter', sans-serif;
+.banniere a {
+    padding-left: 2em;
+    text-decoration: none;
+    color: #000000;
 }
 .banniere img {
     width: 100%;
@@ -37,7 +38,7 @@
     justify-content: space-evenly;
     flex-direction: row;
     list-style: none;
-    padding-top: 2em;
+    padding-top: 1em;
 }
 
 .menu li:hover{
