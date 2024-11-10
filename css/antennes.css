@@ -1,3 +1,5 @@
+/*---------- CARTE DE FRANCE --------- */
+
 .map{
     display: flex;
     justify-content: space-between;
@@ -8,6 +10,7 @@
     float: left;
 }
 
+/*---------- FIN CARTE DE FRANCE ---------- */
 
 /* ----------- BANNIERE ------------- */
 
@@ -17,29 +20,6 @@
 }
 
 /*------------- FIN BANNIERE -------------*/
-
-/* ----------- COMMUN A TOUS -------------- */
-
-main{
-    min-height: 80vh;
-    position: relative;
-    margin : 2em 8em 8em 8em;
-}
-
-
-.chemin{
-    margin : 0 0 2em 0;
-    text-decoration: none;
-    font-size: large;
-}
-.chemin a{
-    color: black;
-    text-decoration: none;
-}
-
-
-/* ----------- FIN COMMUN A TOUS -------------- */
-
 
 
 /* ------------------- REGION NON CLICKABLE ---------------- */
@@ -77,7 +57,7 @@ main{
 /*---------------- FIN REGION CLICKABLE -----------------*/
 
 
-/*------------- DEBUT OVERLAY ----------------------*/
+/*------------- DEBUT INFO REGION ----------------------*/
 
 
 .selecRegion{
@@ -153,7 +133,8 @@ button:hover {
     transform: translateY(-1px); /* Légère élévation au survol */
 }
 
-/*ACTION*/
+/*------------- FIN INFO REGION ----------------------*/
+/*----------------- ACTION -------------------*/
 .action{
     display: flex;
     justify-content: center;
@@ -204,9 +185,9 @@ button:hover {
     height: auto;
     margin-top: 10px;
 }
-/*FIN DE ACTION*/
+/*-------------- FIN DE ACTION -----------------*/
 
-
+/* ------------------  RESPONSIVE ------------------*/
 @media (max-width: 1310px) {
     .map{
         justify-content: center;
@@ -222,5 +203,5 @@ button:hover {
         height: 47em;
     }
 }
-
+/* ------------------  FIN RESPONSIVE ------------------*/
 
