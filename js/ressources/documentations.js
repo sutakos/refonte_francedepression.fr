@@ -9,6 +9,12 @@ function creerDoc(elementType, content) {
     const elem = document.createElement(elementType)
     elem.textContent = content;
     elem.style.backgroundColor = '#ebe9ec'
+    if(elem.textContent !== ""){
+        elem.style.padding = '1.5%'
+        elem.style.margin = '1%'
+        elem.style.marginTop = '2%'
+        elem.style.marginBottom = '2%'
+    }
     return elem;
 }
 
@@ -37,6 +43,7 @@ function creerDocLien(elementType, titre,lien) {
 
     elem.style.textAlign = 'center';
     elem.style.backgroundColor = '#e8effa';
+    elem.style.margin = '1%'
 
     elem.append(link);
     return elem;
@@ -67,7 +74,7 @@ function creerEtiquettes(elementType, etiquettes) {
         li.textContent = "#" + etiquette;
         li.style.listStyle = 'none';
         li.style.textDecoration = 'none';
-
+        li.style.margin = '1%'
         elem.append(li)
     })
     return elem;
@@ -97,6 +104,7 @@ function ajoutDocument(doc) {
     elemDocument.style.borderRadius = '2%'
     elemDocument.style.paddingLeft = '0.5%'
     elemDocument.style.paddingRight = '0.5%'
+    elemDocument.style.marginBottom = '1%'
     return elemDocument;
 }
 
