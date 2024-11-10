@@ -5,6 +5,7 @@
     --color-yellow: #fffca0;
 }
 
+/*PETITE INTRODUCTION DECRIVANT L'ASSOCIATION*/
 .Intro-Association{
     display: flex;
     justify-content: center;
@@ -22,50 +23,7 @@
     margin : 1em 0 2em 0;
 }
 
-.paragraphe{
-    padding : 2em;
-    font-size: x-large;
-}
-
-blocs{
-    position: relative;
-    bottom: 30px;
-    width: 100%;
-}
-
-
-.bloc{
-    height: 200px;
-    width: 1220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2em auto;
-    text-align: center;
-}
-
-.bloc img {
-    height: 200px;
-    width: 365px;
-}
-
-#bloc1{
-    background: linear-gradient(to right, var(--color-orange), var(--color-white));
-}
-
-#bloc2{
-    background: linear-gradient(to right, var(--color-white), var(--color-blue));
-}
-
-#bloc3{
-    background: linear-gradient(to right, var(--color-yellow), var(--color-white));
-}
-
-#bloc1, #bloc2, #bloc3 {
-    width: 100%;
-    max-width: 1220px; /* Ajustement de la largeur pour mieux répondre aux tailles d'écrans */
-}
-
+/*FONCTIONNEMENT DE L'ASSOCIATION*/
 .blocImg {
     position: relative;
     width: 100%;
@@ -121,6 +79,51 @@ blocs{
 
 .cleared {
     clear: left;
+}
+
+/*VISION DE L'ASSOCIATION*/
+.bloc{
+    height: 200px;
+    width: 1220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.bloc img {
+    height: 200px;
+    width: 365px;
+}
+
+#bloc1{
+    background: linear-gradient(to right, var(--color-orange), var(--color-white));
+}
+
+#bloc2{
+    background: linear-gradient(to right, var(--color-white), var(--color-blue));
+}
+
+#bloc3{
+    background: linear-gradient(to right, var(--color-yellow), var(--color-white));
+}
+
+#bloc1, #bloc2, #bloc3 {
+    width: 100%;
+    max-width: 1220px; /* Ajustement de la largeur pour mieux répondre aux tailles d'écrans */
+}
+
+/*POUR LES SECTIONS PARTIE 1 ET 2*/
+.paragraphe{
+    padding : 2em;
+    font-size: x-large;
+}
+
+blocs{
+    position: relative;
+    bottom: 30px;
+    width: 100%;
 }
 
 .titre{
