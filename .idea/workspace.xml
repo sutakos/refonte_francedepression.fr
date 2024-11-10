@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/commun.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/commun.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/quiSommesNous.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/quiSommesNous.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/commun.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/commun.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiSommesNous.html" beforeDir="false" afterPath="$PROJECT_DIR$/quiSommesNous.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/ressources.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ressources.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ressources/filtre.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ressources/filtre.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources.html" beforeDir="false" afterPath="$PROJECT_DIR$/ressources.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,21 +21,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "irenex30"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;irenex30&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/sutakos/refonte_francedepression.fr.git",
-    "accountId": "16c22ba3-00a9-494b-8067-6b08c8c6f2a5"
+    "accountId": "515f0bc9-c9de-44e3-b8e3-3182cd086364"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2oA2UjQ9zpKiFdKnYnH42OMxONW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,6 +45,10 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -50,8 +56,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PS-242.21829.154" />
-        <option value="bundled-php-predefined-a98d8de5180a-4d9f4c849d09-com.jetbrains.php.sharedIndexes-PS-242.21829.154" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23339.16" />
+        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23339.16" />
       </set>
     </attachedChunks>
   </component>
@@ -64,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730298077025</updated>
       <workItem from="1730298078761" duration="244000" />
+      <workItem from="1731274904638" duration="1248000" />
     </task>
     <servers />
   </component>

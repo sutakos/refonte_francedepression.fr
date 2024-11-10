@@ -6,6 +6,10 @@ const options = document.querySelectorAll('.dropdown-menu')
 const checkboxes = document.querySelectorAll('.options input')
 
 /* bouton filtre */
+options.forEach(option => {
+    option.style.visibility = 'hidden';
+});
+
 dropdownMenu.addEventListener('click',afficherFiltre)
 
 function afficherFiltre(){
