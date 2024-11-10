@@ -1,3 +1,4 @@
+// DATA DE TOUTES LES ANTENNES DISPONIBLES
 export const AntennesData = [
     {
         id: "grand-paris-ile-de-france",
