@@ -1,6 +1,6 @@
 /* responsive */
 @media screen and (max-width: 576px) and (min-width: 400px) {
-    dropdown-menu {
+    .dropdown-menu {
         overflow-x: hidden;
     }
 }
@@ -56,34 +56,40 @@
     height: 1.3em;
     border: solid 2px darkgray;
     border-radius: 10%;
-    opacity: 70%;
 }
 
 #fluxRSS:hover {
-    background-color: #d0d8b5;
+    background-color: #d1ced6;
     opacity: 100%;
 
 }
 
 /* barre de recherche */
 .recherche img {
-    height: 1.5em;
+    height: 2em;
     padding-top: 15%;
     align-items: center;
 }
 
 .recherche input {
-    height: 3em;
     background-color: #e9e7ea;
     border: none;
-    border-bottom: solid 2px;
+    border-bottom: solid 2px #615f62;
     width:20em;
+    padding-left: 1em;
+}
+
+.recherche button {
+    border: 1px solid lightgray;
+}
+
+.recherche {
+    display: flex;
 }
 
 /* filtre */
 #dropdownMenuButton {
     width: 7em;
-    background-color: #b1c1d7;
     border: solid 1px black;
     border-radius: 5%;
     height: 2em;
@@ -99,14 +105,14 @@
     padding-top: 0.3em;
     display: flex;
     flex-direction: column;
-    background-color: #9baec6;
+    background-color: #e9e9ed;
     border-radius: 2%;
     padding-right: 2%;
     position: absolute;
     height: 10em;
     overflow-y: scroll;
     scrollbar-width: thin;
-    scrollbar-color: #0e438b #c7cfe2 ;
+    scrollbar-color: #9c93a9 #dad4dc ;
 
 }
 
