@@ -75,6 +75,12 @@ function creerEtiquettes(elementType, etiquettes) {
         li.style.listStyle = 'none';
         li.style.textDecoration = 'none';
         li.style.margin = '1%'
+        li.style.color = 'white'
+        li.style.backgroundColor = '#5b78ab'
+        li.style.paddingLeft='0.5em'
+        li.style.paddingRight='0.5em'
+        li.style.borderRadius = '5%'
+        li.style.display = 'inline-block';
         elem.append(li)
     })
     return elem;

@@ -1,11 +1,7 @@
 /* responsive */
-@media screen and (max-width: 800px) and (min-width: 400px) {
-    .menu {
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    .documentations {
-
+@media screen and (max-width: 576px) and (min-width: 400px) {
+    dropdown-menu {
+        overflow-x: hidden;
     }
 }
 
@@ -86,8 +82,11 @@
 
 /* filtre */
 #dropdownMenuButton {
-    font-family: "Consolas", serif;
     width: 7em;
+    background-color: #b1c1d7;
+    border: solid 1px black;
+    border-radius: 5%;
+    height: 2em;
 }
 
 #dropdownMenuButton img {
@@ -97,15 +96,17 @@
 }
 
 .dropdown-menu {
+    padding-top: 0.3em;
     display: flex;
     flex-direction: column;
-    background-color: #d5e0bb;
+    background-color: #9baec6;
     border-radius: 2%;
     padding-right: 2%;
     position: absolute;
     height: 10em;
     overflow-y: scroll;
-    scrollbar-color: #a8a25c #e3e1cb ;
+    scrollbar-width: thin;
+    scrollbar-color: #0e438b #c7cfe2 ;
 
 }
 
