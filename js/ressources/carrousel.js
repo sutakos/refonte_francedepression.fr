@@ -30,11 +30,7 @@ function ajoutNumero(info){
 
  elemImage.style.width = '10em'
 
- if(informations.image !== ""){
-  return elemImage
- } else {
-  return null
- }
+ return elemImage
 }
 
 const carrousel = document.querySelector('.contenu')
