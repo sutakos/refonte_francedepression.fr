@@ -7,7 +7,7 @@ import {informations} from "./informations.js";
 function creerImage(image) {
  const elem = document.createElement('img');
  elem.src = image;
- elem.style.width='4em'
+ elem.style.width='5em'
  return elem;
 }
 
@@ -28,6 +28,11 @@ function creerContenu(elementType,contenu) {
 function ajoutNumero(info){
  const elemDocument = document.createElement('div');
  const elemContenu = creerImage(info.image);
+ elemDocument.style.display = 'flex'
+ elemDocument.style.flexDirection = 'row'
+ elemDocument.style.justifyContent = 'center'
+ elemDocument.style.alignItems = 'center'
+
 
  elemDocument.append(elemContenu);
  return elemDocument;
