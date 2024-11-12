@@ -46,7 +46,7 @@ fluxRSS.addEventListener('mouseover', () => {
     document.body.append(elem);
 
     fluxRSS.addEventListener('mouseout', () => {
-        document.body.remove(elem);
+        document.body.removeChild(elem);
     }, { once: true });
 })
 
