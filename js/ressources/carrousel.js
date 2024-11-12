@@ -8,7 +8,11 @@ function creerImage(image) {
  const elem = document.createElement('img');
  elem.src = image;
 
- return elem;
+ if(informations.image !== ""){
+  return elem;
+ } else {
+  return null;
+ }
 }
 
 /**
@@ -26,16 +30,21 @@ function creerContenu(elementType,contenu) {
  * @return HTMLElement
  */
 function ajoutNumero(info){
+ const elem = document.createElement('div')
  const elemImage = creerImage(info.image);
 
+ // si déjà a une image alors ne pas afficher numéro sinon afficher num
+
  elemImage.style.width = '10em'
-
- return elemImage
+ elem.append(elemImage)
+ return elem
 }
 
-const carrousel = document.querySelector('.contenu')
+const container = document.querySelector('.contenu')
 for(const information of informations) {
- carrousel.append(ajoutNumero(information));
+ container.append(ajoutNumero(information));
 }
 
-carrousel.style.display = 'flex'
+container.style.display = 'flex'
+container.style.gap = '5em'
+container.style.paddingTop = '0.5em'
