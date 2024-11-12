@@ -132,7 +132,10 @@
     gap: 10px;
 }
 
+/* boutons de page */
+
 #buttonPage {
+    margin-top: 2em;
     display: flex;
     justify-content: center;
 }
@@ -140,9 +143,19 @@
 #flecheG {
     margin-right: 0.5em;
     margin-left: 0.3em;
+    width: 2em;
 }
 
 #flecheD {
     margin-left: 0.5em;
     margin-right: 0.3em;
+    width: 2em;
+}
+
+#doubleFlecheD {
+    width: 2em;
+}
+
+#doubleFlecheG {
+    width: 2em;
 }

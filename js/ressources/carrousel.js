@@ -7,7 +7,7 @@ import {informations} from "./informations.js";
 function creerImage(image) {
  const elem = document.createElement('img');
  elem.src = image;
- elem.style.width='5em'
+
  return elem;
 }
 
@@ -26,20 +26,20 @@ function creerContenu(elementType,contenu) {
  * @return HTMLElement
  */
 function ajoutNumero(info){
- const elemDocument = document.createElement('div');
- const elemContenu = creerImage(info.image);
- elemDocument.style.display = 'flex'
- elemDocument.style.flexDirection = 'row'
- elemDocument.style.justifyContent = 'center'
- elemDocument.style.alignItems = 'center'
+ const elemImage = creerImage(info.image);
 
+ elemImage.style.width = '10em'
 
- elemDocument.append(elemContenu);
- return elemDocument;
+ if(informations.image !== ""){
+  return elemImage
+ } else {
+  return null
+ }
 }
 
 const carrousel = document.querySelector('.contenu')
-for(const information of informations){
- carrousel.append(ajoutNumero(information))
+for(const information of informations) {
+ carrousel.append(ajoutNumero(information));
 }
 
+carrousel.style.display = 'flex'
