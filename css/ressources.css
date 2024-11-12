@@ -29,6 +29,14 @@
     justify-content: center;
 }
 
+#btndroit {
+    left: 0
+}
+
+#btngauche {
+    right: 0
+}
+
 /* menu */
 .menu {
     display : flex;
@@ -133,7 +141,6 @@
 }
 
 /* boutons de page */
-
 #buttonPage {
     margin-top: 2em;
     display: flex;
