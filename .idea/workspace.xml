@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="Dernière modif - Lucie">
-      <change beforePath="$PROJECT_DIR$/css/ressources.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ressources.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ressources/fluxRSS.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ressources/fluxRSS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/ressources/changementDocu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources.html" beforeDir="false" afterPath="$PROJECT_DIR$/ressources.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +16,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,7 +83,7 @@
       <workItem from="1731362140770" duration="3549000" />
       <workItem from="1731407318876" duration="409000" />
       <workItem from="1731418538861" duration="2911000" />
-      <workItem from="1731446857763" duration="297000" />
+      <workItem from="1731446857763" duration="1430000" />
     </task>
     <task id="LOCAL-00001" summary="Dernière modif - Lucie">
       <option name="closed" value="true" />
@@ -181,7 +189,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731420570096</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Dernière modif - Lucie">
+      <option name="closed" value="true" />
+      <created>1731447197647</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1731447197647</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Dernière modif - Lucie">
+      <option name="closed" value="true" />
+      <created>1731447269373</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1731447269373</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
