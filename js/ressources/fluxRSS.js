@@ -32,15 +32,14 @@ fluxRSS.addEventListener('mouseover', () => {
     const elemMessageTitre = creerMessageTitre('h4', "Flux RSS\n")
     const elemMessage = creerMessage('p', " Souscrire pour être informé(e) des mises à jour!")
     elem.style.position = 'absolute'
-    elem.style.border = '1px solid #8c8a8d'
     elem.style.padding = '0.3em'
     elem.style.borderRadius = '3%'
-    elem.style.backgroundColor = 'white'
+    elem.style.backgroundColor = '#e7e3ec'
 
     elem.append(elemMessageTitre, elemMessage);
 
     const rect = fluxRSS.getBoundingClientRect();
-    elem.style.left = `${rect.right + 10}px`;  // Position à droite de l'image
+    elem.style.left = `${rect.right + 2}px`;  // Position à droite de l'image
     elem.style.top = `${rect.top}px`;          // Aligné en hauteur avec l'image
 
     // Ajoute le conteneur au document

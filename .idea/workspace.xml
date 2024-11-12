@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/ressources.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ressources.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/ressources/fluxRSS.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ressources/fluxRSS.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ressources.html" beforeDir="false" afterPath="$PROJECT_DIR$/ressources.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,7 @@
     &quot;accountId&quot;: &quot;515f0bc9-c9de-44e3-b8e3-3182cd086364&quot;
   }
 }</component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\Program Files\php-8.3.8\php.exe" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -56,8 +58,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23339.16" />
-        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23339.16" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PS-242.21829.154" />
+        <option value="bundled-php-predefined-a98d8de5180a-4d9f4c849d09-com.jetbrains.php.sharedIndexes-PS-242.21829.154" />
       </set>
     </attachedChunks>
   </component>
@@ -73,6 +75,8 @@
       <workItem from="1731274904638" duration="6306000" />
       <workItem from="1731281967480" duration="2169000" />
       <workItem from="1731362140770" duration="3549000" />
+      <workItem from="1731407318876" duration="409000" />
+      <workItem from="1731418538861" duration="1955000" />
     </task>
     <task id="LOCAL-00001" summary="Dernière modif - Lucie">
       <option name="closed" value="true" />
