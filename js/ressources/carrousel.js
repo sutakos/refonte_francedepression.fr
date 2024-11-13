@@ -34,19 +34,14 @@ function creerImage(elementType,image, lien) {
   return link
  }
 }
-/**
- * @param {string} elementType
- * @param {string} image
- * @param {string} lien
- * @return {HTMLElement|HTMLAreaElement|HTMLAnchorElement|HTMLImageElement}
- */
 
 /**
  * @param {string} elementType
  * @param {string} contenu
+ * @param {string} lien
  * @return {HTMLCollection}
  */
-function creerNumero(elementType,contenu) {
+function creerNumero(elementType,contenu,lien) {
  const elem = document.createElement(elementType);
  elem.textContent = contenu;
  const link = document.createElement('a')
