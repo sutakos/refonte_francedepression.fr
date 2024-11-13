@@ -2,6 +2,18 @@ import {informations} from "./informations.js";
 
 /**
  * @param {string} elementType
+ * @param {string} texte
+ * @return {HTMLElement|HTMLAreaElement|HTMLAnchorElement|HTMLImageElement}
+ */
+function creerTexte(elementType, texte) {
+ const elem = document.createElement(elementType)
+ elem.textContent = texte;
+ elem.style.color = 'black'
+ return elem
+}
+
+/**
+ * @param {string} elementType
  * @param {string} image
  * @param {string} lien
  * @return {HTMLElement|HTMLAreaElement|HTMLAnchorElement|HTMLImageElement}
@@ -34,7 +46,7 @@ function creerImage(elementType,image, lien) {
  * @param {string} contenu
  * @return {HTMLCollection}
  */
-function creerContenu(elementType,contenu) {
+function creerTitre(elementType,contenu) {
  const elem = document.createElement(elementType);
  elem.textContent = contenu;
  const link = document.createElement('a')
@@ -51,10 +63,11 @@ function creerContenu(elementType,contenu) {
 function ajoutNumero(info){
  const elem = document.createElement('div')
  const elemImage = creerImage('img',info.image,info.lien);
+ const elemTexte = creerTexte('h3',info.titre)
 
  // si déjà a une image alors ne pas afficher numéro sinon afficher num
 
- elem.append(elemImage)
+ elem.append(elemImage, elemTexte)
  return elem
 }
 
@@ -64,4 +77,6 @@ for(const information of informations) {
 }
 
 container.style.display = 'flex'
+container.style.justifyContent = 'center'
 container.style.gap = '5em'
+container.style.marginTop = '1.5em'
