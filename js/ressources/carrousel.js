@@ -43,12 +43,23 @@ function creerImage(elementType,image, lien) {
  */
 function creerNumero(elementType,contenu,lien) {
  const elem = document.createElement(elementType);
- elem.textContent = contenu;
+ elem.style.textAlign = 'center'
+ elem.style.backgroundColor = '#ebe9ec'
+ elem.style.paddingTop = '1.8em'
+ elem.style.paddingBottom = '1.8em'
+ elem.style.borderRadius = '50%'
+ elem.style.width = '5.5em'
+ elem.style.marginLeft = '2em'
+
  const link = document.createElement('a')
+ link.textContent = contenu;
  link.href = lien;
  link.target = '_blank'
 
- link.append(elem)
+ link.style.color = 'black'
+
+
+ elem.append(link)
  return elem;
 }
 /**
@@ -59,14 +70,13 @@ function ajoutNumero(info){
  const elem = document.createElement('div')
  const elemImage = creerImage('img',info.image,info.lien);
  const elemTexte = creerTexte('h3',info.titre)
- const elemNumero = creerNumero('h2', info.numero)
+ const elemNumero = creerNumero('h1', info.numero, info.lien)
 
  // si déjà a une image alors ne pas afficher numéro sinon afficher num
- if(info.image !== ""){
+ if(info.image === ''){
   elem.append(elemNumero, elemTexte)
- } else {
-  elem.append(elemImage,elemTexte)
  }
+  elem.append(elemImage,elemTexte)
  return elem
 }
 
