@@ -1,19 +1,33 @@
 import {informations} from "./informations.js";
 
 /**
+ * @param {string} elementType
  * @param {string} image
- * @return {HTMLImageElement}
+ * @param {string} lien
+ * @return {HTMLElement|HTMLAreaElement|HTMLAnchorElement|HTMLImageElement}
  */
-function creerImage(image) {
- const elem = document.createElement('img');
+function creerImage(elementType,image, lien) {
+ const elem = document.createElement(elementType);
  elem.src = image;
+ elem.style.width = '10em'
 
- if(informations.image !== ""){
-  return elem;
+ const link = document.createElement('a')
+ link.href = lien;
+ link.target = '_blank'
+
+ if (informations.image === "") {
+  return null
  } else {
-  return null;
+  link.append(elem);
+  return link
  }
 }
+/**
+ * @param {string} elementType
+ * @param {string} image
+ * @param {string} lien
+ * @return {HTMLElement|HTMLAreaElement|HTMLAnchorElement|HTMLImageElement}
+ */
 
 /**
  * @param {string} elementType
@@ -23,6 +37,11 @@ function creerImage(image) {
 function creerContenu(elementType,contenu) {
  const elem = document.createElement(elementType);
  elem.textContent = contenu;
+ const link = document.createElement('a')
+ link.href = lien;
+ link.target = '_blank'
+
+ link.append(elem)
  return elem;
 }
 /**
@@ -31,11 +50,10 @@ function creerContenu(elementType,contenu) {
  */
 function ajoutNumero(info){
  const elem = document.createElement('div')
- const elemImage = creerImage(info.image);
+ const elemImage = creerImage('img',info.image,info.lien);
 
  // si déjà a une image alors ne pas afficher numéro sinon afficher num
 
- elemImage.style.width = '10em'
  elem.append(elemImage)
  return elem
 }
@@ -47,4 +65,3 @@ for(const information of informations) {
 
 container.style.display = 'flex'
 container.style.gap = '5em'
-container.style.paddingTop = '0.5em'

@@ -118,3 +118,4 @@ const section = document.querySelector('.documentations');
 for (const document of documents) {
     section.append(ajoutDocument(document));
 }
+
