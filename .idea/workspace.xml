@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/ressources.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ressources.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/ressources/carrousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ressources/carrousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ressources.html" beforeDir="false" afterPath="$PROJECT_DIR$/ressources.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,7 @@
       <workItem from="1731407318876" duration="409000" />
       <workItem from="1731418538861" duration="2911000" />
       <workItem from="1731446857763" duration="5188000" />
-      <workItem from="1731516823320" duration="11030000" />
+      <workItem from="1731516823320" duration="11984000" />
     </task>
     <task id="LOCAL-00001" summary="Dernière modif - Lucie">
       <option name="closed" value="true" />
@@ -271,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731537098784</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="modif carrousel - Lucie">
+      <option name="closed" value="true" />
+      <created>1731538223562</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1731538223562</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

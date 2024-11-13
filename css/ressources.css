@@ -1,7 +1,9 @@
 /* responsive */
-@media screen and (max-width: 576px) and (min-width: 400px) {
-    .dropdown-menu {
-        overflow-x: hidden;
+@media screen and (max-width: 730px) {
+    .navigation {
+        display: flex;
+        flex-direction: column;
+        gap:1em;
     }
 }
 

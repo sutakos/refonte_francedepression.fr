@@ -46,7 +46,7 @@ function creerImage(elementType,image, lien) {
  * @param {string} contenu
  * @return {HTMLCollection}
  */
-function creerTitre(elementType,contenu) {
+function creerNumero(elementType,contenu) {
  const elem = document.createElement(elementType);
  elem.textContent = contenu;
  const link = document.createElement('a')
@@ -64,10 +64,14 @@ function ajoutNumero(info){
  const elem = document.createElement('div')
  const elemImage = creerImage('img',info.image,info.lien);
  const elemTexte = creerTexte('h3',info.titre)
+ const elemNumero = creerNumero('h2', info.numero)
 
  // si déjà a une image alors ne pas afficher numéro sinon afficher num
-
- elem.append(elemImage, elemTexte)
+ if(info.image !== ""){
+  elem.append(elemNumero, elemTexte)
+ } else {
+  elem.append(elemImage,elemTexte)
+ }
  return elem
 }
 
