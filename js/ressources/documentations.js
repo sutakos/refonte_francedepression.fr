@@ -58,7 +58,7 @@ function creerDocImage(elementType, image) {
     const elem = document.createElement(elementType);
     elem.src = image;
     elem.style.width = '100%';
-    elem.style.height = '18em';
+    elem.style.height = '20em';
     return elem;
 }
 
@@ -114,8 +114,22 @@ function ajoutDocument(doc) {
     return elemDocument;
 }
 
+let nbrDoc = 1
+const boutonD = document.querySelector('#flecheD')
+
 const section = document.querySelector('.documentations');
 for (const document of documents) {
-    section.append(ajoutDocument(document));
-}
+    if(nbrDoc <= 6){
+        section.append(ajoutDocument(document));
+        nbrDoc++; // incrémente après chaque ajout
+    } else {
+        break
+    }
 
+    boutonD.addEventListener('click',()=> {
+        if (nbrDoc > 6) {
+            section.append(ajoutDocument(document));
+        }
+    })
+
+}

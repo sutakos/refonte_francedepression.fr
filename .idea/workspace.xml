@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="modif carrousel - Lucie">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/ressources.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/ressources.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ressources/carrousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ressources/carrousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/ressources/informations.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ressources/informations.js" afterDir="false" />
-    </list>
+    <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="modif carrousel - Lucie" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,6 +81,7 @@
       <workItem from="1731418538861" duration="2911000" />
       <workItem from="1731446857763" duration="5188000" />
       <workItem from="1731516823320" duration="13197000" />
+      <workItem from="1731617679671" duration="6293000" />
     </task>
     <task id="LOCAL-00001" summary="Dernière modif - Lucie">
       <option name="closed" value="true" />

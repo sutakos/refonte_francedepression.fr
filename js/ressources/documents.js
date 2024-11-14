@@ -12,7 +12,7 @@ export const documents = [
     {
         title:"Dépression et diabète",
         lien:"https://www.federationdesdiabetiques.org/information/risques/depression-diabete",
-        content:"",
+        content:"Les personnes atteintes de diabète sont plus touchées que les personnes non diabétiques par les troubles psychologiques comme la dépression, l'angoisse ou la fatigue nerveuse. Ces sentiments peuvent aller de la simple baisse de moral passagère sans gravité à la dépression plus lourde.Des données récentes viennent également démontrer que la présence d’une dépression sur un terrain prédisposant au diabète augmente le risque de développer un diabète de type 2.",
         image:"images/ressources/depression_et_diabète.jpg",
         etiquettes:["depression","diabete","angoisse"]
     },
@@ -37,6 +37,27 @@ export const documents = [
             "- Un dossier spécial \n" + " Réinventer la psychiatrie : quelles solutions ?\n : retour sur le colloque du 18 octobre organisé par notre Fondation au Conseil économique social et environnemental avec les personnalités qui font et vivent la psychiatrie en France.\n" +
             "- L'étude sur le rôle de la protéine HRV dans la survenue des troubles psychiatriques : une avancée majeure dans la distinction de sous-groupes de personnes atteintes de troubles psychiatriques.\n" +
             "- Un entretien avec Dominique de Saint Mars : auteure de littérature pour la jeunesse et scénariste de bande dessinée (Max et Lili), elle s’investit dans la déstigmatisation des maladies psychiatriques auprès des enfants et des parents.",
+        image:"",
+        etiquettes:["nouvelles"]
+    },
+    {
+        title:"Dépression résistante",
+        lien:"https://www.lamontagne.fr/clermont-ferrand-63000/actualites/depression-resistante-une-alternative-non-medicamenteuse-proposee-au-centre-hospitalier-sainte-marie-a-clermont-ferrand_13922641/",
+        content:"Une alternative non médicamenteuse proposée au Centre hospitalier Sainte-Marie à Clermont-Ferrand",
+        image:"images/ressources/depression_resistante.jpg",
+        etiquettes:["depression"]
+    },
+    {
+        title:"Dépression saisonnière",
+        lien:"https://www.ledauphine.com/magazine-lifestyle/2021/10/27/depression-saisonniere-comment-garder-le-moral-cet-automne?fbclid=IwAR0o5-bcRo9TlS-k3CY0Yo7Ifl0sFuVYnh7SZydIARQ6s-RXznYVJML-bl4",
+        content:"comment garder le moral cet automne",
+        image:"",
+        etiquettes:["depression"]
+    },
+    {
+        title:"Mon Sherpa",
+        lien:"https://apps.apple.com/app/id1471975438?mt=8",
+        content:"chatbot de soutien psychologique, accompagne les Français gratuitement pendant les fêtes de fin d’année ",
         image:"",
         etiquettes:["nouvelles"]
     }

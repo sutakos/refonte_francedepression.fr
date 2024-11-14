@@ -142,8 +142,9 @@
 
 /* documents */
 .documentations {
-    grid-template-columns: 1em 1em;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
 }
 
 /* boutons de page */
