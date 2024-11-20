@@ -115,6 +115,7 @@ function ajoutDocument(doc) {
 }
 
 let nbrDoc = 1
+let groupDoc = 0
 const boutonD = document.querySelector('#flecheD')
 
 const section = document.querySelector('.documentations');
@@ -126,10 +127,10 @@ for (const document of documents) {
         break
     }
 
-    boutonD.addEventListener('click',()=> {
-        if (nbrDoc > 6) {
-            section.append(ajoutDocument(document));
-        }
-    })
+    boutonD.addEventListener('click',afficheDocuments)
+    
+    function afficheDocuments() {
+
+    }
 
 }
