@@ -185,6 +185,32 @@ nav {
 }
 /*FIN DU BOUTON*/
 
+/*BOUTON QUESTIONNAIRE*/
+.form {
+    position: relative;
+}
+
+.btnForm{
+    position: sticky;
+    top: 10px;
+}
+
+.btnForm button{
+    padding: 0.7rem 1rem;
+    font-size: 1em;
+    background-color: #f95c40;
+    color: var(--color-white);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer; /*Change le curseur*/
+}
+
+.btnForm button:hover {
+    background-color: #af0505;
+    transition: background-color 0.3s ease; /*Temps de la transition*/
+}
+/*FIN BOUTON QUESTIONNAIRE*/
+
 /*FOOTER*/
 footer {
     background-color: #A3C7C2;
