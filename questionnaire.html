@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+
+<html lang="fr">
+    <head>
+        <title>Accueil</title>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--CSS COMMUN AUX PAGES-->
+        <link rel="stylesheet" type="text/css" href="css/commun.css">
+
+        <!--FONT-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <!--FONT Josefin-->
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <!--SCRIPT JS-->
+        <script src="js/accueil.js" type="module"></script>
+        <script src="js/commun.js" type="module"></script>
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <!-- NAV BURGER -->
+                <div id="mySidenav" class="sidenav">
+                    <a id="closeBtn" href="#" class="close">×</a>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="#" id="toggleDropdown">L'association ⌵</a>
+                            <ul id="dropBurger" class="dropD">
+                                <li><a href="quiSommesNous.html">Qui sommes-nous</a>
+                                <li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a>
+                                <li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a>
+                                <li><a href="https://francedepression.fr/index.php/l-association/faire-un-don">Faire un don</a></li>
+                                <li><a href="https://francedepression.fr/index.php/l-association/creer-une-antenne">Créer une antenne</a></li>
+                            </ul>
+
+                        </li>
+                        <li><a href="Antennes.html">Antennes</a></li>
+                        <li><a href="ressources.html">Ressources</a></li>
+                    </ul>
+                    <a href="index.html"><img id="logoBurger" src="images/commun/logoSF.png" width="90px" alt="Logo"></a>
+                </div>
+
+                <a href="#" id="openBtn" class="openBtn">
+                            <span class="burger-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                </a>
+                <!-- FIN NAV BURGER -->
+                <!--BARRE DE NAVIGATION-->
+                <div class="divLogo">
+                    <a href="index.html"><img src="images/commun/logoSF.png" width="90px" alt="Logo"></a>
+                    <a href="index.html"><span>France Dépression</span></a>
+                </div>
+
+                <div class="navbar">
+                    <ul>
+                        <li class="section"><a href="index.html">Accueil</a></li>
+                        <li class="section" id="drop"><a href="#">L'association  ⌵</a>
+                            <ul id="dropDown">
+                                <li><a href="quiSommesNous.html">Qui sommes-nous</a></li>
+                                <li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a></li>
+                                <li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a></li>
+                                <li><a href="https://francedepression.fr/index.php/l-association/faire-un-don">Faire un don</a></li>
+                                <li><a href="https://francedepression.fr/index.php/l-association/creer-une-antenne">Créer une antenne</a></li>
+                            </ul>
+                        </li>
+                        <li class="section"><a href="Antennes.html">Antennes</a></li>
+                        <li class="section"><a href="ressources.html">Ressources</a></li>
+                    </ul>
+                </div>
+
+                <div id="login">
+                    <a href="https://francedepression.fr/index.php/component/users/login?Itemid=139"><img src="images/commun/connexion.PNG" width="60px" alt="Connexion"></a>
+                </div>
+            </nav>
+            <!--FIN DE LA BARRE DE NAVIGATION-->
+        </header>
+
+        <main>
+            <div class="Questionnaire">
+                <h1>Questionnaire</h1>
+                <p>Nous voulons mieux comprendre vos besoins pour vous offrir des ressources utiles.
+                    Vos réponses sont anonymes et nous aideront à créer un espace sûr et accueillant pour tous.
+                </p>
+                <h2>Êtes-vous adhérent ?</h2>
+                <form id="questionForm" action="form.php" method="POST">
+                    <label>
+                        <input type="radio" name="adherent" value="oui" required> Oui
+                    </label>
+                    <label>
+                        <input type="radio" name="adherent" value="non" required> Non
+                    </label>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </main>
+
+        <!--FOOTER-->
+        <footer>
+            <div class="divFooter">
+
+                <div class="divLogo">
+                    <a href="index.html"><img src="images/commun/logoSF.PNG" width="150px" alt="Logo"></a>
+                </div>
+
+                <div>
+                    <span class="titre-footer">Vous êtes concerné(e) ?</br></br></span>
+                    <p class="contenu">	Ecoute patients : 07 84 96 88 28 </br></br>
+                        France Dépression – 10 rue de Norvège </br> – 54500 Vandœuvre
+                    </p></div>
+
+                <div>
+                    <span class="titre-footer">À propos</br></br></span>
+                    <p class="contenu"><a href="quiSommesNous.html">L'association</a></br></br>
+                        <a href="Antennes.html">Antennes</a>
+                    </p>
+                </div>
+
+                <div>
+                    <span class="titre-footer">Contacts</br></br></span>
+                    <p class="contenu">06 03 89 34 47 </br></br>
+                        contact@francedepression.fr 
+                    </p>
+                </div>
+
+                <div>
+                    <span class="titre-footer">Réseaux</br></br></span>
+                    <p class="contenu">
+                        <a  href="facebook.com/francedepression">
+                            <img src="images/commun/logoFacebook.png" alt="Facebook" width="50px">
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="mention">
+                <p>| <a href="https://francedepression.fr/index.php/component/users/login?Itemid=139">Accès réservé</a> | <a href="https://francedepression.fr/index.php/content-page/item/66-mentions-legales">Mentions légales</a> |</p>
+            </div>
+        </footer>
+        <!--FIN FOOTER-->
+    </body>
+</html>
