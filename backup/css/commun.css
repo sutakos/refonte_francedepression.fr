@@ -1,0 +1,376 @@
+:root {
+    --color-white: white;
+    --color-black: black;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box /*gere les depassements et les dimensions des elements*/
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+
+main{
+    min-height: 80vh;
+    position: relative;
+    margin : 2em 4em 4em 4em;
+}
+
+/* ----------- BANNIERE ------------- */
+
+.banniere{
+    width: 100%;
+    height: 150px;
+}
+
+/*------------- FIN BANNIERE -------------*/
+
+/* CHEMIN */
+.chemin{
+    margin : 0 0 2em 0;
+    text-decoration: none;
+    font-size: large;
+}
+.chemin a{
+    color: black;
+    text-decoration: none;
+}
+/* FIN CHEMIN */
+
+/* BARRE DE NAVIGATION */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--color-white);
+}
+
+.sidenav{
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*PARTIE GAUCHE*/
+.divLogo {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.divLogo a {
+    text-decoration: none;
+}
+
+.divLogo span {
+    font-size: 0.938em;
+    color: #506FA5;
+}
+
+/*PARTIE CENTRE*/
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul .section {
+    margin: 0 4.375rem;
+    text-align: center;
+    display: inline;
+    position: relative;
+    font-size: 1.188em;
+}
+
+.navbar a {
+    color: #506FA5;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #bcd6f7;
+}
+
+#drop{
+    padding: 1.5em 0 1.563em 0;
+}
+
+#dropDown{
+    display: none;
+    position: absolute;
+    background-color: #bfe8f4;
+    border-radius: 0.938em;
+    margin-top: 1.563em;
+}
+
+#dropDown li{
+    padding: 0.625em;
+}
+
+#dropDown a{
+    color: black;
+}
+
+#drop:hover #dropDown{
+    display: block;
+    white-space: nowrap;
+}
+
+#dropDown li:hover {
+    background-color: #70defe;
+    border-radius: 0.938em;
+}
+
+
+/*PARTIE DROITE*/
+#login {
+    margin-right: 6.25em;
+    display: flex;
+    align-items: center;
+}
+
+#login:hover{
+    opacity: 0.3; /*transparence*/
+}
+
+/*MENU BURGER*/
+/* Sous-menu caché par défaut */
+.dropD {
+    display: none;
+    margin-left: 20px;
+}
+
+.dropD li a {
+    font-size: 17px;
+    color: #111;
+}
+.dropD li a:hover {
+    color: #888787;
+}
+
+#logoBurger{
+    position: absolute;
+    margin-left: 20%;
+    margin-right: 20%;
+    bottom: 2em;
+}
+/*FIN MENU BURGER*/
+
+/*FIN DE LA BARRE DE NAVIGATION*/
+
+/*BOUTON POUR REMONTER*/
+#retourHaut {
+    display: none;
+    position: fixed;
+    bottom: 14em;
+    right: 1.25em;
+    z-index: 2;
+    padding: 1em 1.25em;
+    cursor: pointer;
+    width: 5em;
+
+}
+
+#retourHaut:hover {
+    opacity: 0.5;
+}
+/*FIN DU BOUTON*/
+
+/*BOUTON QUESTIONNAIRE*/
+.form {
+    position: relative;
+}
+
+.btnForm{
+    position: sticky;
+    top: 10px;
+}
+
+.btnForm button{
+    padding: 0.7rem 1rem;
+    font-size: 1em;
+    background-color: #f95c40;
+    color: var(--color-white);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer; /*Change le curseur*/
+}
+
+.btnForm button:hover {
+    background-color: #af0505;
+    transition: background-color 0.3s ease; /*Temps de la transition*/
+}
+/*FIN BOUTON QUESTIONNAIRE*/
+
+/*FOOTER*/
+footer {
+    background-color: #A3C7C2;
+    width: 100%;
+}
+
+.divFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5em 6em;
+}
+
+.titre-footer{
+    color: #6C6873;
+    font-size: 1.25em;
+}
+
+.contenu{
+    color: var(--color-white);
+    font-size: 0.875em;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.contenu a{
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+
+.mention a,
+.mention p{
+    color: var(--color-white);
+    text-align: center;
+    text-decoration: none;
+}
+/*FIN DU FOOTER*/
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 1457px)
+{
+    .navbar{
+        display: none;
+    }
+    /* Sidenav menu */
+    .sidenav {
+        order: -1;
+        display: block;
+        height: 100%;
+        width: 250px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -250px;
+        background-color: #f0f0f2;
+        padding-top: 60px;
+        transition: left 0.5s ease;
+    }
+
+    /* Sidenav menu links */
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #708090;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+        color: #b0c4de;
+    }
+
+    .sidenav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Active class */
+    .sidenav.active {
+        left: 0;
+    }
+
+    /* Close btn */
+    .sidenav .close {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+    }
+
+    .openBtn{
+        margin-left: 4em;
+    }
+
+    /* Icône burger */
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px
+    }
+
+}
+
+@media (min-width: 601px) and (max-width: 1310px) {
+    /*FOOTER*/
+    .divFooter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    .divLogo img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .titre-footer {
+        font-size: 1em;
+    }
+
+    .contenu{
+        font-size: 0.85em;
+    }
+    /*FIN FOOTER*/
+}
+
+/*FORMAT PETIT ECRAN*/
+@media (max-width: 600px) {
+    main{
+        margin: 1em 2em 2em 2em;
+    }
+    
+    /*FOOTER*/
+    .divFooter {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center; /*Aligne le texte au centre*/
+        width: 100%; /*Assure qu'il prenne toute la largeur de l’écran */
+    }
+
+    .divLogo img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .contenu, .titre-footer {
+        font-size: 1em;
+    }
+    /*FIN FOOTER*/
+}
+/*FIN FORMAT PETIT ECRAN*/
+/*FIN MEDIA QUERIES*/
