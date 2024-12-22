@@ -1,0 +1,10 @@
+{
+    "name": "grp202_1/php",
+    "autoload": {
+        "psr-4": {
+            "Grp2021\\Php\\": "app/"
+        }
+    },
+
+    "require": {}
+}
