@@ -1,0 +1,160 @@
+:root {
+    --color-gray: #888787;
+    --color-orange: #ffd07b;
+    --color-blue: #9ac7ff;
+    --color-yellow: #fffca0;
+}
+
+/*PETITE INTRODUCTION DECRIVANT L'ASSOCIATION*/
+.Intro-Association{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: large;
+    text-align: center;
+}
+
+.Intro-Association #phraseIntro{
+    color: var(--color-gray);
+}
+
+.Intro-Association img{
+    margin : 1em 0 2em 0;
+}
+
+/*FONCTIONNEMENT DE L'ASSOCIATION*/
+.blocImg {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Ajustement de la largeur pour mieux répondre aux tailles d'écrans */
+    height: 380px;
+    overflow: hidden;
+    margin : 1em;
+}
+
+.blocImg img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease;
+}
+
+.blocTxt {
+    position: absolute;
+    color: var(--color-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.05;
+    transition: opacity 0.5s ease;
+    text-align: center;
+}
+
+.blocImg:hover img {
+    opacity: 0.6;
+}
+
+.blocImg:hover .blocTxt {
+    opacity: 1;
+}
+
+/* Alternance gauche/droite avec Flexbox */
+.blocImg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#agir {
+    float: left;
+}
+
+#appel\ aux\ pro {
+    float: right;
+}
+
+#représente {
+    float: left;
+}
+
+.cleared {
+    clear: left;
+}
+
+/*VISION DE L'ASSOCIATION*/
+.bloc{
+    height: 200px;
+    width: 1220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.bloc img {
+    height: 200px;
+    width: 365px;
+}
+
+#bloc1{
+    background: linear-gradient(to right, var(--color-orange), var(--color-white));
+}
+
+#bloc2{
+    background: linear-gradient(to right, var(--color-white), var(--color-blue));
+}
+
+#bloc3{
+    background: linear-gradient(to right, var(--color-yellow), var(--color-white));
+}
+
+#bloc1, #bloc2, #bloc3 {
+    width: 100%;
+    max-width: 1220px; /* Ajustement de la largeur pour mieux répondre aux tailles d'écrans */
+}
+
+/*POUR LES SECTIONS PARTIE 1 ET 2*/
+.paragraphe{
+    padding : 2em;
+    font-size: x-large;
+}
+
+blocs{
+    position: relative;
+    bottom: 30px;
+    width: 100%;
+}
+
+.titre{
+    font-size: large;
+    margin: 2em;
+}
+
+/*RESPONSIVE*/
+/*FORMAT MOYEN ECRAN*/
+@media (min-width: 795px) and (max-width: 1000px){
+    .paragraphe{
+        font-size: medium;
+    }
+}
+/*FIN FORMAT MOYEN ECRAN*/
+/*FORMAT PETIT ECRAN*/
+@media (max-width: 794px){
+    .banniere{
+        height: 100px;
+    }
+    .bloc img{
+        display: none;
+    }
+    .paragraphe{
+        font-size: medium;
+    }
+}
+/*FIN FORMAT PETIT ECRAN*/
+
+@media (max-width: 600px){
+    .banniere {
+        height: 80px;
+    }
+}
