@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
-<html lang="fr">
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
     <head>
         <title>Accueil</title>
         <meta charset = "utf-8">
@@ -80,20 +80,103 @@
             <!--FIN DE LA BARRE DE NAVIGATION-->
         </header>
 
+        <div class="banniere">
+            <img src="images/commun/Bannière.png" alt="Bannière" class="banniere" alt="Bannière">
+        </div>
+
         <main>
+            <!--CHEMIN-->
+            <section>
+                <div class="chemin">
+                    <a href="questionnaire.html">Formulaire</a>
+                </div>
+            </section>
             <div class="Questionnaire">
-                <h1>Questionnaire</h1>
                 <p>Nous voulons mieux comprendre vos besoins pour vous offrir des ressources utiles.
                     Vos réponses sont anonymes et nous aideront à créer un espace sûr et accueillant pour tous.
                 </p>
-                <h2>Êtes-vous adhérent ?</h2>
+
                 <form id="questionForm" action="form.php" method="POST">
+                    <h2>Quel est votre activité scolaire ou professionnel ?</h2>
+                    <label for="activitechoisi"></label>
+                        <select name="statut" id="activitechoisi">
+                            <option value="semo">Scolarité en milieu ordinaire</option>
+                            <option value="sdsen">Scolarité en dispositif spécialisé de l'Éducation Nationale</option>
+                            <option value="ef">Instruction en Famille</option>
+                            <option value="sems">Scolarité dans un établissement médico-social (IME,IMPRO...)</option>
+                            <option value="fp">Formation professionnelle</option>
+                            <option value="es">Études supérieures</option>
+                            <option value="apmo">Activités professionnelle en milieu ordinaire</option>
+                            <option value="apmp">Activités professionnelle en milieu protégé (ESAT,Entreprises adaptée...)</option>
+                            <option value="saasop">Sans aucune activité scolaire ou professionnelle</option>
+                            <option value="a">Autres</option>
+                        </select>
+
+                    <br>
+
+                    <h2>Quel âge avez-vous ?</h2>
                     <label>
-                        <input type="radio" name="adherent" value="oui" required> Oui
+                        <input type="number" min="0" name="age">
+                    </label>
+                    <br>
+
+                    <h2>Votre sexe</h2>
+                    <label>
+                        <input type="radio" name="sexe" value="M" required> M
                     </label>
                     <label>
-                        <input type="radio" name="adherent" value="non" required> Non
+                        <input type="radio" name="sexe" value="F" required> F
                     </label>
+                    <br>
+
+                    <h2>Où habitez vous ?</h2>
+                    <label for="regionchoisi"></label>
+                        <select name="nom" id="regionchoisi">
+                            <option value="idf" >Île-de-France</option>
+                            <option value="hm" >Haute-Normandie</option>
+                            <option value="l" >Lorraine</option>
+                            <option value="pt" >Poitou-Charentes</option>
+                            <option value="ra" >Rhône-Alpes</option>
+                            <option value="paca" >Provence-Alpes-Côte d'Azur</option>
+                            <option value="als" >Alsace</option>
+                            <option value="aqui" >Aquitaine</option>
+                            <option value="auv" >Auvergne</option>
+                            <option value="bourg" >Bourgogne</option>
+                            <option value="bret" >Bretagne</option>
+                            <option value="cen" >Centre</option>
+                            <option value="ca" >Champagne-Ardenne</option>
+                            <option value="cor" >Corse</option>
+                            <option value="fc" >Franche-Comté</option>
+                            <option value="lr" >Languedoc-Roussillon</option>
+                            <option value="mp" >Midi-Pyrénées</option>
+                            <option value="lim" >Limousin</option>
+                            <option value="npdc" >Nord-Pas-de-Calais</option>
+                            <option value="bn" >Basse-Normandie</option>
+                            <option value="pl" >Pays de la Loire</option>
+                            <option value="p" >Picardie</option>
+                        </select>
+                    <br>
+
+                    <h2>Vous êtes vous sentie seul(e) ces dernières semaines?</h2>
+                    <label>
+                        <input type="radio" name="triste" value="oui" required> Oui
+                    </label>
+                    <label>
+                        <input type="radio" name="triste" value="non" required> Non
+                    </label>
+                    <br>
+
+                    <h2>À quelle fréquence utilisez-vous le site</h2>
+                    <label>
+                        <input type="text" name="frequence">
+                    </label>
+                    <br>
+
+                    <h2>Si vous pouviez améliorer notre site, que serait-ce ?</h2>
+                    <label>
+                        <input type="text" name="amelioration">
+                    </label>
+                    <br>
 
                     <button type="submit">Envoyer</button>
                 </form>
