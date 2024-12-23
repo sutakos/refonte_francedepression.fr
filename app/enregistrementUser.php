@@ -22,7 +22,7 @@ class enregistrementUser {
     }
 
     /**
-     * @throws enregistrementException
+     * @throws AuthentificationException
      */
     public function connexion(string $email, string $password) : int {
         try{

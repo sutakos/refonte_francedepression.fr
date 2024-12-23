@@ -2,15 +2,14 @@
 
 use Grp202_1\php\Messages;
 
+$title="Questionnaire";
+$page="questionnaire";
 require_once 'header.php';
 
 if(!isset($_SESSION['user_id'])) {
     Messages::goTo("Veuillez vous connectez pour répondre au formulaire","warning","connexion.php");
     exit;
 }
-
-$title="Questionnaire";
-$page="questionnaire";
 
 
 ?>
