@@ -1,6 +1,6 @@
 <?php
 
-namespace Grp202_1\php;
+namespace Grp2021\app;
 class Messages {
 
   /**
@@ -12,8 +12,7 @@ class Messages {
    */
   public static function goTo(string $message, string $type, string $page) : void {
     $_SESSION['flash'][$type] = $message;
-    $baseurl = $_SERVER['HTTP_ORIGIN'];
-    header("Location: $baseurl/$page");
+    header("Location: /$page");
   }
 
   /**

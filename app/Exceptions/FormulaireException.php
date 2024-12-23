@@ -1,6 +1,6 @@
 <?php
 namespace Grp2021\app\Exceptions;
-class AuthentificationException extends \Exception {
+class FormulaireException extends \Exception {
     protected string $type;
 
     public function __construct($message,$type) {

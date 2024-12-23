@@ -1,8 +1,8 @@
 {
-    "name": "grp202_1/php",
+    "name": "grp202_1/app",
     "autoload": {
         "psr-4": {
-            "Grp2021\\Php\\": "app/"
+            "Grp2021\\app\\": "app/"
         }
     },
 

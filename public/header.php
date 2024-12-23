@@ -1,5 +1,7 @@
 <?php
 session_start();
+require_once __DIR__ . "/../vendor/autoload.php";
+
 ?>
 
 <!DOCTYPE HTML>
@@ -58,7 +60,7 @@ session_start();
             <div class="navbar">
                 <ul>
                     <li class="section"><a href="index.php">Accueil</a></li>
-                    <li class="section" id="drop"><a href="#">L'association  ⌵</a>
+                    <li class="section" id="drop"><a href="quiSommesNous.php">L'association  ⌵</a>
                         <ul id="dropDown">
                             <li><a href="quiSommesNous.php">Qui sommes-nous</a></li>
                             <li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a></li>
@@ -73,7 +75,7 @@ session_start();
             </div>
 
             <div id="login">
-                <a href="https://francedepression.fr/index.php/component/users/login?Itemid=139"><img src="images/commun/connexion.PNG" width="60px" alt="Connexion"></a>
+                <a href="connexion.php"><img src="images/commun/connexion.PNG" width="60px" alt="Connexion"></a>
             </div>
         </nav>
         <!--FIN DE LA BARRE DE NAVIGATION-->
@@ -81,8 +83,5 @@ session_start();
 
 
 <?php
-
-use Grp202_1\php\Messages;
-
 require_once '../app/Messages.php';
 Messages::messageFlash();

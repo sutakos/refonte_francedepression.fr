@@ -1,20 +1,23 @@
 <?php
-namespace Grp202_1\php;
+namespace Grp2021\app;
 class user
 {
+    /* INSCRIPTION */
     private string $email;
     private string $mdp;
+    /* FORMULAIRE */
+    private string $statut;
     private int $age;
     private string $sexe;
     private bool $triste;
 
-    public function __construct(string $email, string $mdp,int $age, string $sexe, bool $triste )
+    public function __construct(string $email, string $mdp)
     {
         $this->mdp = $mdp;
-        $this->triste = $triste;
-        $this->sexe = $sexe;
-        $this->age = $age;
         $this->email = $email;
+
+    }
+    public function setFormulaire(string $statut,int $age,string $sexe,string $region,bool $triste,string $frequence){
 
     }
     public function getEmail(): string{

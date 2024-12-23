@@ -1,21 +1,23 @@
 <?php
 
-namespace Grp202_1\php;
+namespace Grp2021\app;
 
-class BddConnect
+use Grp2021\app\Exceptions\BddConnectException;
+
+class bddConnect
 {
     public \PDO $pdo;
-    protected ?string $host = null;
-    protected ?string $login = null;
-    protected ?string $password = null;
-    protected ?string $dbname = null;
+    protected string $host;
+    protected string $login;
+    protected string $password;
+    protected string $dbname;
 
     public function __construct()
     {
         $this->host = 'localhost';
-        $this->login = 'lucas.lablanche';
-        $this->password = '58d50fba';
-        $this->dbname = 'grp202_1';
+        $this->login = 'root';
+        $this->password = 'root';
+        $this->dbname = 'users';
     }
 
     /**

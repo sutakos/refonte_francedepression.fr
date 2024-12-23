@@ -1,6 +1,6 @@
 <?php
 
-namespace Grp202_1\php;
+namespace Grp2021\app\Exceptions;
 class BddConnectException extends \Exception {
   protected string $type;
 

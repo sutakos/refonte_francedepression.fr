@@ -1,5 +1,7 @@
 <?php
-namespace Grp202_1\php;
+namespace Grp2021\app\php;
+
+use Grp2021\app\userRepository;
 
 $bdd = new bddConnect();
 
