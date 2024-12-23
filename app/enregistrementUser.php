@@ -1,8 +1,15 @@
 <?php
 namespace Grp202_1\php;
+use PDO;
+use PDOException;
+
 class enregistrementUser {
 
-    public function __construct(private IUserRepository $userRepository) { }
+    private IUserRepository $userRepository;
+
+    public function __construct(IUserRepository $userRepository) {
+        $this->userRepository = $userRepository;
+    }
 
     /**
      * @throws enregistrementException
@@ -17,8 +24,26 @@ class enregistrementUser {
     /**
      * @throws enregistrementException
      */
-    public function authenticate(string $email, string $password) : string {
-        // TODO : À compléter
+    public function connexion(string $email, string $password) : int {
+        try{
+            $user = $this->userRepository->getUserByEmail($email);
+            if($user === null){
+                throw new AuthentificationException("Email inexistant","warning");
+            }
+            if(!password_verify($password, $user->password)){
+                throw new AuthentificationException("Mot de passe incorrect","warning");
+            }
+            // Requête pour récupérer l'ID de l'utilisateur
+            $stmt = $pdo->prepare("SELECT id FROM users WHERE email = :email");
+            $stmt->bindParam(':email', $email);
+            $stmt->execute();
+            $user_id = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $user_id["id"];
+
+        }
+        catch(AuthentificationException $e){
+            Messages::goTo($e->getMessage(),$e->getType(),"connexion.php");
+        }
     }
 
 }

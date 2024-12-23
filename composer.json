@@ -6,5 +6,7 @@
         }
     },
 
-    "require": {}
+    "require": {
+      "ext-pdo": "*"
+    }
 }

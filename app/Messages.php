@@ -10,7 +10,7 @@ class Messages {
    * @param string $page Nom du fichier public de destination
    * @return void
    */
-  public static function goHome(string $message, string $type, string $page) : void {
+  public static function goTo(string $message, string $type, string $page) : void {
     $_SESSION['flash'][$type] = $message;
     $baseurl = $_SERVER['HTTP_ORIGIN'];
     header("Location: $baseurl/$page");

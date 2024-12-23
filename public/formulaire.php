@@ -1,11 +1,5 @@
 <?php
 namespace Grp202_1\php;
-if(!session_id())
-    session_start();
-
-
-
-
 
 $bdd = new bddConnect();
 
@@ -13,7 +7,7 @@ try {
     $pdo = $bdd->connexion();
 }
 catch(BddConnectException $e) {
-    Messages::goHome(
+    Messages::goTo(
         $e->getMessage(),
         $e->getType(),
         "index.php");
@@ -42,6 +36,6 @@ else {
     $type = "danger";
 }
 
-Messages::goHome($message, $type, "index.php");
+Messages::goTo($message, $type, "index.php");
 
 require_once 'footer.php';
