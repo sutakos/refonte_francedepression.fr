@@ -13,6 +13,8 @@ if(!isset($_SESSION['user_id'])) {
 
 
 ?>
+    <!--CCS QUE DE L'Accueil-->
+    <link rel="stylesheet" type="text/css" href="css/questionnaire.css">
 <main>
         <!--CHEMIN-->
         <section>
