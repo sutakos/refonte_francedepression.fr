@@ -126,10 +126,10 @@ if(!isset($_SESSION['user_id'])) {
                 </label>
                 <br><br>
 
-                <button type="submit">Envoyer</button>
-            </form>
-        </div>
-    </main>
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</main>
 
 <?php
 require_once 'footer.php';

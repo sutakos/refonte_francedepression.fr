@@ -6,7 +6,6 @@ require 'header.php';
 ?>
     <link rel="stylesheet" href="css/antennes.css">
     <script src="js/antennes/Antennes_toggle.js" type="module"></script>
-</head>
 <body>
 
 
