@@ -1,4 +1,7 @@
 <?php
+
+use Grp2021\app\Messages;
+
 session_start();
 require_once __DIR__ . "/../vendor/autoload.php";
 
@@ -20,6 +23,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <!--SCRIPT JS-->
     <script src="js/commun.js" type="module"></script>
+    <script src="js/<?php if(isset($page)){echo $page;}?>.js" type="module"></script>
     <header>
         <nav>
             <!-- NAV BURGER -->
@@ -80,8 +84,8 @@ require_once __DIR__ . "/../vendor/autoload.php";
         </nav>
         <!--FIN DE LA BARRE DE NAVIGATION-->
     </header>
+</head>
 
 
 <?php
-require_once '../app/Messages.php';
 Messages::messageFlash();

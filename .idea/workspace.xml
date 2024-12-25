@@ -4,36 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="Mise en commentaire des bug de connexion.php">
-      <change beforePath="$PROJECT_DIR$/.idea/refonte_francedepression.fr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/refonte_francedepression.fr.iml" afterDir="false" />
+    <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="rattrapage erreur commit">
+      <change afterPath="$PROJECT_DIR$/app/IFormRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/enregistrementForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/formRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/formulaire.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/AuthentificationException.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/AuthentificationException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/BddConnectException.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/BddConnectException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/enregistrementException.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/FormulaireException.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/IUserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/IUserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Messages.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Messages.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/bddConnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/bddConnect.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/enregistrementUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/enregistrementUser.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/user.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/userRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/userRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/connexion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/formulaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/formulaire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formulaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/RECUPQUESTIONNAIRE.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/inscription.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/questionnaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/questionnaire.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +40,13 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="43471f5729b1c5667f1e70bb21acd0aac29e3c7d" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -86,7 +78,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "701c15f2",
     "last_opened_file_path": "C:/Users/jedil/OneDrive/Documents/IUT/francedepressionProjet/app/Exceptions",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -106,6 +98,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jedil\OneDrive\Documents\IUT\francedepressionProjet\app\Exceptions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jedil\OneDrive\Documents\IUT\francedepressionProjet\app" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -377,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734962847967</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="rattrapage erreur commit">
+      <option name="closed" value="true" />
+      <created>1735155327517</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1735155327517</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,6 +403,7 @@
     <MESSAGE value="modif documentations.js - Lucie" />
     <MESSAGE value="Ajout page connexion/inscription et quelques trucs en php" />
     <MESSAGE value="Mise en commentaire des bug de connexion.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en commentaire des bug de connexion.php" />
+    <MESSAGE value="rattrapage erreur commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="rattrapage erreur commit" />
   </component>
 </project>
