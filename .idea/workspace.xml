@@ -5,9 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="rattrapage erreur commit">
+      <change afterPath="$PROJECT_DIR$/app/IFormRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/enregistrementForm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/formRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/formulaire.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/ressources.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/ressources.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/IUserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/IUserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/bddConnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/bddConnect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/enregistrementUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/enregistrementUser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/userRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/userRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/formulaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/RECUPQUESTIONNAIRE.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/inscription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/questionnaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/questionnaire.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +78,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "e459fb31",
+    "git-widget-placeholder": "701c15f2",
     "last_opened_file_path": "C:/Users/jedil/OneDrive/Documents/IUT/francedepressionProjet/app/Exceptions",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -86,6 +98,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jedil\OneDrive\Documents\IUT\francedepressionProjet\app\Exceptions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jedil\OneDrive\Documents\IUT\francedepressionProjet\app" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -357,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734962847967</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="rattrapage erreur commit">
+      <option name="closed" value="true" />
+      <created>1735155327517</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1735155327517</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

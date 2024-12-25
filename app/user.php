@@ -5,11 +5,7 @@ class user
     /* INSCRIPTION */
     private string $email;
     private string $mdp;
-    /* FORMULAIRE */
-    private string $statut;
-    private int $age;
-    private string $sexe;
-    private bool $triste;
+
 
     public function __construct(string $email, string $mdp)
     {
@@ -17,9 +13,7 @@ class user
         $this->email = $email;
 
     }
-    public function setFormulaire(string $statut,int $age,string $sexe,string $region,bool $triste,string $frequence){
 
-    }
     public function getEmail(): string{
         return $this->email;
     }
@@ -35,5 +29,5 @@ class user
     public function getTriste(): bool{
         return $this->triste;
     }
-    
+
 }

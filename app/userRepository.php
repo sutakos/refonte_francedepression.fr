@@ -20,12 +20,12 @@ class userRepository implements IUserRepository
     public function saveUser(User $user): bool
     {
         //requete SQL pour insérer les données
-        $requete = "INSERT INTO users (email, password)  VALUES (:email,:password)";
+        $requete = "INSERT INTO users (email, mdp)  VALUES (:email,:mdp)";
         $requeteprepare = $this->dbConnexion->prepare($requete);
         $email = $user->getEmail();
         $requeteprepare->bindParam(':email', $email);
         $mdp = $user->getMdp();
-        $requeteprepare->bindParam(':password', $mdp);
+        $requeteprepare->bindParam(':mdp', $mdp);
         $requeteprepare->execute();
         return true;
     }
@@ -51,4 +51,18 @@ class userRepository implements IUserRepository
 
 
     }
+
+    public function findIfAdmin(string $email): bool
+    {
+        $requete = "SELECT * FROM admin WHERE email = :email";
+        $requetepreparer = $this->dbConnexion->prepare($requete);
+        $requetepreparer->bindParam(':email', $email);
+        $requetepreparer->execute();
+        $data = $requetepreparer->fetch(PDO::FETCH_ASSOC);
+        if (!$data){
+            return false;
+        }
+        return true;
+    }
+
 }

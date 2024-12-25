@@ -1,14 +1,63 @@
 <?php
 
+use Grp2021\app\enregistrementForm;
+use Grp2021\app\Exceptions\FormulaireException;
+use Grp2021\app\formRepository;
 use Grp2021\app\Messages;
 
 $title="Questionnaire";
 $page="questionnaire";
 require_once 'header.php';
 
-if(!isset($_SESSION['user_id'])) {
+if(isset($_SESSION['user_id'])) {
     Messages::goTo("Veuillez vous connectez pour répondre au formulaire","warning","connexion.php");
     exit;
+}
+if(isset($_SESSION['role']) && $_SESSION['role'] == "admin") {
+    header("Location: admin.php");
+    exit;
+}
+
+// Connexion à la base de données
+$bdd = new bddConnect();
+try {
+    $pdo = $bdd->connexion();
+} catch (BddConnectException $e) {
+    Messages::goTo($e->getMessage(), $e->getType(), "index.php");
+    exit;
+}
+
+$trousseau = new formRepository($pdo);
+$repForm = new enregistrementForm($trousseau);
+
+// Vérifiez si le formulaire a été soumis
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    try{
+        // Vérification des réponses obligatoires
+        if(empty($_POST['statut']) || empty($_POST['age']) || empty($_POST['sexe']) || empty($_POST['region']) || empty($_POST['triste'])) {
+            throw new FormulaireException("Les questions avec des * devant sont obligatoires.","warning");
+        }
+        //Enregistrement des réponses
+        if($repForm->enregistrement($_SESSION['user_id'],$_POST['statut'],$_POST['age'], $_POST['sexe'],$_POST['region'] ,$_POST['triste'], $_POST['frequence'], $_POST['amelioration'])){
+            $message = "Enregistrement du questionnaire réussie. Merci de votre temps.";
+            $type ="success";
+            $redirection="index.php";
+        }
+
+    } catch (FormulaireException $e){
+        $message = $e->getMessage();
+        $type = $e->getType();
+        $redirection = "inscription.php";
+    }
+    Messages::goTo($message, $type, $redirection);
+    // Récupérer les données du formulaire
+    $statut = $_POST['statut'] ?? null;
+    $age = $_POST['age'] ?? null;
+    $sexe = $_POST['sexe'] ?? null;
+    $nom = $_POST['nom'] ?? null;
+    $triste = $_POST['triste'] ?? null;
+    $frequency = $_POST['frequency'] ?? null;
+    $amelioration = $_POST['amelioration'] ?? null;
 }
 
 
@@ -50,9 +99,9 @@ if(!isset($_SESSION['user_id'])) {
                 </select>
                 <br><br>
 
-                <h2>Quel âge avez-vous ?</h2>
+                <h2><span>*</span>Quel âge avez-vous ?</h2>
                 <label>
-                    <input type="number" min="0" name="age">
+                    <input type="number" name="age" min="0" name="age">
                 </label>
                 <br><br>
 
@@ -68,7 +117,7 @@ if(!isset($_SESSION['user_id'])) {
                 <h2><span>*</span>Où habitez vous ?</h2>
                 <p>Si vous ne souhaitez pas répondre, mettez la réponse "Ne souhaite pas répondre"</p>
                 <label for="regionchoisi"></label>
-                <select name="nom" id="regionchoisi">
+                <select name="region" id="regionchoisi">
                     <option value="nspr">Ne souhaite pas répondre</option>
                     <option value="idf" >Île-de-France</option>
                     <option value="hm" >Haute-Normandie</option>

@@ -12,33 +12,24 @@ $title = "Inscription";
 $page = "inscription";
 require_once 'header.php';
 
-/**
- * @return enregistrementUser|void
- */
-function getAuth()
-{
-
-    // Si utilisateur déjà connecté
-    if (isset($_SESSION['user_id'])) {
-        Messages::goTo("Vous êtes déjà connecté", "warning", "index.php");
-        exit;
-    }
-
-// Connexion à la base de données
-    $bdd = new bddConnect();
-    try {
-        $pdo = $bdd->connexion();
-    } catch (BddConnectException $e) {
-        Messages::goTo($e->getMessage(), $e->getType(), "index.php");
-        exit;
-    }
-
-    $trousseau = new UserRepository($pdo);
-    return new enregistrementUser($trousseau);
+// Si utilisateur déjà connecté
+if (isset($_SESSION['user_id'])) {
+    Messages::goTo("Vous êtes déjà connecté", "warning", "index.php");
+    exit;
 }
 
+// Connexion à la base de données
+$bdd = new bddConnect();
+try {
+    $pdo = $bdd->connexion();
+} catch (BddConnectException $e) {
+    Messages::goTo($e->getMessage(), $e->getType(), "index.php");
+    exit;
+}
 
-$auth = getAuth();
+$trousseau = new UserRepository($pdo);
+$auth= new enregistrementUser($trousseau);
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {

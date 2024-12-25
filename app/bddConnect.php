@@ -17,7 +17,7 @@ class bddConnect
         $this->host = 'localhost';
         $this->login = 'root';
         $this->password = 'root';
-        $this->dbname = 'users';
+        $this->dbname = 'grp202_1';
     }
 
     /**
