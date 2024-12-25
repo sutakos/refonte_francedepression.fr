@@ -3,11 +3,6 @@ $title ="Accueil";
 $page="accueil";
 require_once 'header.php';
 ?>
-<!--JS DE L'ACCUEIL-->
-<script src="js/accueil.js" type="module"></script>
-<!--CCS QUE DE L'Accueil-->
-<link rel="stylesheet" type="text/css" href="css/accueil.css">
-</head>
 <body>
 <!--BANNIERE-->
 <section class="ecoute">

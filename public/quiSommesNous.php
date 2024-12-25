@@ -3,9 +3,6 @@ $title='Qui sommes-nous ?';
 $page="quiSommesNous";
 require 'header.php';
 ?>
-    <!--CCS QUE DE QUI SOMMES NOUS-->
-<link rel="stylesheet" type="text/css" href="css/quiSommesNous.css">
-</header>
 <body>
 
 <div class="banniere">

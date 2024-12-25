@@ -3,7 +3,11 @@ $title="Ressources";
 $page="ressources";
 require_once 'header.php';
 ?>
-
+<script src="js/ressources/documentations.js" type="module"></script>
+<script src="js/ressources/filtre.js" type="module"></script>
+<script src="js/ressources/fluxRSS.js" type="module"></script>
+<script src="js/ressources/carrousel.js" type="module"></script>
+<script src="js/ressources/changementDocu.js" type="module"></script>
 <body>
 <div class="banniere">
     <img src="images/commun/Bannière.png" alt="Bannière" class="banniere">
