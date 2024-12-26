@@ -16,7 +16,7 @@ class enregistrementUser {
      */
     public function inscription(string $email, string $mdp, string $confirm_mdp) : bool {
         try {
-            if ($email !== $confirm_mdp) {
+            if ($mdp !== $confirm_mdp) {
                 throw new AuthentificationException("Les mots de passe ne correspondent pas.", "warning");
             }
             // Vérifier si l'utilisateur existe déjà
@@ -40,9 +40,9 @@ class enregistrementUser {
         try{
             $user = $this->userRepository->findUserByEmail($email);
             if($user === null){
-                throw new AuthentificationException("Email inexistant","warning");
+                throw new AuthentificationException("Vous n'êtes pas encore inscrit","warning");
             }
-            if(!password_verify($mdp, $user->getMdp())){
+            if(password_verify($mdp, $user->getMdp())){
                 throw new AuthentificationException("Mot de passe incorrect","warning");
             }
             // Requête pour récupérer l'ID de l'utilisateur
@@ -60,20 +60,12 @@ class enregistrementUser {
     }
 
     /**
-     * @throws AuthentificationException
      */
-    public function checkRole(int $userid) : ?int {
-        try{
-            $estAdmin = $this->userRepository->findIfAdmin($email);
+    public function checkRole(int $userid) : ?string {
+            $estAdmin = $this->userRepository->findIfAdmin($userid);
             if($estAdmin)
                 return "admin";
             return "user";
-
-        }
-        catch(AuthentificationException $e){
-            Messages::goTo($e->getMessage(),$e->getType(),"connexion.php");
-        }
-        return null;
     }
 
 

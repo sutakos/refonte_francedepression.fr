@@ -14,7 +14,7 @@ require_once 'header.php';
 
 // Si utilisateur déjà connecté
 if (isset($_SESSION['user_id'])) {
-    Messages::goTo("Vous êtes déjà connecté", "warning", "index.php");
+    Messages::goTo("Vous êtes déjà connecté", "success", "index.php");
     exit;
 }
 

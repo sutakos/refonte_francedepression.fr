@@ -1,6 +1,8 @@
 <?php
 
+use Grp2021\app\bddConnect;
 use Grp2021\app\enregistrementForm;
+use Grp2021\app\Exceptions\BddConnectException;
 use Grp2021\app\Exceptions\FormulaireException;
 use Grp2021\app\formRepository;
 use Grp2021\app\Messages;
@@ -9,15 +11,23 @@ $title="Questionnaire";
 $page="questionnaire";
 require_once 'header.php';
 
-if(isset($_SESSION['user_id'])) {
-    Messages::goTo("Veuillez vous connectez pour répondre au formulaire","warning","connexion.php");
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+if(!isset($_SESSION['user_id'])) {
+    Messages::goTo("Veuillez vous connectez pour répondre au formulaire","info","connexion.php");
     exit;
 }
 if(isset($_SESSION['role']) && $_SESSION['role'] == "admin") {
-    header("Location: admin.php");
-    exit;
+    echo <<<HTML
+          <div class='alert alert-info alert-dismissible fade show' role='alert'>
+          Si vous voulez voir les graphiques, merci de cliquer sur votre profil.
+          <button class="alert-close" onclick="this.parentElement.style.display='none';">&times;</button>
+          </div>
+          HTML;
 }
-
 // Connexion à la base de données
 $bdd = new bddConnect();
 try {
@@ -37,9 +47,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if(empty($_POST['statut']) || empty($_POST['age']) || empty($_POST['sexe']) || empty($_POST['region']) || empty($_POST['triste'])) {
             throw new FormulaireException("Les questions avec des * devant sont obligatoires.","warning");
         }
+        if(isset($_POST['frequency']))
+            $frequence = (int)$_POST['frequency'];
+        else $frequence = -1;
+        $triste = $_POST['triste'] === "oui" ? 1 : 0;
         //Enregistrement des réponses
-        if($repForm->enregistrement($_SESSION['user_id'],$_POST['statut'],$_POST['age'], $_POST['sexe'],$_POST['region'] ,$_POST['triste'], $_POST['frequence'], $_POST['amelioration'])){
+        if($repForm->enregistrement($_SESSION['user_id'],$_POST['statut'],$_POST['age'], $_POST['sexe'],$_POST['region'] ,$triste, $frequence, $_POST['amelioration'])){
             $message = "Enregistrement du questionnaire réussie. Merci de votre temps.";
+            $message ="VOUS AVEZ SELECTIONNE: ".$_POST['frequency'];
             $type ="success";
             $redirection="index.php";
         }
@@ -47,23 +62,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } catch (FormulaireException $e){
         $message = $e->getMessage();
         $type = $e->getType();
-        $redirection = "inscription.php";
+        $redirection = "questionnaire.php";
     }
     Messages::goTo($message, $type, $redirection);
-    // Récupérer les données du formulaire
-    $statut = $_POST['statut'] ?? null;
-    $age = $_POST['age'] ?? null;
-    $sexe = $_POST['sexe'] ?? null;
-    $nom = $_POST['nom'] ?? null;
-    $triste = $_POST['triste'] ?? null;
-    $frequency = $_POST['frequency'] ?? null;
-    $amelioration = $_POST['amelioration'] ?? null;
 }
 
 
 ?>
-    <!--CCS QUE DE L'Accueil-->
-    <link rel="stylesheet" type="text/css" href="css/questionnaire.css">
 <main>
         <!--CHEMIN-->
         <section>
@@ -82,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </p>
             <br>
 
-            <form id="questionForm" action="form.php" method="POST">
+            <form id="questionForm" action="" method="POST">
                 <h2><span>*</span>Quel est votre activité scolaire ou professionnel ?</h2>
                 <p>Si vous ne souhaitez pas répondre, mettez la réponse "Ne souhaite pas répondre"</p>
                 <label for="activitechoisi"></label>
@@ -157,16 +162,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <h2>À quelle fréquence utilisez-vous le site</h2>
                 <div class="container">
-                    <label class="label-text">Pas beaucoup</label>
-                    <input type="radio" name="frequency" id="not-often">
-                    <label for="not-often"></label>
-                    <input type="radio" name="frequency" id="sometimes">
+                    <input type="radio" name="frequency" id="not-often" value="1">
+                    <label for="not-often">Pas beaucoup</label>
+                    <input type="radio" name="frequency" id="sometimes" value="2">
                     <label for="sometimes"></label>
-                    <input type="radio" name="frequency" id="often">
+                    <input type="radio" name="frequency" id="often" value="3">
                     <label for="often"></label>
-                    <input type="radio" name="frequency" id="very-often">
+                    <input type="radio" name="frequency" id="very-often" value="4">
                     <label for="very-often"></label>
-                    <input type="radio" name="frequency" id="always">
+                    <input type="radio" name="frequency" id="always" value="5">
                     <label for="always">Beaucoup</label>
                 </div>
                 <br><br>

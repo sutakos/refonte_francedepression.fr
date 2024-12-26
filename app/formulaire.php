@@ -10,10 +10,10 @@ class formulaire
     private int $age;
     private string $sexe;
     private string $region;
-    private bool $triste;
+    private int $triste;
     private int $frequence;
     private string $amelioration;
-    public function __construct(int $user_id,string $statut,int $age,string $sexe,string $region,bool $triste,string $frequence,string $amelioration){
+    public function __construct(int $user_id,string $statut,int $age,string $sexe,string $region,int $triste,string $frequence,string $amelioration){
         $this->user_id = $user_id;
         $this->statut = $statut;
         $this->age = $age;
@@ -39,7 +39,7 @@ class formulaire
     public function getRegion(): string{
         return $this->region;
     }
-    public function getTriste(): bool{
+    public function getTriste(): int{
         return $this->triste;
     }
     public function getFrequence(): int{

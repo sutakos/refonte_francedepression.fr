@@ -20,15 +20,25 @@ class formRepository implements IFormRepository
     public function saveForm(formulaire $form): bool
     {
         //requete SQL pour insérer les données
-        $requete = "INSERT INTO formulaire (user_id,statut,age,sexe,triste,frequence,amelioration)  VALUES (:user_id,:statut,:age,:sexe,:triste,:frequence,:amelioration)";
+        $requete = "INSERT INTO formulaire (user_id,statut,age,sexe,region,triste,frequence,amelioration)  VALUES (:user_id,:statut,:age,:sexe,:region,:triste,:frequence,:amelioration)";
         $requeteprepare = $this->dbConnexion->prepare($requete);
-        $requeteprepare->bindValue(':user_id', $form->getUserId());
-        $requeteprepare->bindValue(':statut', $form->getStatut());
-        $requeteprepare->bindValue(':age', $form->getAge());
-        $requeteprepare->bindValue(':sexe', $form->getSexe());
-        $requeteprepare->bindValue(':triste', $form->getTriste());
-        $requeteprepare->bindValue(':frequence', $form->getFrequence());
-        $requeteprepare->bindValue(':amelioration', $form->getAmelioration());
+        $userId = $form->getUserId();
+        $requeteprepare->bindParam(':user_id', $userId);
+        $statut = $form->getStatut();
+        $requeteprepare->bindParam(':statut', $statut);
+        $age = $form->getAge();
+        $requeteprepare->bindParam(':age', $age);
+        $sexe = $form->getSexe();
+        $requeteprepare->bindParam(':sexe', $sexe);
+        $region = $form->getRegion();
+        $requeteprepare->bindParam(':region', $region);
+        $triste = $form->getTriste();
+        var_dump($triste);
+        $requeteprepare->bindParam(':triste',$triste);
+        $frequence = $form->getFrequence();
+        $requeteprepare->bindParam(':frequence', $frequence);
+        $amelioration = $form->getAmelioration();
+        $requeteprepare->bindParam(':amelioration', $amelioration);
         $requeteprepare->execute();
         return true;
     }
@@ -50,7 +60,7 @@ class formRepository implements IFormRepository
         if (!$data){
             return null;
         }
-        return new formulaire($data['statut'],$data['age'], $data['sexe'],$data['region'] ,$data['triste'], $data['frequence'], $data['amelioration']);
+        return new formulaire($id,$data['statut'],$data['age'], $data['sexe'],$data['region'] ,$data['triste'], $data['frequence'], $data['amelioration']);
 
 
     }

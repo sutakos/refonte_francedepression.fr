@@ -20,14 +20,5 @@ class user
     public function getMdp(): string{
         return $this->mdp;
     }
-    public function getAge(): int{
-        return $this->age;
-    }
-    public function getSexe(): string{
-        return $this->sexe;
-    }
-    public function getTriste(): bool{
-        return $this->triste;
-    }
 
 }

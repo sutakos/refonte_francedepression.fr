@@ -1,0 +1,59 @@
+/* Base styles for the alert box */
+.alert {
+
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+}
+
+/* Success alert */
+.alert-success {
+    background-color: rgba(76, 175, 80, 0.4); /* Green */
+    border: 1px solid rgba(56, 142, 60, 0.5);
+}
+
+/* Error alert */
+.alert-error {
+    background-color: rgba(244, 67, 54, 0.4); /* Red */
+    border: 1px solid rgba(211, 47, 47, 0.5);
+}
+
+/* Warning alert */
+.alert-warning {
+    background-color: rgba(255, 152, 0, 0.4); /* Orange */
+    border: 1px solid rgba(245, 124, 0, 0.5);
+}
+
+/* Info alert */
+.alert-info {
+    background-color: rgba(33, 150, 243, 0.4); /* Blue */
+    border: 1px solid rgba(25, 118, 210, 0.5);
+}
+
+/* Alert message text */
+.alert-message {
+    color: #000000;
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+
+/* Close button styles */
+.alert-close {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+
+.alert-close:hover {
+    color: #232323;
+}

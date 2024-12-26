@@ -23,7 +23,10 @@ function retourneHaut() {
     window.scrollTo({ top: 0, behavior: 'smooth' }); 
 }
 
-document.querySelector('#retourHaut').addEventListener('click',retourneHaut);
+if(document.querySelector('#retourHaut')!== null){
+    document.querySelector('#retourHaut').addEventListener('click',retourneHaut);
+}
+
 
 /* RESPONSIVE */
 

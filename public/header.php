@@ -13,9 +13,11 @@ require_once __DIR__ . "/../vendor/autoload.php";
 <head>
     <meta charset = "utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?php if(isset($title)){echo $title;} else echo "Titre"?></title>
     <!--CSS COMMUN AUX PAGES-->
+    <link rel="stylesheet" type="text/css" href="css/alert.css">
     <link rel="stylesheet" type="text/css" href="css/commun.css">
-    <link rel="stylesheet" type="text/css" href="css/<?php if(isset($page)){echo $page;}?>.css">
+    <link rel="stylesheet" type="text/css" href="css/<?php if(isset($page)){echo $page;} else echo "erreur"?>.css">
     <!--FONT-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +30,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
         <nav>
             <!-- NAV BURGER -->
             <div id="mySidenav" class="sidenav">
-                <a id="closeBtn" href="#" class="close">×</a>
+                <a id="closeBtn" class="close">×</a>
                 <ul>
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="#" id="toggleDropdown">L'association ⌵</a>
@@ -47,7 +49,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
                 <a href="index.php"><img id="logoBurger" src="images/commun/logoSF.png" width="90px" alt="Logo"></a>
             </div>
 
-            <a href="#" id="openBtn" class="openBtn">
+            <a id="openBtn" class="openBtn">
 				  	<span class="burger-icon">
 						<span></span>
 						<span></span>

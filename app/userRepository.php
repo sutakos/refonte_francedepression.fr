@@ -47,22 +47,22 @@ class userRepository implements IUserRepository
             if (!$data){
                 return null;
             }
-            return new user($data['email'], $data['mdp'], 0, null, false);
+            return new user($data['email'], $data['mdp']);
 
 
     }
 
-    public function findIfAdmin(string $email): bool
+    public function findIfAdmin(int $userid): bool
     {
-        $requete = "SELECT * FROM admin WHERE email = :email";
+        $requete = "SELECT * FROM admin WHERE id = :id";
         $requetepreparer = $this->dbConnexion->prepare($requete);
-        $requetepreparer->bindParam(':email', $email);
+        $requetepreparer->bindParam(':id', $userid);
         $requetepreparer->execute();
         $data = $requetepreparer->fetch(PDO::FETCH_ASSOC);
-        if (!$data){
-            return false;
+        if ($data){
+            return true;
         }
-        return true;
+        return false;
     }
 
 }

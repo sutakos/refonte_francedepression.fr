@@ -14,16 +14,17 @@ class enregistrementForm {
     /**
      * @throws FormulaireException
      */
-    public function enregistrement(int $id,string $statut,int $age,string $sexe,string $region,bool $triste,string $frequence,string $amelioration) : bool {
+    public function enregistrement(int $id,string $statut,int $age,string $sexe,string $region,int $triste,int $frequence,string $amelioration) : bool {
         try {
             // Vérifier si l'utilisateur a déjà répondu
             if ($this->formRepository->findFormByID($id) !== null) {
                 throw new FormulaireException("Vous avez déjà répondu au formulaire.", "warning");
             }
+
             $this->formRepository->saveForm(new formulaire($id,$statut,$age,$sexe,$region,$triste,$frequence,$amelioration));
             return true;
         }
-        catch (AuthentificationException $e) {
+        catch (FormulaireException $e) {
             Messages::goTo($e->getMessage(),$e->getType(),"index.php");
         }
         return false;

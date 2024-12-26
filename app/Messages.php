@@ -12,7 +12,7 @@ class Messages {
    */
   public static function goTo(string $message, string $type, string $page) : void {
     $_SESSION['flash'][$type] = $message;
-    header("Location: /$page");
+    echo '<script>window.location.href = "'.$page.'"</script>';
   }
 
   /**
@@ -24,8 +24,9 @@ class Messages {
       foreach($_SESSION['flash'] as $type => $message) {
         echo <<<HTML
           <div class='alert alert-$type alert-dismissible fade show' role='alert'>
-          <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-          $message</div>
+          $message
+          <button class="alert-close" onclick="this.parentElement.style.display='none';">&times;</button>
+          </div>
           HTML;
       }
       unset($_SESSION['flash']);

@@ -14,9 +14,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
+
 // Si utilisateur déjà connecté
 if (isset($_SESSION['user_id'])) {
-    Messages::goTo("Vous êtes déjà connecté", "warning", "index.php");
+    echo '<script>window.location.href = "profil.php"</script>';
     exit;
 }
 
@@ -41,11 +42,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         $userid = $auth->connexion($_POST['email'], $_POST['mdp']);
         $_SESSION['user_id'] = $userid;
-        $role = $auth->checkRole($_POST['email']);
+        $role = $auth->checkRole($userid);
         $_SESSION['role']=$role;
+        $_SESSION['email']=$_POST['email'];
         $message ="Authentification réussie";
         $type="success";
-        $redirection = $_SERVER['HTTP_REFERER'];
+        $redirection = 'index.php';
 
     }catch (AuthentificationException $e) {
         $message = $e->getMessage();
