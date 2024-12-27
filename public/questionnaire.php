@@ -17,7 +17,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 if(isset($_SESSION['user_id'])) {
-    Messages::goTo("Veuillez vous connectez pour répondre au formulaire","info","connexion.php");
+    Messages::goTo("Veuillez vous connectez pour répondre au formulaire","info","identification.php");
     exit;
 }
 if(isset($_SESSION['role']) && $_SESSION['role'] == "admin") {

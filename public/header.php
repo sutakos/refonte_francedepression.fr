@@ -81,7 +81,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
             </div>
 
             <div id="login">
-                <a href="connexion.php"><img src="images/commun/connexion.PNG" width="60px" alt="Connexion"></a>
+                <a href="identification.php"><img src="images/commun/connexion.png" width="60px" alt="Connexion"></a>
             </div>
         </nav>
         <!--FIN DE LA BARRE DE NAVIGATION-->

@@ -7,17 +7,6 @@ use Grp2021\app\Exceptions\BddConnectException;
 use Grp2021\app\Messages;
 use Grp2021\app\userRepository;
 
-
-$title = "Inscription";
-$page = "inscription";
-require_once 'header.php';
-
-// Si utilisateur déjà connecté
-if (isset($_SESSION['user_id'])) {
-    Messages::goTo("Vous êtes déjà connecté", "success", "index.php");
-    exit;
-}
-
 // Connexion à la base de données
 $bdd = new bddConnect();
 try {
@@ -52,16 +41,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     Messages::goTo($message, $type, $redirection);
 }
-
-?>
-
-    <!-- Formulaire HTML pour l'inscription -->
-    <form method="POST" action="">
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="mdp" placeholder="Mot de passe" required>
-        <input type="password" name="confirm_mdp" placeholder="Confirmez le mot de passe" required>
-        <button type="submit">S'inscrire</button>
-    </form>
-
-<?php
-require_once 'footer.php';

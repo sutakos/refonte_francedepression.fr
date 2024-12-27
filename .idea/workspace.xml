@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="FIN DE BDD (tout fonctionne)&#10;HTML de profil.php">
+    <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="ajout banniere questionnaire.php">
+      <change afterPath="$PROJECT_DIR$/public/css/identification.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/identification.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/identification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/connexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/connexion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/inscription.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/inscription.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/questionnaire.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/questionnaire.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +124,10 @@
       <workItem from="1732124509843" duration="3507000" />
       <workItem from="1734951833381" duration="7837000" />
       <workItem from="1734961716921" duration="9295000" />
-      <workItem from="1735312221035" duration="397000" />
+      <workItem from="1735312221035" duration="448000" />
+      <workItem from="1735312723048" duration="43000" />
+      <workItem from="1735313230601" duration="25000" />
+      <workItem from="1735313346647" duration="1930000" />
     </task>
     <task id="LOCAL-00001" summary="Dernière modif - Lucie">
       <option name="closed" value="true" />
@@ -384,7 +393,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735221402977</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="ajout banniere questionnaire.php">
+      <option name="closed" value="true" />
+      <created>1735312668763</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1735312668763</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,6 +426,7 @@
     <MESSAGE value="Mise en commentaire des bug de connexion.php" />
     <MESSAGE value="rattrapage erreur commit" />
     <MESSAGE value="FIN DE BDD (tout fonctionne)&#10;HTML de profil.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="FIN DE BDD (tout fonctionne)&#10;HTML de profil.php" />
+    <MESSAGE value="ajout banniere questionnaire.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout banniere questionnaire.php" />
   </component>
 </project>
