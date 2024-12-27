@@ -1,9 +1,72 @@
 .questionnaire{
-    margin-left: 2em;
+    margin-left: 3em;
 }
 
+h2{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+p{
+    font-family: 'Inter', sans-serif;
+}
+
+/*Question obligatoire*/
+.etoile{
+    color: red;
+}
+
+/*Question 1,4 ne souhaite pas repondre*/
+.minitxt{
+    font-size: 0.8em;
+}
+
+/*Tous les btn radios*/
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .cercle {
+    background-color: #c5ee9c;
+    border-color: #c5ee9c;
+}
+/*Question 3,5,6 frequence*/
+.cercle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 2px solid #c5ee9c;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.echelle {
+    display: flex;
+    gap: 1.5em;
+    position: relative;
+}
+
+.cercle:hover {
+    border-color: #3cb371;
+}
+
+/*Question 7 amelioration*/
+.retour{
+    width: 40em;
+    height: 20em;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+/*Bouton envoie*/
 button{
-    background-color: mistyrose;
+    background-color: #b0e773;
     border: none;
     border-radius: 0.5em;
     padding: 1em;
@@ -12,42 +75,8 @@ button{
     cursor: pointer;
 }
 
-h2{
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-span{
-    color: red;
-}
-
-p{
-    font-family: 'Inter', sans-serif;
-}
-
-.container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 20px;
-}
-
-.container input[type="radio"] {
-    display: none;
-}
-
-.container label {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-    cursor: pointer;
-    margin: 0 10px;
-}
-.container input[type="radio"]:checked + label {
-    background-color: #007bff;
-}
-.container .label-text {
-    margin-left: 10px;
+button:hover{
+    background-color: #99cd5f;
+    transition: 0.5s;
 }
 
