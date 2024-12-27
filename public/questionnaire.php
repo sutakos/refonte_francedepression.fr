@@ -16,7 +16,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-if(!isset($_SESSION['user_id'])) {
+if(isset($_SESSION['user_id'])) {
     Messages::goTo("Veuillez vous connectez pour répondre au formulaire","info","connexion.php");
     exit;
 }
@@ -69,7 +69,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 ?>
+    <div class="banniere">
+        <img src="images/commun/Bannière.png" alt="Bannière" class="banniere" alt="Bannière">
+    </div>
 <main>
+
         <!--CHEMIN-->
         <section>
             <div class="chemin">
