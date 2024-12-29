@@ -25,13 +25,17 @@ require_once 'header.php';
 </section>
 <!--FIN BANNIERE-->
 <main>
-    <!--BOUTON FORMULAIRE-->
-    <section class="form">
-        <div class="btnForm">
-            <a href="questionnaire.php"><button>Remplissez moi !</button></a>
+    <!--POPUP FORMULAIRE-->
+    <div class="popup-container" id="popup">
+        <div class="popup-txt">
+            Souhaitez-vous remplir un questionnaire ?
         </div>
-    </section>
-    <!--FIN BOUTON FORMULAIRE-->
+        <div class="popup-btn">
+            <a href="questionnaire.php"><button class="yes-btn">Oui</button></a>
+            <button class="no-btn">Non</button>
+        </div>
+    </div>
+    <!--FIN POPUP FORMULAIRE-->
 
     <!--CHEMIN-->
     <section>
