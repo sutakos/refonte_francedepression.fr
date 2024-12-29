@@ -66,6 +66,60 @@
 /*FIN BOUTONS ASSOCIATION ET RESSOURCES*/
 /*FIN DU NUMERO D'ECOUTE*/
 
+/*POP-UP CONSENTEMENT*/
+.popup-container {
+    position: fixed;
+    bottom: 1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    font-family: 'Inter', sans-serif;
+}
+
+.popup-txt {
+    color: #333;
+    font-size: 16px;
+    margin-right: 16px;
+    flex: 1;
+}
+
+/*ajoute cette propriete quand on clique sur les btn (voir js)*/
+.popup-container.hidden {
+    display: none;
+}
+
+.popup-btn button {
+    background-color: #99cd5f;
+    color: #fff;
+    border: none;
+    border-radius: 0.5em;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.popup-btn button:hover {
+    background-color: #b2f038;
+}
+
+.popup-btn button.no-btn {
+    background-color: #fa6363;
+}
+
+.popup-btn button.no-btn:hover {
+    background-color: #f53838;
+}
+/*FIN POP-UP CONSENTEMENT*/
+
 /*CARROUSEL*/
 .InfoCarrousel {
     display: flex;
