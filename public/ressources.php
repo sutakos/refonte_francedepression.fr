@@ -13,8 +13,13 @@ require_once 'header.php';
     <img src="images/commun/Bannière.png" alt="Bannière" class="banniere">
     <a href="ressources.php">Ressources</a>
 </div>
-<br>
+
 <main>
+    <!--CHEMIN-->
+    <div class="chemin">
+        <a href="ressources.php">Ressources</a>
+    </div>
+    
     <menu class="menu">
         <li>Documentations</li>
         <li>Vidéothèque</li>
@@ -76,7 +81,7 @@ require_once 'header.php';
             </div>
         </div>
         <!-- Fin Filtre -->
-        <img id="fluxRSS" src="images/ressources/fluxRSS.png">
+        <img id="fluxRSS" src="images/ressources/fluxRSS.png" alt="fluxRSS">
     </div>
     <br>
     <div class="carrousel">
@@ -107,7 +112,7 @@ require_once 'header.php';
 
     <!--BOUTON RETOUR VERS LE HAUT-->
     <section>
-        <img id="retourHaut" src="public/images/commun/fleche.png" alt="fleche retour">
+        <img id="retourHaut" src="images/commun/fleche.png" alt="fleche retour">
     </section>
     <!--FIN BOUTON RETOUR VERS LE HAUT-->
 </main>
