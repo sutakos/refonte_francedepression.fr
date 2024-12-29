@@ -29,3 +29,12 @@ function prevSlide() {
 
 //CHANGE TOUTE LES 5SEC
 setInterval(nextSlide, 5000);
+
+//FERME LA POPUP APRES NON
+function closePopup() {
+    const popup = document.getElementById('popup');
+    popup.classList.add('hidden'); //Masque la pop-up
+}
+
+//ASSOCIE LES EVENEMENTS AUX BOUTONS DU POPUP
+document.querySelector('.no-btn').addEventListener('click', closePopup);
