@@ -38,6 +38,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
                             <li><a href="quiSommesNous.php">Qui sommes-nous</a>
                             <li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a>
                             <li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a>
+			    <li><a href="questionnaire.php">Questionnaire</a>
                             <li><a href="https://francedepression.fr/index.php/l-association/faire-un-don">Faire un don</a></li>
                             <li><a href="https://francedepression.fr/index.php/l-association/creer-une-antenne">Créer une antenne</a></li>
                         </ul>
@@ -71,6 +72,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
                             <li><a href="quiSommesNous.php">Qui sommes-nous</a></li>
                             <li><a href="https://francedepression.fr/index.php/l-association/edito">Edito</a></li>
                             <li><a href="https://francedepression.fr/index.php/l-association/statuts">Statuts</a></li>
+			    <li><a href="questionnaire.php">Questionnaire</a>
                             <li><a href="https://francedepression.fr/index.php/l-association/faire-un-don">Faire un don</a></li>
                             <li><a href="https://francedepression.fr/index.php/l-association/creer-une-antenne">Créer une antenne</a></li>
                         </ul>
