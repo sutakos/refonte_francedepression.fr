@@ -11,6 +11,9 @@ if (isset($_SESSION['user_id'])) {
 
 ?>
 
+<div class="banniere">
+    <img src="images/commun/Bannière.png" alt="Bannière" class="banniere" alt="Bannière">
+</div>
 <div class="container mt-5">
     <h2>Identification</h2>
     <div class="container">
