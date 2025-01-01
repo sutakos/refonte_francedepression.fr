@@ -134,9 +134,9 @@ blocs{
 /*RESPONSIVE*/
 
 /*FORMAT GRAND ECRAN*/
-@media screen and (min-width: 1532px){
+@media screen and (min-width: 1530px){
     body{
-        width: 1532px;
+        width: 1519px;
         margin: 0 auto;
     }
 }
