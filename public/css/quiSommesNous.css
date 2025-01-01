@@ -132,6 +132,15 @@ blocs{
 }
 
 /*RESPONSIVE*/
+
+/*FORMAT GRAND ECRAN*/
+@media screen and (min-width: 1532px){
+    body{
+        width: 1532px;
+        margin: 0 auto;
+    }
+}
+
 /*FORMAT MOYEN ECRAN*/
 @media (min-width: 795px) and (max-width: 1000px){
     .paragraphe{
