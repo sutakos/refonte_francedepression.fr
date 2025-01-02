@@ -46,11 +46,9 @@ if (isset($_SESSION['user_id'])) {
                                placeholder="Votre mot de passe"
                                required>
                     </div>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <button class="btn btn-primary" type="submit">Se connecter</button>
-                        </div>
-                    </div>
+
+                    <button class="btn btn-primary" type="submit">Se connecter</button>
+
                 </form>
             </div>
             <!-- Contenu de l'onglet "Enregistrement" -->
@@ -82,12 +80,8 @@ if (isset($_SESSION['user_id'])) {
                         </div>
                     </div>
 
-                    <div class="row g-3">
-                        <div class="col-md-3">
+                    <button class="btn btn-primary " type="submit">S'inscrire</button>
 
-                            <button class="btn btn-primary " type="submit">S'inscrire</button>
-                        </div>
-                    </div>
                 </form>
             </div>
         </div>

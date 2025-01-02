@@ -77,16 +77,31 @@ form .form-label {
     align-self: flex-start;
     font-weight: bold;
     color: #495057;
+    display: block;
+    margin-bottom: 5px;
 }
 
 form .form-control {
     width: 100%;
-    max-width: 400px;
     padding: 10px;
     border: 1px solid #ced4da;
     border-radius: 4px;
     font-size: 14px;
 }
+
+form .form-control:focus{
+    border-color: #007BFF;
+    outline: none;
+}
+
+form .col-md-4{
+    width: 320px;
+}
+
+form .col-md-8{
+    width: 320px;
+}
+
 
 button.switch-form {
     display: block;
