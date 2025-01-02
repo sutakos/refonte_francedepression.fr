@@ -58,8 +58,6 @@ if (isset($_SESSION['user_id'])) {
                 <h3>Inscription</h3>
                 <form class="row g-3 needs-validation" action="inscription.php" method="post">
                     <div class="row g-3">
-                    </div>
-                    <div class="row g-3">
                         <div class="col-md-8">
                             <label for="signup-email" class="form-label">Email</label>
                             <input type="email" name="email" class="form-control" id="signup-email"
