@@ -49,7 +49,6 @@ function creerNumero(elementType,contenu,lien) {
  elem.style.paddingBottom = '1.8em'
  elem.style.borderRadius = '50%'
  elem.style.width = '5.5em'
- elem.style.marginLeft = '2em'
 
  const link = document.createElement('a')
  link.textContent = contenu;
@@ -67,16 +66,20 @@ function creerNumero(elementType,contenu,lien) {
  * @return HTMLElement
  */
 function ajoutNumero(info){
- const elem = document.createElement('div')
- const elemImage = creerImage('img',info.image,info.lien);
- const elemTexte = creerTexte('h3',info.titre)
- const elemNumero = creerNumero('h1', info.numero, info.lien)
+ const elem = document.createElement('div');
+ elem.style.display = 'flex';
+ elem.style.flexDirection = 'column';
+ elem.style.alignItems = 'center';
+
+ const elemImage = creerImage('img', info.image, info.lien);
+ const elemTexte = creerTexte('h3', info.titre)
+ const elemNumero = creerNumero('h1', info.numero, info.lien);
 
  // si déjà a une image alors ne pas afficher numéro sinon afficher num
  if(info.image === ''){
   elem.append(elemNumero, elemTexte)
  }
-  elem.append(elemImage,elemTexte)
+  elem.append(elemImage, elemTexte)
  return elem
 }
 
@@ -89,3 +92,5 @@ container.style.display = 'flex'
 container.style.justifyContent = 'center'
 container.style.gap = '5em'
 container.style.marginTop = '1.5em'
+container.flex.wrap = 'wrap'
+container.style.textAlign = 'center'
