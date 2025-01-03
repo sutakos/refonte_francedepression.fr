@@ -30,24 +30,24 @@ h3 {
 
 .nav-tabs .nav-link {
     padding: 10px 20px;
-    color: #007bff;
+    color:#506FA5;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    background-color: #dafaff;
+    background-color: #bfe8f4;
     box-shadow: none; /* Suppression des ombres 3D */
 }
 
 .nav-tabs .nav-link.active {
-    background-color: #007bff;
+    background-color: #506FA5;
     color: #fff;
-    border-color: #007bff;
+    border-color: #506FA5;
 }
 
 .nav-tabs .nav-link:hover {
     background-color: #e9ecef;
-    color: #0056b3;
+    color: #506FA5;
     border-color: #ddd;
 }
 
@@ -90,7 +90,7 @@ form .form-control {
 }
 
 form .form-control:focus{
-    border-color: #007BFF;
+    border-color: #506FA5;
     outline: none;
 }
 
@@ -107,7 +107,7 @@ button.switch-form {
     display: block;
     margin: 20px auto; /* Aligne les boutons au centre */
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #506FA5;
     border-radius: 5px;
     color: white;
     cursor: pointer;
@@ -117,17 +117,9 @@ button.switch-form {
     box-shadow: none; /* Suppression des ombres 3D */
 }
 
-button.switch-form:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-button.switch-form:hover {
-    background-color: #0056b3;
-}
 
 button[type="submit"] {
-    background-color: #28a745;
+    background-color: #b0e773;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -140,7 +132,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #218838;
+    background-color: #99cd5f;
     transform: scale(1.05);
 }
 
