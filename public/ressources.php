@@ -11,7 +11,6 @@ require_once 'header.php';
 <body>
 <div class="banniere">
     <img src="images/commun/Bannière.png" alt="Bannière" class="banniere">
-    <a href="ressources.php">Ressources</a>
 </div>
 
 <main>
