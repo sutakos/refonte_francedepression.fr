@@ -1,9 +1,16 @@
 /* responsive */
-@media screen and (max-width: 730px) {
+@media (max-width: 777px) {
     .navigation {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap:1em;
+    }
+    .documentations {
+        flex: 1 1 100%;
+        flex-direction: column;
+    }
+    .carrousel{
+
     }
 }
 
@@ -141,9 +148,21 @@
 
 /* documents */
 .documentations {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    max-width: 100%;
+    gap: 0.5%;
+    margin: auto;
+}
+
+.document {
+    border: solid 1px grey;
+    border-radius : 2%;
+    padding-left : 0.5%;
+    padding-right : 0.5%;
+    flex : 1 1 calc(50% - 10px);
+    box-sizing : border-box;
 }
 
 /* boutons de page */

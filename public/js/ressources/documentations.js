@@ -105,12 +105,12 @@ function ajoutDocument(doc) {
         elemDocument.append(elemTitle, elemContent,elemEtiquettes);
     }
 
-    elemDocument.style.width = '38.5em'
+    //elemDocument.style.width = '38em'
     elemDocument.style.border = 'solid 1px grey'
     elemDocument.style.borderRadius = '2%'
     elemDocument.style.paddingLeft = '0.5%'
     elemDocument.style.paddingRight = '0.5%'
-    elemDocument.style.marginBottom = '1%'
+
     return elemDocument;
 }
 

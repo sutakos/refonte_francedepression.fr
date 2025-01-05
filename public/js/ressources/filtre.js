@@ -7,7 +7,7 @@ const checkboxes = document.querySelectorAll('.options input')
 
 /* bouton filtre */
 options.forEach(option => {
-    option.style.visibility = 'hidden';
+    option.style.display = 'none';
 });
 
 dropdownMenu.addEventListener('click',afficherFiltre)
@@ -16,12 +16,12 @@ function afficherFiltre(){
    if(dropdownMenu.value === "desactive"){
        dropdownMenu.value = "active"
        options.forEach(option => {
-           option.style.visibility = 'hidden';
+           option.style.display = 'none';
        })
    } else {
        dropdownMenu.value = "desactive"
        options.forEach(option => {
-           option.style.visibility = 'visible';
+           option.style.display = 'block';
        })
    }
 }
@@ -45,13 +45,13 @@ function afficherDoc() {
 
     if (selectedValues.length === 0) { // si rien sélectionné -> tous les docs affichés
         selections.forEach(selection => {
-            selection.style.visibility = 'visible';
+            selection.style.display = 'block';
         });
         return;
     }
 
     selections.forEach(selection => { // tout cacher
-        selection.style.visibility = 'hidden';
+        selection.style.display = 'none';
 
         documents.forEach(docu => {
             let trouver = false;
@@ -69,7 +69,7 @@ function afficherDoc() {
                     documentElements.push(selection);
                 });
                 documentElements.forEach(element => {
-                    element.style.visibility = 'visible';
+                    element.style.display = 'block';
 
                     section.prepend(element); // mettre en premier l'élément sélectionné
                 });

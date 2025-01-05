@@ -1,5 +1,5 @@
 /* responsive */
-@media screen and (max-width: 730px) {
+@media (max-width: 730px) {
     .navigation {
         display: flex;
         flex-direction: column;

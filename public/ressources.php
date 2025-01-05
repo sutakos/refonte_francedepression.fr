@@ -8,6 +8,7 @@ require_once 'header.php';
 <script src="js/ressources/fluxRSS.js" type="module"></script>
 <script src="js/ressources/carrousel.js" type="module"></script>
 <script src="js/ressources/changementDocu.js" type="module"></script>
+<script src="js/ressources/recherche.js" type="module"></script>
 <body>
 <div class="banniere">
     <img src="images/commun/Bannière.png" alt="Bannière" class="banniere">
@@ -18,7 +19,7 @@ require_once 'header.php';
     <div class="chemin">
         <a href="ressources.php">Ressources</a>
     </div>
-    
+
     <menu class="menu">
         <li>Documentations</li>
         <li>Vidéothèque</li>
@@ -31,7 +32,7 @@ require_once 'header.php';
     <div class="navigation">
         <!-- Barre de recherche -->
         <div class="recherche">
-            <input type="Search" placeholder="Rechercher">
+            <input id="barrederecherche" type="Search" placeholder="Rechercher">
             <button><img src="images/ressources/loupeRecherche.png"></button>
         </div>
         <!-- Fin Barre de recherche -->
@@ -115,3 +116,7 @@ require_once 'header.php';
     </section>
     <!--FIN BOUTON RETOUR VERS LE HAUT-->
 </main>
+
+<?php
+
+require_once 'footer.php';
