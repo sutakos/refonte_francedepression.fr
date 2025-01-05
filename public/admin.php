@@ -7,7 +7,6 @@ use Grp2021\app\dataGraphics;
 $title = 'Admin';
 $page="admin";
 require_once 'header.php';
-// TODO : À compléter avec les D3 etc (les graphiques quoi)
 
 // Connexion à la base de données
 $bdd = new bddConnect();
@@ -22,33 +21,8 @@ $data = new dataGraphics($pdo);
 
 
 $statsSexe = json_encode($data->dataHF());
+$statsRegion= json_encode($data->dataR());
 
-$data2 = [
-        ['Region'=> "Ne souhaite pas répondre"],
-        ['Region' => "Île-de-France"],
-        ['Region' => "Haute-Normandie"],
-        ['Region' => "Lorraine"],
-        ['Region' => "Île-de-France"],
-        ['Region' => "Poitou-Charentes"],
-        ['Region' => "Poitou-Charentes"],
-        ['Region' => "Poitou-Charentes"]
-];
-
-$regionCounts = [];
-foreach ($data2 as $item) {
-    $region = $item['Region'];
-    if (!isset($regionCounts[$region])) {
-        $regionCounts[$region] = 0;
-    }
-    $regionCounts[$region]++;
-}
-
-$donneeRegion = [];
-foreach ($regionCounts as $region => $count) {
-    $donneeRegion[] = ['name' => $region, 'value' => $count];
-}
-
-$statsRegion = json_encode($donneeRegion);
 
 $data3 = [
         ['Age' => "15"],
@@ -67,7 +41,6 @@ foreach ($data3 as $item) {
     $ageCounts[$age]++;
 }
 
-$donneeAge = [];
 foreach ($ageCounts as $age => $count) {
     $donneeAge[] = ['name' => $age, 'value' => $count];
 }
@@ -89,7 +62,7 @@ $statsAge = json_encode($donneeAge);
 
     <h2>Répartition des sexes</h2><br>
     <svg id="StatSexe" width="400" height="400"></svg>
-    
+
     <!--import d3-->
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
@@ -97,42 +70,48 @@ $statsAge = json_encode($donneeAge);
         //récupére les stats PHP encodées en JSON
         const donneeSexe = <?php echo $statsSexe; ?>;
 
-       //dimension du diagramme circulaire
-            const svgSexe = d3.select("#StatSexe");
-            const widthSexe = +svgSexe.attr("width"); //recupere la largeur du svg et converti en int avec le +
-            const heightSexe = +svgSexe.attr("height"); //recupere la largeur du svg et converti en int avec le +
-            const rayonSexe = Math.min(widthSexe, heightSexe) / 2; //rayon du cercle
+        //crée un diagramme circulaire
+        const svgSexe = d3.select("#StatSexe");
+        const width = +svgSexe.attr("width"); //recupere la largeur du svg et converti en int avec le +
+        const height = +svgSexe.attr("height"); //recupere la largeur du svg et converti en int avec le +
+        const radius = Math.min(width, height) / 2;
 
-            //couleur des zones
-            const colorSexe = d3.scaleOrdinal(["#ff866c", "#b0e773"]);
+        //couleur des zones
+        const color = d3.scaleOrdinal(["#ff866c", "#b0e773"]);
 
-            //divise un cercle en segments
-            const pieSexe = d3.pie().value(d => d.value);
-            const arcSexe = d3.arc().outerRadius(rayonSexe - 10).innerRadius(0);
+        const pie = d3.pie()
+            .value(d => d.value);
 
-            //ajout d'un groupe g pour contenir le cercle
-            //translate deplace vers la position x,y
-            const gSexe = svgSexe.append("g")
-                .attr("transform", `translate(${widthSexe / 2},${heightSexe / 2})`);
+        const arc = d3.arc()
+            .outerRadius(radius - 10)
+            .innerRadius(0);
 
-            //crée les segments
-            const arcsSexe = gSexe.selectAll(".arc")
-                .data(pieSexe($donneeSexe))
-                .enter().append("g")
-                .attr("class", "arc");
+        const g = svgSexe.append("g")
+            .attr("transform", `translate(${width / 2},${height / 2})`);
 
-            //dessine les segments du diagramme circulaire
-            arcsSexe.append("path")
-                .attr("d", arcSexe)
-                .attr("fill", d => colorSexe(d.data.name));
+        //nom des zones et la valeur
+        const dataDiagramme = [
+            { name: 'Homme', value: donneeSexe['hommes']},
+            { name: 'Femme', value: donneeSexe['femmes']}
+        ];
 
-            //ajout des noms sur les zones
-            arcsSexe.append("text")
-                .attr("transform", d => "translate(" + arcSexe.centroid(d) + ")")
-                .attr("dy", "0.35em")
-                .attr("text-anchor", "middle")
-                .text(d => `${d.data.name} (${d.data.value})`);
-        </script>
+        const arcs = g.selectAll(".arc")
+            .data(pie(dataDiagramme))
+            .enter().append("g")
+            .attr("class", "arc");
+
+        //affichage diagramme circulaire
+        arcs.append("path")
+            .attr("d", arc)
+            .attr("fill", d => color(d.data.name));
+
+        //ajout des noms sur les zones
+        arcs.append("text")
+            .attr("transform", d => "translate(" + arc.centroid(d) + ")")
+            .attr("dy", "0.35em")
+            .attr("text-anchor", "middle")
+            .text(d => `${d.data.name} (${d.data.value})`);
+    </script>
         <br><br>
 
         <h2>Répartition des régions</h2><br>
@@ -142,63 +121,68 @@ $statsAge = json_encode($donneeAge);
             //récupére les stats PHP encodées en JSON
             const donneeRegion = <?php echo $statsRegion; ?>;
 
-            //dimensions de l'histogramme
+            // Filtrer les régions dont le comptage est égal à 0
+            const donneeRegionFiltered = Object.entries(donneeRegion)
+                .filter(([region, count]) => count > 0) // Garder uniquement celles avec un comptage > 0
+            // Vérifier dans la console les données filtrées
+            console.log(donneeRegionFiltered);
+
+            // Dimensions de l'histogramme
             const svgRegion = d3.select("#StatRegion");
             const widthRegion = +svgRegion.attr("width");
             const heightRegion = +svgRegion.attr("height");
 
-            //définition des marges de l'histogramme
+            // Définition des marges de l'histogramme
             const marginActivite = { top: 20, right: 25, bottom: 50, left: 150 };
-            //taille des barres
+
+            // Taille des barres
             const barWidthActivite = widthRegion - marginActivite.left - marginActivite.right;
             const barHeightActivite = heightRegion - marginActivite.top - marginActivite.bottom;
 
-            //ajout d'un groupe g pour contenir les barres
-            //translate deplace vers la position x,y
+            // Ajout d'un groupe g pour contenir les barres
             const gActivite = svgRegion.append("g")
                 .attr("transform", `translate(${marginActivite.left},${marginActivite.top})`);
 
-            //définition de l'échelle
+            // Définition de l'échelle
             const xActivite = d3.scaleLinear()
-                .domain([0, d3.max(donneeRegion, d => d.value)])
+                .domain([0, d3.max(donneeRegionFiltered, d => d[1])]) // Utiliser les valeurs (comptages)
                 .range([0, barWidthActivite]);
 
             const yActivite = d3.scaleBand()
-                .domain(donneeRegion.map(d => d.name))
+                .domain(donneeRegionFiltered.map(d => d[0]))  // Utiliser les clés (régions) pour l'axe Y
                 .range([0, barHeightActivite])
                 .padding(0.1);
 
-            //crée les barres de l'histogramme
+            // Créer les barres de l'histogramme
             gActivite.selectAll(".bar")
-                .data(donneeRegion)
+                .data(donneeRegionFiltered)  // Utiliser les données filtrées
                 .enter().append("rect")
                 .attr("class", "bar")
-                .attr("y", d => yActivite(d.name))
-                .attr("height", yActivite.bandwidth())
-                .attr("x", 0)
-                .attr("width", d => xActivite(d.value))
+                .attr("y", d => yActivite(d[0]))  // Position verticale en fonction du nom de la région
+                .attr("height", yActivite.bandwidth())  // Hauteur des barres
+                .attr("x", 0)  // Position horizontale
+                .attr("width", d => xActivite(d[1]))  // Largeur des barres en fonction de la valeur
                 .attr("fill", "#f9f18f");
 
-            //ajout des noms des regions (y)
+            // Ajouter les axes
             gActivite.append("g")
                 .call(d3.axisLeft(yActivite));
 
-            //ajout des valeurs (x)
-            //d3.axisBottom dessine l'axe x basé sur l'échelle xActivite
-            //ticks divise l'axe en intervalle
             gActivite.append("g")
                 .attr("transform", `translate(0,${barHeightActivite})`)
                 .call(d3.axisBottom(xActivite).ticks(5));
 
-            //ajout des noms des zones
+            // Ajouter les labels sur les barres
             gActivite.selectAll(".label")
-                .data(donneeRegion)
+                .data(donneeRegionFiltered)
                 .enter().append("text")
                 .attr("class", "label")
-                .attr("x", d => xActivite(d.value) + 5)
-                .attr("y", d => yActivite(d.name) + yActivite.bandwidth() / 2)
-                .attr("dy", "0.35em")
-                .text(d => d.value);
+                .attr("x", d => xActivite(d[1]) + 5)  // Position horizontale des labels
+                .attr("y", d => yActivite(d[0]) + yActivite.bandwidth() / 2)  // Position verticale des labels
+                .attr("dy", "0.35em")  // Ajuste le texte au centre
+                .text(d => d[1]);  // Affiche la valeur (arrondie)
+
+
         </script>
 
         <h2>Répartition de l'âges</h2><br>
@@ -283,7 +267,7 @@ $statsAge = json_encode($donneeAge);
             <img id="retourHaut" src="images/commun/fleche.png" alt="fleche retour">
         </section>
         <!--FIN BOUTON RETOUR VERS LE HAUT-->
-    
+
 </main>
 <?php
 require_once 'footer.php';
