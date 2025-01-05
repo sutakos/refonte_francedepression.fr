@@ -1,26 +1,28 @@
 <?php
+
+use Grp2021\app\bddConnect;
+use Grp2021\app\Exceptions\BddConnectException;
+use Grp2021\app\Messages;
+use Grp2021\app\dataGraphics;
+$title = 'Admin';
+$page="admin";
 require_once 'header.php';
 // TODO : À compléter avec les D3 etc (les graphiques quoi)
-$data = [
-    ['sexe' => 'homme'],
-    ['sexe' => 'femme'],
-    ['sexe' => 'homme'],
-    ['sexe' => 'femme'],
-    ['sexe' => 'homme'],
-    ['sexe' => 'homme'],
-];
 
-//fais la somme des sexes
-$somme = ['homme' => 0, 'femme' => 0];
-foreach ($data as $person) {
-    if ($person['sexe'] == 'homme') {
-        $somme['homme']++;
-    } elseif ($person['sexe'] == 'femme') {
-        $somme['femme']++;
-    }
+// Connexion à la base de données
+$bdd = new bddConnect();
+try {
+    $pdo = $bdd->connexion();
+} catch (BddConnectException $e) {
+    Messages::goTo($e->getMessage(), $e->getType(), "index.php");
+    exit;
 }
 
-$statsSexe = json_encode($somme);
+$data = new dataGraphics($pdo);
+
+
+$statsSexe = json_encode($data->dataHF());
+
 ?>
 
  <div class="banniere">
@@ -65,8 +67,8 @@ $statsSexe = json_encode($somme);
 
         //nom des zones et la valeur
         const dataDiagramme = [
-            { name: 'Homme', value: donneeSexe['homme']},
-            { name: 'Femme', value: donneeSexe['femme']}
+            { name: 'Homme', value: donneeSexe['hommes']},
+            { name: 'Femme', value: donneeSexe['femmes']}
         ];
 
         const arcs = g.selectAll(".arc")
@@ -86,5 +88,6 @@ $statsSexe = json_encode($somme);
             .attr("text-anchor", "middle")
             .text(d => d.data.name);
     </script>
+</main>
 <?php
 require_once 'footer.php';

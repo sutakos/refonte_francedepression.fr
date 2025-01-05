@@ -7,6 +7,8 @@ use Grp2021\app\Exceptions\BddConnectException;
 use Grp2021\app\Messages;
 use Grp2021\app\userRepository;
 
+require_once "header.php";
+
 // Connexion à la base de données
 $bdd = new bddConnect();
 try {
@@ -30,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if($auth->inscription($_POST['email'], $_POST['mdp'], $_POST['confirm_mdp'])){
             $message = "Inscription réussie. Vous pouvez maintenant vous connecter.";
             $type = "success";
-            $redirection = "connexion.php";
+            $redirection = "identification.php";
         }
 
     } catch (AuthentificationException $e) {
