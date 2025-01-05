@@ -63,8 +63,10 @@ $statsSexe = json_encode($data->dataHF());
             .outerRadius(radius - 10)
             .innerRadius(0);
 
-        const gSexe = svg.append("g")
-            .attr("transform", `translate(${width / 2},${height / 2})`);
+        //ajout d'un groupe g pour contenir le cercle
+        //translate deplace vers la position x,y
+        const gSexe = svgSexe.append("g")
+            .attr("transform", `translate(${widthSexe / 2},${heightSexe / 2})`);
 
         //crée les segments
         const arcsSexe = gSexe.selectAll(".arc")
