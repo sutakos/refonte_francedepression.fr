@@ -130,7 +130,7 @@ for (const document of documents) {
     boutonD.addEventListener('click',afficheDocuments)
     
     function afficheDocuments() {
-
+        section.append
     }
 
 }

@@ -86,9 +86,9 @@ for(const information of informations) {
  container.append(ajoutNumero(information));
 }
 
+
 container.style.display = 'flex'
 container.style.justifyContent = 'center'
 container.style.gap = '5em'
 container.style.marginTop = '1.5em'
-container.flex.wrap = 'wrap'
 container.style.textAlign = 'center'
