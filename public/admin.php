@@ -66,12 +66,6 @@ $statsSexe = json_encode($data->dataHF());
         const gSexe = svg.append("g")
             .attr("transform", `translate(${width / 2},${height / 2})`);
 
-        //nom des zones et la valeur
-        const dataDiagramme = [
-            { name: 'Homme', value: donneeSexe['hommes']},
-            { name: 'Femme', value: donneeSexe['femmes']}
-        ];
-
         //crée les segments
         const arcsSexe = gSexe.selectAll(".arc")
             .data(pieSexe($donneeSexe))
