@@ -22,32 +22,10 @@ $data = new dataGraphics($pdo);
 
 $statsSexe = json_encode($data->dataHF());
 $statsRegion= json_encode($data->dataR());
+$statsAge= json_encode($data->dataA());
 
-
-$data3 = [
-        ['Age' => "15"],
-        ['Age' => "29"],
-        ['Age' => "11"],
-        ['Age' => "33"],
-        ['Age' => "15"]
-];
-
-$ageCounts = [];
-foreach ($data3 as $item) {
-    $age = $item['Age'];
-    if (!isset($ageCounts[$age])) {
-        $ageCounts[$age] = 0;
-    }
-    $ageCounts[$age]++;
-}
-
-foreach ($ageCounts as $age => $count) {
-    $donneeAge[] = ['name' => $age, 'value' => $count];
-}
-
-$statsAge = json_encode($donneeAge);
 ?>
-
+<script src="./js/identification.js" type="module"></script>
  <div class="banniere">
         <img src="images/commun/Bannière.png" class="banniere" alt="Bannière">
     </div>
@@ -60,8 +38,16 @@ $statsAge = json_encode($donneeAge);
         </div>
     </section>
 
-    <h2>Répartition des sexes</h2><br>
-    <svg id="StatSexe" width="400" height="400"></svg>
+    <div class="button-container">
+        <button id="showSexe" class="nav-link active">Afficher Répartition des sexes</button>
+        <button id="showRegion" class="nav-link">Afficher Répartition des régions</button>
+        <button id="showAge" class="nav-link">Afficher Répartition des âges</button>
+    </div>
+
+
+
+
+    <svg id="StatSexe" class="graphique" style="display: block;" width="400" height="400"></svg>
 
     <!--import d3-->
     <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -113,9 +99,7 @@ $statsAge = json_encode($donneeAge);
             .text(d => `${d.data.name} (${d.data.value})`);
     </script>
         <br><br>
-
-        <h2>Répartition des régions</h2><br>
-        <svg id="StatRegion" width="700" height="400"></svg>
+        <svg id="StatRegion" class="graphique" width="700" height="400"></svg>
 
         <script>
             //récupére les stats PHP encodées en JSON
@@ -185,82 +169,71 @@ $statsAge = json_encode($donneeAge);
 
         </script>
 
-        <h2>Répartition de l'âges</h2><br>
-        <svg id="StatAge" width="700" height="400"></svg>
+        <svg id="StatAge" class="graphique" width="700" height="400"></svg>
+            <script>
+                // Récupère les stats PHP encodées en JSON
+                const donneeAge = <?php echo $statsAge; ?>;
 
-        <script>
-            //récupére les stats PHP encodées en JSON
-            const donneeAge = <?php echo $statsAge; ?>;
+                // Prépare les données des tranches d'âge pour D3.js
+                const donneesTranchees = Object.keys(donneeAge).map(tranche => ({
+                name: tranche,
+                value: donneeAge[tranche]
+            }));
 
-            //trie par tranche de 10
-            const trancheTaille = 10;
-            //age le plus grand
-            //Math.ceil arrondi a la tranche superieur
-            const maxAge = Math.ceil(d3.max(donneeAge, d => +d.name) / trancheTaille) * trancheTaille;
+                // Dimensions de l'histogramme
+                const svgAge = d3.select("#StatAge");
+                const widthAge = +svgAge.attr("width");
+                const heightAge = +svgAge.attr("height");
 
-            const donneesTranchees = [];
-            for (let i = 0; i < maxAge; i += trancheTaille) {
-                const trancheNom = `${i}-${i + trancheTaille - 1}`;
-                const total = donneeAge
-                    .filter(d => +d.name >= i && +d.name < i + trancheTaille) //garde les valeurs dans la tranche
-                    .reduce((sum, d) => sum + d.value, 0); //somme des elements filtres
-                donneesTranchees.push({ name: trancheNom, value: total }); //ajout dans le tableau qui sera utilisé
-            }
+                // Marges
+                const marginAge = { top: 20, right: 20, bottom: 50, left: 50 };
+                const barWidthAge = widthAge - marginAge.left - marginAge.right;
+                const barHeightAge = heightAge - marginAge.top - marginAge.bottom;
 
-            //dimensions de l'histogramme
-            const svgAge = d3.select("#StatAge");
-            const widthAge = +svgAge.attr("width");
-            const heightAge = +svgAge.attr("height");
-
-            //marges
-            const marginAge = { top: 20, right: 20, bottom: 50, left: 50 };
-            const barWidthAge = widthAge - marginAge.left - marginAge.right;
-            const barHeightAge = heightAge - marginAge.top - marginAge.bottom;
-
-            //grp avec marges
-            const gAge = svgAge.append("g")
+                // Groupe avec marges
+                const gAge = svgAge.append("g")
                 .attr("transform", `translate(${marginAge.left},${marginAge.top})`);
 
-            //echelle
-            const xAge = d3.scaleBand()
-                .domain(donneesTranchees.map(d => d.name)) //catégories
-                .range([0, barWidthAge]) //largeur du graphique
-                .padding(0.1); //espacement entre les barres
+                // Echelle des axes
+                const xAge = d3.scaleBand()
+                .domain(donneesTranchees.map(d => d.name)) // Catégories (tranches d'âge)
+                .range([0, barWidthAge]) // Largeur du graphique
+                .padding(0.1); // Espacement entre les barres
 
-            const yAge = d3.scaleLinear()
-                .domain([0, d3.max(donneesTranchees, d => d.value)]) //valeurs des barres
+                const yAge = d3.scaleLinear()
+                .domain([0, d3.max(donneesTranchees, d => d.value)]) // Valeurs des barres
                 .range([barHeightAge, 0]);
 
-            //créer les barres
-            gAge.selectAll(".bar")
+                // Créer les barres de l'histogramme
+                gAge.selectAll(".bar")
                 .data(donneesTranchees)
                 .enter().append("rect")
                 .attr("class", "bar")
-                .attr("x", d => xAge(d.name))
-                .attr("y", d => yAge(d.value))
-                .attr("width", xAge.bandwidth()) //largeur des barres
-                .attr("height", d => barHeightAge - yAge(d.value)) //hauteur des barres
+                .attr("x", d => xAge(d.name)) // Position horizontale de la barre
+                .attr("y", d => yAge(d.value)) // Position verticale de la barre
+                .attr("width", xAge.bandwidth()) // Largeur des barres
+                .attr("height", d => barHeightAge - yAge(d.value)) // Hauteur des barres
                 .attr("fill", "#bc8ff9");
 
-            //axe x (noms des catégories)
-            gAge.append("g")
-                .attr("transform", `translate(0,${barHeightAge})`) //x en bas
+                // Axe X (noms des catégories, les tranches d'âge)
+                gAge.append("g")
+                .attr("transform", `translate(0,${barHeightAge})`) // Position en bas
                 .call(d3.axisBottom(xAge));
 
-            //axe y (valeurs)
-            gAge.append("g")
+                // Axe Y (valeurs des barres)
+                gAge.append("g")
                 .call(d3.axisLeft(yAge));
 
-            //ajout des noms des zones
-            gAge.selectAll(".label")
+                // Ajouter les valeurs sur les barres
+                gAge.selectAll(".label")
                 .data(donneesTranchees)
                 .enter().append("text")
                 .attr("class", "label")
-                .attr("x", d => xAge(d.name) + xAge.bandwidth() / 2)
-                .attr("y", d => yAge(d.value) - 5)
+                .attr("x", d => xAge(d.name) + xAge.bandwidth() / 2) // Positionnement horizontal (au centre de la barre)
+                .attr("y", d => yAge(d.value) - 5) // Positionnement vertical (au-dessus de la barre)
                 .attr("text-anchor", "middle")
-                .text(d => d.value);
-        </script>
+                .text(d => d.value); // Affiche la valeur sur la barre
+    </script>
 
         <!--BOUTON RETOUR VERS LE HAUT-->
         <section>
