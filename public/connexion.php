@@ -6,6 +6,15 @@ use Grp2021\app\Exceptions\BddConnectException;
 use Grp2021\app\Messages;
 use Grp2021\app\userRepository;
 
+require_once "header.php";
+
+
+// Si utilisateur déjà connecté
+if (isset($_SESSION['user_id'])) {
+    echo '<script>window.location.href = "profil.php"</script>';
+    exit;
+}
+
 // Connexion à la base de données
 $bdd = new bddConnect();
 try {

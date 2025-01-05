@@ -3,12 +3,13 @@ $title='Qui sommes-nous ?';
 $page="quiSommesNous";
 require 'header.php';
 ?>
-<body>
+
 
 <div class="banniere">
     <img src="images/commun/Bannière.png" alt="Bannière" class="banniere" alt="Bannière">
 </div>
 <main>
+
     <div class="chemin">
         <a href="#">L'association > </a>
         <a href="quiSommesNous.php">Qui sommes-nous</a>
@@ -107,8 +108,8 @@ require 'header.php';
     <section>
         <img id="retourHaut" src="images/commun/fleche.png" alt="flèche haut">
     </section>
-</main>
 
+</main>
 <?php
 
 require_once 'footer.php';

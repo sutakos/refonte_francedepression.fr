@@ -89,6 +89,7 @@ require_once __DIR__ . "/../vendor/autoload.php";
         <!--FIN DE LA BARRE DE NAVIGATION-->
     </header>
 </head>
+    <body>
 
 
 <?php

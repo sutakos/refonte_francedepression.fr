@@ -16,7 +16,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-if(isset($_SESSION['user_id'])) {
+if(!isset($_SESSION['user_id'])) {
     Messages::goTo("Veuillez vous connectez pour répondre au formulaire","info","identification.php");
     exit;
 }
@@ -54,7 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //Enregistrement des réponses
         if($repForm->enregistrement($_SESSION['user_id'],$_POST['statut'],$_POST['age'], $_POST['sexe'],$_POST['region'] ,$triste, $frequence, $_POST['amelioration'])){
             $message = "Enregistrement du questionnaire réussie. Merci de votre temps.";
-            $message ="VOUS AVEZ SELECTIONNE: ".$_POST['frequency'];
             $type ="success";
             $redirection="index.php";
         }
@@ -124,13 +123,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="container">
                         <label for="homme">M</label>
                         <div class="radio-group">
-                            <input type="radio" name="sexe" id="homme" value="homme">
+                            <input type="radio" name="sexe" id="homme" value="H">
                             <label for="homme" class="cercle"></label>
                         </div>
 
                         <label for="femme">F</label>
                         <div class="radio-group">
-                            <input type="radio" name="sexe" id="femme" value="femme">
+                            <input type="radio" name="sexe" id="femme" value="F">
                             <label for="femme" class="cercle"></label>
                         </div>
                     </div>
