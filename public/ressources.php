@@ -91,8 +91,6 @@ require_once 'header.php';
     <br>
     <div class="carrousel">
         <div class="container">
-            <!--<button class="boutonCarrousel" id="btndroit"></button>
-            <button class="boutonCarrousel" id="btngauche"></button>-->
             <div class="contenu">
 
             </div>

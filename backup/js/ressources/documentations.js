@@ -50,10 +50,10 @@ function creerDocLien(elementType, titre,lien) {
 }
 
 /**
-* @param {string} elementType
-* @param {string} image
-* @return {HTMLElement|HTMLAreaElement|HTMLAnchorElement|HTMLImageElement}
-*/
+ * @param {string} elementType
+ * @param {string} image
+ * @return {HTMLElement|HTMLAreaElement|HTMLAnchorElement|HTMLImageElement}
+ */
 function creerDocImage(elementType, image) {
     const elem = document.createElement(elementType);
     elem.src = image;
@@ -105,32 +105,124 @@ function ajoutDocument(doc) {
         elemDocument.append(elemTitle, elemContent,elemEtiquettes);
     }
 
-    elemDocument.style.width = '38.5em'
+    //elemDocument.style.width = '38em'
     elemDocument.style.border = 'solid 1px grey'
     elemDocument.style.borderRadius = '2%'
     elemDocument.style.paddingLeft = '0.5%'
     elemDocument.style.paddingRight = '0.5%'
-    elemDocument.style.marginBottom = '1%'
+
     return elemDocument;
 }
 
-let nbrDoc = 1
+/* Permet de charger des documents */
+
+let nbrDoc = 0
 let groupDoc = 0
 const boutonD = document.querySelector('#flecheD')
-
+const boutonG = document.querySelector('#flecheG')
+const boutonDoubleG = document.querySelector('#doubleFlecheG')
+const boutonDoubleD = document.querySelector('#doubleFlecheD')
 const section = document.querySelector('.documentations');
-for (const document of documents) {
-    if(nbrDoc <= 6){
-        section.append(ajoutDocument(document));
-        nbrDoc++; // incrémente après chaque ajout
-    } else {
-        break
+function afficherDocuments(debut, fin) {
+    for(let i = debut; i < fin && i <= documents.length; i++) {
+        section.append(ajoutDocument(documents[i]))
+        nbrDoc++;
     }
-
-    boutonD.addEventListener('click',afficheDocuments)
-    
-    function afficheDocuments() {
-
-    }
-
 }
+function supprimerDocuments(){
+    const documentsP = document.querySelectorAll('.document');
+
+    documentsP.forEach(select =>{
+        select.remove();
+    })
+}
+
+afficherDocuments(0, 6);
+
+boutonD.addEventListener('click',suiteDocuments)
+function suiteDocuments() {
+    supprimerDocuments()
+    groupDoc ++;
+    const debut = groupDoc * 6;
+    const fin = debut + 6;
+    afficherDocuments(debut,fin)
+
+
+    if (nbrDoc >= documents.length) {
+        boutonD.disabled = true;
+    }
+    boutonG.disabled = false;
+}
+
+boutonG.addEventListener('click', retourDocuments)
+function retourDocuments(){
+    if (groupDoc > 0) {
+        supprimerDocuments()
+        groupDoc--;
+        const debut = groupDoc * 6;
+        const fin = debut + 6;
+        afficherDocuments(debut, fin);
+    }
+
+    if (groupDoc === 0) {
+        boutonG.disabled = true;
+    }
+    boutonD.disabled = false;
+}
+boutonDoubleG.addEventListener('click',() => {
+    supprimerDocuments()
+    groupDoc = 0;
+    nbrDoc = 0;
+    afficherDocuments(0,6);
+    boutonG.disabled = false;
+    boutonD.disabled = false;
+})
+boutonDoubleD.addEventListener('click',() => {
+    supprimerDocuments()
+    groupDoc = documents.length/6;
+    if (documents.length % 6 !== 0) { // S'il y a des documents restants
+        groupeDoc++;
+    }
+    nbrDoc = groupDoc * 6; // Réinitialiser le nombre de documents affichés
+    const debut = groupDoc * 6;
+    const fin = debut + 6;
+    afficherDocuments(debut,fin);
+    boutonG.disabled = false;
+    boutonD.disabled = false;
+})
+
+boutonG.disabled = true;
+
+/* Barre de recherche */
+
+const bouton = document.querySelector("#boutonRecherche"); // Bouton de recherche
+const recherche = document.querySelector("#barrederecherche").value.toLowerCase();
+const selections = document.querySelectorAll('.document');
+
+
+bouton.addEventListener('click', () => {
+
+    const filterDocuments = documents.filter(item => {
+        return item.title.toLowerCase().includes(recherche);
+    });
+
+    section.innerHTML = '';
+
+    section.forEach(e => {
+        if(filterDocuments){
+            if(filterDocuments){
+                e.style.display = 'block'
+            }
+        } else {
+            e.style.display ='none'
+        }
+    })
+
+
+    if (filterDocuments.length === 0) {
+        const noResults = document.createElement('p');
+        noResults.textContent = 'Aucun document trouvé.';
+        section.append(noResults);
+    }
+
+});

@@ -7,23 +7,23 @@ const checkboxes = document.querySelectorAll('.options input')
 
 /* bouton filtre */
 options.forEach(option => {
-    option.style.visibility = 'hidden';
+    option.style.display = 'none';
 });
 
 dropdownMenu.addEventListener('click',afficherFiltre)
 
 function afficherFiltre(){
-   if(dropdownMenu.value === "desactive"){
-       dropdownMenu.value = "active"
-       options.forEach(option => {
-           option.style.visibility = 'hidden';
-       })
-   } else {
-       dropdownMenu.value = "desactive"
-       options.forEach(option => {
-           option.style.visibility = 'visible';
-       })
-   }
+    if(dropdownMenu.value === "desactive"){
+        dropdownMenu.value = "active"
+        options.forEach(option => {
+            option.style.display = 'none';
+        })
+    } else {
+        dropdownMenu.value = "desactive"
+        options.forEach(option => {
+            option.style.display = 'block';
+        })
+    }
 }
 
 /* checkboxes options */
@@ -45,13 +45,13 @@ function afficherDoc() {
 
     if (selectedValues.length === 0) { // si rien sélectionné -> tous les docs affichés
         selections.forEach(selection => {
-            selection.style.visibility = 'visible';
+            selection.style.display = 'block';
         });
         return;
     }
 
     selections.forEach(selection => { // tout cacher
-        selection.style.visibility = 'hidden';
+        selection.style.display = 'none';
 
         documents.forEach(docu => {
             let trouver = false;
@@ -65,13 +65,11 @@ function afficherDoc() {
             if (trouver) { // affichage du document
                 const documentElements = []
                 selections.forEach(selection=> {
-                if(selection.textContent.includes(docu.title))
-                    documentElements.push(selection);
+                    if(selection.textContent.includes(docu.title))
+                        documentElements.push(selection);
                 });
                 documentElements.forEach(element => {
-                    element.style.visibility = 'visible';
-
-                    section.prepend(element); // mettre en premier l'élément sélectionné
+                    element.style.display = 'block';
                 });
             }
         });

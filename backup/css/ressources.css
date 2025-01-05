@@ -1,9 +1,26 @@
 /* responsive */
-@media (max-width: 730px) {
+@media (max-width: 777px) {
     .navigation {
         display: flex;
+        flex-direction: row;
+    }
+    .documentations {
+        flex: 1 1 100%;
         flex-direction: column;
-        gap:1em;
+    }
+
+    .textIcon {
+        font-size: 1em;
+        margin-bottom: 2em;
+    }
+
+    .carrousel {
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-color: #9c93a9 #dad4dc ;
+        scrollbar-width: thin;
+        display: flex;
+        padding-bottom: 1em;
     }
 }
 
@@ -23,36 +40,40 @@
     width: 100%;
     height: 15em;
     border: solid 2px #bab2c6;
+    border-radius: 1.3em;
+    display: flex;
 }
 
 .carrousel .container {
-    width: 100%;
     height: 10em;
     justify-content: center;
+    box-sizing: content-box;
+    display: flex;
+    flex-wrap: nowrap;
+    width: max-content;
 }
 
-.container button {
-    position: relative;
-}
-
-#btndroit {
-    right: 0
-}
-
-#btngauche {
-    left: 0
+.icon {
+    width: 100%;
+    height: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    flex-direction: column;
+    margin-top: 1.5em;
 }
 
 /* menu */
 .menu {
     display : flex;
     justify-content: space-evenly;
-    flex-direction: row;
+    gap: 2%;
+    flex-wrap: wrap;
     list-style: none;
     padding-top: 1em;
     font-weight: bold;
     color: #506FA5;
-    border: 2px solid #dcdadd;
     padding-bottom: 1em;
 }
 
@@ -63,6 +84,7 @@
 /* navigation */
 .navigation{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     padding-top: 2em;
 }
@@ -109,6 +131,7 @@
     border: solid 1px black;
     border-radius: 5%;
     height: 2em;
+    margin-top: 1%;
 }
 
 #dropdownMenuButton img {
@@ -142,9 +165,21 @@
 
 /* documents */
 .documentations {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    max-width: 100%;
+    gap: 0.5%;
+    margin: auto;
+}
+
+.document {
+    border: solid 1px grey;
+    border-radius : 2%;
+    padding-left : 0.5%;
+    padding-right : 0.5%;
+    flex : 1 1 calc(50% - 10px);
+    box-sizing : border-box;
 }
 
 /* boutons de page */

@@ -1,9 +1,5 @@
 const fluxRSS = document.querySelector('#fluxRSS')
 
-fluxRSS.addEventListener('click',()=>{
-    alert("Vous êtes maintenant abonné aux actualités ! (Il n'est pas accessible pour l'instant)")
-})
-
 /**
  * @param {string} elementType
  * @param {string} contenu
@@ -50,3 +46,13 @@ fluxRSS.addEventListener('mouseover', () => {
     }, { once: true });
 })
 
+fluxRSS.addEventListener('click', () => {
+    const url = 'http://localhost:63342/refonte_francedepression.fr/public/documentations.xml';
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.target = '_blank'
+    a.download = 'documentations.xml'
+
+    a.click()
+})

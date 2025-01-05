@@ -7,8 +7,10 @@ import {informations} from "./informations.js";
  */
 function creerTexte(elementType, texte) {
  const elem = document.createElement(elementType)
+ elem.classList.add('textIcon')
  elem.textContent = texte;
  elem.style.color = 'black'
+
  return elem
 }
 
@@ -49,7 +51,6 @@ function creerNumero(elementType,contenu,lien) {
  elem.style.paddingBottom = '1.8em'
  elem.style.borderRadius = '50%'
  elem.style.width = '5.5em'
- elem.style.marginLeft = '2em'
 
  const link = document.createElement('a')
  link.textContent = contenu;
@@ -66,26 +67,29 @@ function creerNumero(elementType,contenu,lien) {
  * @param {informations} info
  * @return HTMLElement
  */
-function ajoutNumero(info){
- const elem = document.createElement('div')
- const elemImage = creerImage('img',info.image,info.lien);
- const elemTexte = creerTexte('h3',info.titre)
- const elemNumero = creerNumero('h1', info.numero, info.lien)
+function ajoutNumero(info) {
+ const elem = document.createElement('div');
+ elem.classList.add('icon');
 
- // si déjà a une image alors ne pas afficher numéro sinon afficher num
- if(info.image === ''){
+ const elemImage = creerImage('img', info.image, info.lien);
+ const elemTexte = creerTexte('h3', info.titre)
+ const elemNumero = creerNumero('h1', info.numero, info.lien);
+
+ if (info.image === '') {
   elem.append(elemNumero, elemTexte)
  }
-  elem.append(elemImage,elemTexte)
+ elem.append(elemImage, elemTexte)
  return elem
 }
 
-const container = document.querySelector('.contenu')
+const contenu = document.querySelector('.contenu')
 for(const information of informations) {
- container.append(ajoutNumero(information));
+ contenu.append(ajoutNumero(information));
 }
 
-container.style.display = 'flex'
-container.style.justifyContent = 'center'
-container.style.gap = '5em'
-container.style.marginTop = '1.5em'
+
+contenu.style.display = 'flex'
+contenu.style.justifyContent = 'center'
+contenu.style.gap = '5em'
+contenu.style.marginTop = '2em'
+contenu.style.textAlign = 'center'
