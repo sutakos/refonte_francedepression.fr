@@ -46,7 +46,7 @@ function creerImage(elementType,image, lien) {
 function creerNumero(elementType,contenu,lien) {
  const elem = document.createElement(elementType);
  elem.style.textAlign = 'center'
- elem.style.backgroundColor = '#ebe9ec'
+ elem.style.backgroundColor = '#d5d9e4'
  elem.style.paddingTop = '1.8em'
  elem.style.paddingBottom = '1.8em'
  elem.style.borderRadius = '50%'

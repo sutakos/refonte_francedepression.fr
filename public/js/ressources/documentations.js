@@ -197,11 +197,34 @@ boutonG.disabled = true;
 
 /* Barre de recherche */
 
-const bouton = document.querySelector("#boutonRecherche"); // Bouton de recherche
-const recherche = document.querySelector("#barrederecherche").value.toLowerCase();
+const boutonRecherche = document.querySelector("#boutonRecherche"); // Bouton de recherche
+const barreRecherche = document.querySelector("#barrederecherche");
 const selections = document.querySelectorAll('.document');
 
+boutonRecherche.addEventListener("click", () => {
+    const recherche = barreRecherche.value.toLowerCase(); // Récupérer et normaliser la recherche
 
+    // Parcourir tous les documents
+    documents.forEach((doc) => {
+        // Vérifier si le document correspond à la recherche
+        const title = doc.textContent.toLowerCase(); // Contenu textuel du document
+        if (title.includes(recherche)) {
+            doc.style.display = "block"; // Afficher si correspond
+        } else {
+            doc.style.display = "none"; // Masquer si ne correspond pas
+        }
+    });
+
+    // Optionnel : Vérifier si aucun document ne correspond
+    const aucunResultat = Array.from(documents).every(
+        (doc) => doc.style.display === "none"
+    );
+    if (aucunResultat) {
+        alert("Aucun document trouvé.");
+    }
+});
+
+/*
 bouton.addEventListener('click', () => {
 
     const filterDocuments = documents.filter(item => {
@@ -228,3 +251,4 @@ bouton.addEventListener('click', () => {
     }
 
 });
+ */
