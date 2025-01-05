@@ -136,7 +136,7 @@ $statsAge = json_encode($donneeAge);
             .attr("transform", d => "translate(" + arc.centroid(d) + ")")
             .attr("dy", "0.35em")
             .attr("text-anchor", "middle")
-            .text(d => d.data.name);
+            .text(d => `${d.data.name} (${d.data.value})`);
     </script>
         <br><br>
 
