@@ -26,7 +26,9 @@ require_once 'header.php';
     </div>
 
     <menu class="menu">
-        <li>Documentations</li>
+        <li>
+            <a href="http://localhost:3434/ressources.php">Documentations</a>
+        </li>
         <li>Vidéothèque</li>
         <li>Audiothèque</li>
         <li>Témoignages</li>
