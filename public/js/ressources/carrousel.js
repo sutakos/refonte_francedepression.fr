@@ -23,7 +23,7 @@ function creerTexte(elementType, texte) {
 function creerImage(elementType,image, lien) {
  const elem = document.createElement(elementType);
  elem.src = image;
- elem.style.width = '9em'
+ elem.style.width = '10em'
 
  const link = document.createElement('a')
  link.href = lien;
@@ -91,5 +91,5 @@ for(const information of informations) {
 contenu.style.display = 'flex'
 contenu.style.justifyContent = 'center'
 contenu.style.gap = '5em'
-contenu.style.marginTop = '1.5em'
+contenu.style.marginTop = '2em'
 contenu.style.textAlign = 'center'

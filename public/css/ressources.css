@@ -10,13 +10,15 @@
     }
 
     .textIcon {
-        font-size: 0.9em;
+        font-size: 1em;
+        margin-bottom: 2em;
     }
 
     .carrousel {
         overflow-x: auto;
         overflow-y: hidden;
         scrollbar-color: #9c93a9 #dad4dc ;
+        scrollbar-width: thin;
         display: flex;
         padding-bottom: 1em;
     }
@@ -40,7 +42,6 @@
     border: solid 2px #bab2c6;
     border-radius: 1.3em;
     display: flex;
-    position: relative;
 }
 
 .carrousel .container {
