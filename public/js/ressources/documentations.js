@@ -1,5 +1,7 @@
 import { documents } from "./documents.js";
 
+/* Création des documents */
+
 /**
  * @param {string} elementType
  * @param {string} content
