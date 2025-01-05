@@ -48,47 +48,45 @@ $statsSexe = json_encode($data->dataHF());
         const donneeSexe = <?php echo $statsSexe; ?>;
 
        //dimension du diagramme circulaire
-        const svgSexe = d3.select("#StatSexe");
-        const widthSexe = +svgSexe.attr("width"); //recupere la largeur du svg et converti en int avec le +
-        const heightSexe = +svgSexe.attr("height"); //recupere la largeur du svg et converti en int avec le +
-        const rayonSexe = Math.min(widthSexe, heightSexe) / 2; //rayon du cercle
+            const svgSexe = d3.select("#StatSexe");
+            const widthSexe = +svgSexe.attr("width"); //recupere la largeur du svg et converti en int avec le +
+            const heightSexe = +svgSexe.attr("height"); //recupere la largeur du svg et converti en int avec le +
+            const rayonSexe = Math.min(widthSexe, heightSexe) / 2; //rayon du cercle
 
-        //couleur des zones
-        const colorSexe = d3.scaleOrdinal(["#ff866c", "#b0e773"]);
+            //couleur des zones
+            const colorSexe = d3.scaleOrdinal(["#ff866c", "#b0e773"]);
 
-        const pieSexe = d3.pie()
-            .value(d => d.value);
+            //divise un cercle en segments
+            const pieSexe = d3.pie().value(d => d.value);
+            const arcSexe = d3.arc().outerRadius(rayonSexe - 10).innerRadius(0);
 
-        const arcSexe = d3.arc()
-            .outerRadius(radius - 10)
-            .innerRadius(0);
+            //ajout d'un groupe g pour contenir le cercle
+            //translate deplace vers la position x,y
+            const gSexe = svgSexe.append("g")
+                .attr("transform", `translate(${widthSexe / 2},${heightSexe / 2})`);
 
-        //ajout d'un groupe g pour contenir le cercle
-        //translate deplace vers la position x,y
-        const gSexe = svgSexe.append("g")
-            .attr("transform", `translate(${widthSexe / 2},${heightSexe / 2})`);
+            //crée les segments
+            const arcsSexe = gSexe.selectAll(".arc")
+                .data(pieSexe($donneeSexe))
+                .enter().append("g")
+                .attr("class", "arc");
 
-        //crée les segments
-        const arcsSexe = gSexe.selectAll(".arc")
-            .data(pieSexe($donneeSexe))
-            .enter().append("g")
-            .attr("class", "arc");
+            //dessine les segments du diagramme circulaire
+            arcsSexe.append("path")
+                .attr("d", arcSexe)
+                .attr("fill", d => colorSexe(d.data.name));
 
-        //dessine les segments du diagramme circulaire
-        arcsSexe.append("path")
-            .attr("d", arcSexe)
-            .attr("fill", d => colorSexe(d.data.name));
+            //ajout des noms sur les zones
+            arcsSexe.append("text")
+                .attr("transform", d => "translate(" + arcSexe.centroid(d) + ")")
+                .attr("dy", "0.35em")
+                .attr("text-anchor", "middle")
+                .text(d => `${d.data.name} (${d.data.value})`);
+        </script>
+        <br><br>
 
-       //ajout des noms sur les zones
-        arcsSexe.append("text")
-            .attr("transform", d => "translate(" + arcSexe.centroid(d) + ")")
-            .attr("dy", "0.35em")
-            .attr("text-anchor", "middle")
-            .text(d => `${d.data.name} (${d.data.value})`);
-    </script>
-
-    <h2>Répartition des régions</h2><br>
-    <svg id="StatRegion" width="700" height="400"></svg>
+        <h2>Répartition des régions</h2><br>
+        <svg id="StatRegion" width="700" height="400"></svg>
 
         <script>
             //donnees
