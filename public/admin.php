@@ -7,7 +7,6 @@ use Grp2021\app\dataGraphics;
 $title = 'Admin';
 $page="admin";
 require_once 'header.php';
-// TODO : À compléter avec les D3 etc (les graphiques quoi)
 
 // Connexion à la base de données
 $bdd = new bddConnect();
@@ -22,6 +21,7 @@ $data = new dataGraphics($pdo);
 
 
 $statsSexe = json_encode($data->dataHF());
+
 
 $data2 = [
         ['Region'=> "Ne souhaite pas répondre"],
@@ -67,7 +67,6 @@ foreach ($data3 as $item) {
     $ageCounts[$age]++;
 }
 
-$donneeAge = [];
 foreach ($ageCounts as $age => $count) {
     $donneeAge[] = ['name' => $age, 'value' => $count];
 }
@@ -89,7 +88,7 @@ $statsAge = json_encode($donneeAge);
 
     <h2>Répartition des sexes</h2><br>
     <svg id="StatSexe" width="400" height="400"></svg>
-    
+
     <!--import d3-->
     <script src="https://d3js.org/d3.v7.min.js"></script>
 
@@ -97,42 +96,48 @@ $statsAge = json_encode($donneeAge);
         //récupére les stats PHP encodées en JSON
         const donneeSexe = <?php echo $statsSexe; ?>;
 
-       //dimension du diagramme circulaire
-            const svgSexe = d3.select("#StatSexe");
-            const widthSexe = +svgSexe.attr("width"); //recupere la largeur du svg et converti en int avec le +
-            const heightSexe = +svgSexe.attr("height"); //recupere la largeur du svg et converti en int avec le +
-            const rayonSexe = Math.min(widthSexe, heightSexe) / 2; //rayon du cercle
+        //crée un diagramme circulaire
+        const svgSexe = d3.select("#StatSexe");
+        const width = +svgSexe.attr("width"); //recupere la largeur du svg et converti en int avec le +
+        const height = +svgSexe.attr("height"); //recupere la largeur du svg et converti en int avec le +
+        const radius = Math.min(width, height) / 2;
 
-            //couleur des zones
-            const colorSexe = d3.scaleOrdinal(["#ff866c", "#b0e773"]);
+        //couleur des zones
+        const color = d3.scaleOrdinal(["#ff866c", "#b0e773"]);
 
-            //divise un cercle en segments
-            const pieSexe = d3.pie().value(d => d.value);
-            const arcSexe = d3.arc().outerRadius(rayonSexe - 10).innerRadius(0);
+        const pie = d3.pie()
+            .value(d => d.value);
 
-            //ajout d'un groupe g pour contenir le cercle
-            //translate deplace vers la position x,y
-            const gSexe = svgSexe.append("g")
-                .attr("transform", `translate(${widthSexe / 2},${heightSexe / 2})`);
+        const arc = d3.arc()
+            .outerRadius(radius - 10)
+            .innerRadius(0);
 
-            //crée les segments
-            const arcsSexe = gSexe.selectAll(".arc")
-                .data(pieSexe($donneeSexe))
-                .enter().append("g")
-                .attr("class", "arc");
+        const g = svgSexe.append("g")
+            .attr("transform", `translate(${width / 2},${height / 2})`);
 
-            //dessine les segments du diagramme circulaire
-            arcsSexe.append("path")
-                .attr("d", arcSexe)
-                .attr("fill", d => colorSexe(d.data.name));
+        //nom des zones et la valeur
+        const dataDiagramme = [
+            { name: 'Homme', value: donneeSexe['hommes']},
+            { name: 'Femme', value: donneeSexe['femmes']}
+        ];
 
-            //ajout des noms sur les zones
-            arcsSexe.append("text")
-                .attr("transform", d => "translate(" + arcSexe.centroid(d) + ")")
-                .attr("dy", "0.35em")
-                .attr("text-anchor", "middle")
-                .text(d => `${d.data.name} (${d.data.value})`);
-        </script>
+        const arcs = g.selectAll(".arc")
+            .data(pie(dataDiagramme))
+            .enter().append("g")
+            .attr("class", "arc");
+
+        //affichage diagramme circulaire
+        arcs.append("path")
+            .attr("d", arc)
+            .attr("fill", d => color(d.data.name));
+
+        //ajout des noms sur les zones
+        arcs.append("text")
+            .attr("transform", d => "translate(" + arc.centroid(d) + ")")
+            .attr("dy", "0.35em")
+            .attr("text-anchor", "middle")
+            .text(d => d.data.name);
+    </script>
         <br><br>
 
         <h2>Répartition des régions</h2><br>
@@ -283,7 +288,7 @@ $statsAge = json_encode($donneeAge);
             <img id="retourHaut" src="images/commun/fleche.png" alt="fleche retour">
         </section>
         <!--FIN BOUTON RETOUR VERS LE HAUT-->
-    
+
 </main>
 <?php
 require_once 'footer.php';

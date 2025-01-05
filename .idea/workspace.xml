@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="responsive page ressource -&gt; documents ok">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/ressources/carrousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/ressources/carrousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/ressources/documentations.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/ressources/documentations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/ressources/fluxRSS.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/ressources/fluxRSS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/ressources/recherche.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/ressources/recherche.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/ressources.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/ressources.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/dataGraphics.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/dataGraphics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="17045bdc68d91065ea288d470d8f85120c62a2d5" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,12 +44,12 @@
     &quot;assignee&quot;: &quot;irenex30&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/sutakos/refonte_francedepression.fr.git",
-    "accountId": "515f0bc9-c9de-44e3-b8e3-3182cd086364"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sutakos/refonte_francedepression.fr.git&quot;,
+    &quot;accountId&quot;: &quot;515f0bc9-c9de-44e3-b8e3-3182cd086364&quot;
   }
-}]]></component>
+}</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
