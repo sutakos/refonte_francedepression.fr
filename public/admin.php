@@ -23,6 +23,56 @@ $data = new dataGraphics($pdo);
 
 $statsSexe = json_encode($data->dataHF());
 
+$data2 = [
+        ['Region'=> "Ne souhaite pas répondre"],
+        ['Region' => "Île-de-France"],
+        ['Region' => "Haute-Normandie"],
+        ['Region' => "Lorraine"],
+        ['Region' => "Île-de-France"],
+        ['Region' => "Poitou-Charentes"],
+        ['Region' => "Poitou-Charentes"],
+        ['Region' => "Poitou-Charentes"]
+];
+
+$regionCounts = [];
+foreach ($data2 as $item) {
+    $region = $item['Region'];
+    if (!isset($regionCounts[$region])) {
+        $regionCounts[$region] = 0;
+    }
+    $regionCounts[$region]++;
+}
+
+$donneeRegion = [];
+foreach ($regionCounts as $region => $count) {
+    $donneeRegion[] = ['name' => $region, 'value' => $count];
+}
+
+$statsRegion = json_encode($donneeRegion);
+
+$data3 = [
+        ['Age' => "15"],
+        ['Age' => "29"],
+        ['Age' => "11"],
+        ['Age' => "33"],
+        ['Age' => "15"]
+];
+
+$ageCounts = [];
+foreach ($data3 as $item) {
+    $age = $item['Age'];
+    if (!isset($ageCounts[$age])) {
+        $ageCounts[$age] = 0;
+    }
+    $ageCounts[$age]++;
+}
+
+$donneeAge = [];
+foreach ($ageCounts as $age => $count) {
+    $donneeAge[] = ['name' => $age, 'value' => $count];
+}
+
+$statsAge = json_encode($donneeAge);
 ?>
 
  <div class="banniere">
@@ -89,14 +139,8 @@ $statsSexe = json_encode($data->dataHF());
         <svg id="StatRegion" width="700" height="400"></svg>
 
         <script>
-            //donnees
-            const donneeRegion = [
-                { name: "Ne souhaite pas répondre", value: 10 },
-                { name: "Île-de-France", value: 2 },
-                { name: "Haute-Normandie", value: 5 },
-                { name: "Lorraine", value: 0 },
-                { name: "Poitou-Charentes",value: 7}
-            ];
+            //récupére les stats PHP encodées en JSON
+            const donneeRegion = <?php echo $statsRegion; ?>;
 
             //dimensions de l'histogramme
             const svgRegion = d3.select("#StatRegion");
@@ -161,15 +205,8 @@ $statsSexe = json_encode($data->dataHF());
         <svg id="StatAge" width="700" height="400"></svg>
 
         <script>
-            //donnee
-            const donneeAge = [
-                { name: "15", value: 10 },
-                { name: "20", value: 2 },
-                { name: "12", value: 5 },
-                { name: "19", value: 0 },
-                { name: "33", value: 7 },
-                { name: "10", value: 4 }
-            ];
+            //récupére les stats PHP encodées en JSON
+            const donneeAge = <?php echo $statsAge; ?>;
 
             //trie par tranche de 10
             const trancheTaille = 10;
