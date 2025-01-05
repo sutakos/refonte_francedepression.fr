@@ -51,13 +51,13 @@ export const documents = [
         title:"Dépression saisonnière",
         lien:"https://www.ledauphine.com/magazine-lifestyle/2021/10/27/depression-saisonniere-comment-garder-le-moral-cet-automne?fbclid=IwAR0o5-bcRo9TlS-k3CY0Yo7Ifl0sFuVYnh7SZydIARQ6s-RXznYVJML-bl4",
         content:"comment garder le moral cet automne",
-        image:"",
+        image:"images/ressources/depression-saisonniere.jpg",
         etiquettes:["depression"]
     },
     {
         title:"Mon Sherpa",
         lien:"https://apps.apple.com/app/id1471975438?mt=8",
-        content:"chatbot de soutien psychologique, accompagne les Français gratuitement pendant les fêtes de fin d’année ",
+        content:"chatbot de soutien psychologique, accompagne les Français gratuitement pendant les fêtes de fin d’année",
         image:"",
         etiquettes:["nouvelles"]
     }

@@ -15,6 +15,6 @@ export const informations = [
         image:"images/ressources/ligne_ecoute.png",
         titre:"Lignes d'écoute",
         numero:"09 72 39 40 50",
-        lien:""
+        lien:"https://francedepression.fr/index.php/ressources/documentations/item/31-lignes-d-ecoute"
     }
 ]
