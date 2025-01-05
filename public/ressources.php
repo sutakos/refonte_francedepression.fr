@@ -3,6 +3,7 @@ $title="Ressources";
 $page="ressources";
 require_once 'header.php';
 ?>
+
 <script src="js/ressources/documentations.js" type="module"></script>
 <script src="js/ressources/filtre.js" type="module"></script>
 <script src="js/ressources/fluxRSS.js" type="module"></script>
@@ -11,7 +12,7 @@ require_once 'header.php';
 <script src="js/ressources/recherche.js" type="module"></script>
 <body>
 <div class="banniere">
-    <img src="images/commun/Bannière.png" alt="Bannière" class="banniere">
+    <img src="./images/commun/Bannière.png" alt="Bannière" class="banniere">
 </div>
 
 <main>
@@ -33,13 +34,13 @@ require_once 'header.php';
         <!-- Barre de recherche -->
         <div class="recherche">
             <input id="barrederecherche" type="Search" placeholder="Rechercher">
-            <button><img src="images/ressources/loupeRecherche.png"></button>
+            <button><img src="./images/ressources/loupeRecherche.png"></button>
         </div>
         <!-- Fin Barre de recherche -->
         <!-- Filtre -->
         <div class="dropdown">
             <button type="button" id="dropdownMenuButton" value="active">
-                Filtre<img src="images/ressources/flecheBas.png">
+                Filtre<img src="./images/ressources/flecheBas.png">
             </button>
             <div class="dropdown-menu">
                 <div class="options">
@@ -81,7 +82,7 @@ require_once 'header.php';
             </div>
         </div>
         <!-- Fin Filtre -->
-        <img id="fluxRSS" src="images/ressources/fluxRSS.png" alt="fluxRSS">
+        <img id="fluxRSS" src="./images/ressources/fluxRSS.png" alt="fluxRSS">
     </div>
     <br>
     <div class="carrousel">
@@ -112,7 +113,7 @@ require_once 'header.php';
 
     <!--BOUTON RETOUR VERS LE HAUT-->
     <section>
-        <img id="retourHaut" src="images/commun/fleche.png" alt="fleche retour">
+        <img id="retourHaut" src="./images/commun/fleche.png" alt="fleche retour">
     </section>
     <!--FIN BOUTON RETOUR VERS LE HAUT-->
 </main>

@@ -67,9 +67,7 @@ function creerNumero(elementType,contenu,lien) {
  */
 function ajoutNumero(info){
  const elem = document.createElement('div');
- elem.style.display = 'flex';
- elem.style.flexDirection = 'column';
- elem.style.alignItems = 'center';
+ elem.classList.add('icon');
 
  const elemImage = creerImage('img', info.image, info.lien);
  const elemTexte = creerTexte('h3', info.titre)

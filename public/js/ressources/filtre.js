@@ -70,8 +70,6 @@ function afficherDoc() {
                 });
                 documentElements.forEach(element => {
                     element.style.display = 'block';
-
-                    section.prepend(element); // mettre en premier l'élément sélectionné
                 });
             }
         });
