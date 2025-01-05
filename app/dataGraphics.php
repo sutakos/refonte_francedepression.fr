@@ -16,7 +16,7 @@ class dataGraphics
     {
         return $this->dbConnexion;
     }
-        public function dataHF(): array
+    public function dataHF(): array
         {
         // Requête SQL pour compter le nombre d'hommes et de femmes
         $requete = "SELECT sexe, COUNT(user_id) as nb FROM formulaire WHERE triste = true GROUP BY sexe";
@@ -87,6 +87,55 @@ class dataGraphics
         }
 
         return $dataR;
+    }
+    public function dataA(): array
+    {
+        // Requête SQL pour compter le nombre d'hommes et de femmes
+        $requete = "SELECT age, COUNT(user_id) as nb FROM formulaire WHERE triste = true GROUP BY age";
+
+        // Préparer et exécuter la requête
+        $stmt = $this->dbConnexion->prepare($requete);
+        $stmt->execute();
+
+        // Initialiser le tableau des résultats
+        $dataAge = [
+            '0-9' => 0,
+            '10-19' => 0,
+            '20-29' => 0,
+            '30-39' => 0,
+            '40-49' => 0,
+            '50-59' => 0,
+            '60-69' => 0,
+            '70+' => 0
+        ];
+
+        // Parcourir les résultats
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $age = (int) $row['age'];
+            $count = (int) $row['nb'];
+
+            // Déterminer la tranche d'âge
+            if ($age >= 0 && $age <= 9) {
+                $dataAge['0-9'] += $count;
+            } elseif ($age >= 10 && $age <= 19) {
+                $dataAge['10-19'] += $count;
+            } elseif ($age >= 20 && $age <= 29) {
+                $dataAge['20-29'] += $count;
+            } elseif ($age >= 30 && $age <= 39) {
+                $dataAge['30-39'] += $count;
+            } elseif ($age >= 40 && $age <= 49) {
+                $dataAge['40-49'] += $count;
+            } elseif ($age >= 50 && $age <= 59) {
+                $dataAge['50-59'] += $count;
+            } elseif ($age >= 60 && $age <= 69) {
+                $dataAge['60-69'] += $count;
+            } else {
+                // Pour les âges >= 70
+                $dataAge['70+'] += $count;
+            }
+        }
+
+        return $dataAge;
     }
 
 

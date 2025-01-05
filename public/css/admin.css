@@ -1,0 +1,50 @@
+/* Masquer tous les graphiques par défaut */
+.graphique {
+    display: none;
+    margin: 25px auto;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+/* Style pour les boutons */
+.nav-link {
+    margin: 0px 5px;
+    padding: 10px 20px;
+    color: #506FA5;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    background-color: #bfe8f4;
+    box-shadow: none; /* Suppression des ombres 3D */
+    border: 1px solid #bfe8f4; /* Ajout d'une bordure de même couleur que le fond */
+    cursor: pointer; /* Curseur pointer pour indiquer un élément cliquable */
+}
+
+/* Style pour les boutons actifs */
+.nav-link.active {
+    background-color: #506FA5;
+    color: #fff;
+    border-color: #506FA5;
+}
+
+/* Style pour le survol des boutons */
+.nav-link:hover {
+    background-color: #6a81ac;
+    color: #ffffff;
+    border-color: #ddd;
+}
+
+/* Ajout d'un petit espace entre les boutons */
+div button {
+    margin-right: 10px;
+}
+
+/* Optionnel : style pour les boutons désactivés (si nécessaire) */
+.nav-link.disabled {
+    background-color: #dcdcdc;
+    color: #a1a1a1;
+    cursor: not-allowed;
+}

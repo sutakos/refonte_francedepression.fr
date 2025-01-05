@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="responsive page ressource -&gt; documents ok">
+    <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="SELECT REGION + Region (abréviation)">
+      <change afterPath="$PROJECT_DIR$/public/css/admin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/dataGraphics.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/dataGraphics.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/identification.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/identification.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,29 +69,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Node.js.changementDocu.js.executor": "Debug",
-    "Node.js.recherche.js.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/oiso_fille_2/Downloads/php-8.4.2-nts-Win32-vs17-x64/php.exe",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_interpreter_path": "node",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Node.js.changementDocu.js.executor&quot;: &quot;Debug&quot;,
+    &quot;Node.js.recherche.js.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/oiso_fille_2/Downloads/php-8.4.2-nts-Win32-vs17-x64/php.exe&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mariadb",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mariadb&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jedil\OneDrive\Documents\IUT\francedepressionProjet\app\Exceptions" />
@@ -443,7 +445,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736084504526</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="ajout region age">
+      <option name="closed" value="true" />
+      <created>1736102106347</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1736102106347</updated>
+    </task>
+    <task id="LOCAL-00039" summary="SELECT REGION + Region (abréviation)">
+      <option name="closed" value="true" />
+      <created>1736103096456</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1736103096456</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +488,9 @@
     <MESSAGE value="FIN DE BDD (tout fonctionne)&#10;HTML de profil.php" />
     <MESSAGE value="ajout banniere questionnaire.php" />
     <MESSAGE value="responsive page ressource -&gt; documents ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="responsive page ressource -&gt; documents ok" />
+    <MESSAGE value="ajout region age" />
+    <MESSAGE value="SELECT REGION + Region (abréviation)" />
+    <option name="LAST_COMMIT_MESSAGE" value="SELECT REGION + Region (abréviation)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
