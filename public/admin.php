@@ -31,9 +31,10 @@ $statsAge= json_encode($data->dataA());
     </div>
 <main>
 
-    <!--CHEMIN-->
+    <!-- CHEMIN -->
     <section>
         <div class="chemin">
+            <a href="profil.php">Profil ></a>
             <a href="admin.php">Statistiques</a>
         </div>
     </section>
