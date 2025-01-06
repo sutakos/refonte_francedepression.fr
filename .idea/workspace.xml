@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="fini responsive + fluxRSS + chargement des documents !!!!!!!">
+    <list default="true" id="b704abdb-2af2-4940-bfde-2ae57cd6c0cf" name="Changes" comment="fini responsive + fluxRSS + chargement des documents + Barre de recherche !">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/ressources/changementDocu.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/ressources/changementDocu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/ressources/documentations.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/ressources/documentations.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +144,8 @@
       <workItem from="1735313346647" duration="1930000" />
       <workItem from="1736002091029" duration="32973000" />
       <workItem from="1736073149952" duration="18432000" />
-      <workItem from="1736180333468" duration="4699000" />
+      <workItem from="1736180333468" duration="4883000" />
+      <workItem from="1736186707760" duration="318000" />
     </task>
     <task id="LOCAL-00001" summary="Dernière modif - Lucie">
       <option name="closed" value="true" />
@@ -497,7 +499,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736119091658</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="fini responsive + fluxRSS + chargement des documents + Barre de recherche !">
+      <option name="closed" value="true" />
+      <created>1736186451087</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1736186451087</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +535,8 @@
     <MESSAGE value="ajout banniere questionnaire.php" />
     <MESSAGE value="responsive page ressource -&gt; documents ok" />
     <MESSAGE value="fini responsive + fluxRSS + chargement des documents !!!!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="fini responsive + fluxRSS + chargement des documents !!!!!!!" />
+    <MESSAGE value="fini responsive + fluxRSS + chargement des documents + Barre de recherche !" />
+    <option name="LAST_COMMIT_MESSAGE" value="fini responsive + fluxRSS + chargement des documents + Barre de recherche !" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -92,7 +92,7 @@ function creerEtiquettes(elementType, etiquettes) {
  * @param {documents} doc
  * @return HTMLElement
  */
-function ajoutDocument(doc) {
+export function ajoutDocument(doc) {
     const elemDocument = document.createElement('div');
     elemDocument.classList.add('document');
     const elemImage= creerDocImage('img', doc.image);
@@ -189,7 +189,7 @@ boutonDoubleD.addEventListener('click',() => {
     supprimerDocuments()
     groupDoc = documents.length/6;
     if (documents.length % 6 !== 0) { // S'il y a des documents restants
-        groupeDoc++;
+        groupDoc++;
     }
     nbrDoc = groupDoc * 6; // Réinitialiser le nombre de documents affichés
     const debut = groupDoc * 6;
