@@ -118,13 +118,19 @@ function ajoutDocument(doc) {
 
 /* Permet de charger des documents */
 
-let nbrDoc = 0
-let groupDoc = 0
+let nbrDoc = 0 // nombre total de documents
+let groupDoc = 0 // équivalent à une page
 const boutonD = document.querySelector('#flecheD')
 const boutonG = document.querySelector('#flecheG')
 const boutonDoubleG = document.querySelector('#doubleFlecheG')
 const boutonDoubleD = document.querySelector('#doubleFlecheD')
 const section = document.querySelector('.documentations');
+
+/**
+ * Afficher les documents selon le positionnement des pages
+ * @param debut : int nombre total de documents au début
+ * @param fin : int le nombre du dernier document
+ */
 function afficherDocuments(debut, fin) {
     for(let i = debut; i < fin && i <= documents.length; i++) {
         section.append(ajoutDocument(documents[i]))
@@ -197,58 +203,28 @@ boutonG.disabled = true;
 
 /* Barre de recherche */
 
-const boutonRecherche = document.querySelector("#boutonRecherche"); // Bouton de recherche
-const barreRecherche = document.querySelector("#barrederecherche");
-const selections = document.querySelectorAll('.document');
+const barreRecherche = document.getElementById("barrederecherche");
+const documentations = document.querySelector(".documentations");
+const boutonRecherche = document.getElementById("boutonRecherche")
 
-boutonRecherche.addEventListener("click", () => {
-    const recherche = barreRecherche.value.toLowerCase(); // Récupérer et normaliser la recherche
-
-    // Parcourir tous les documents
-    documents.forEach((doc) => {
-        // Vérifier si le document correspond à la recherche
-        const title = doc.textContent.toLowerCase(); // Contenu textuel du document
-        if (title.includes(recherche)) {
-            doc.style.display = "block"; // Afficher si correspond
-        } else {
-            doc.style.display = "none"; // Masquer si ne correspond pas
-        }
-    });
-
-    // Optionnel : Vérifier si aucun document ne correspond
-    const aucunResultat = Array.from(documents).every(
-        (doc) => doc.style.display === "none"
-    );
-    if (aucunResultat) {
-        alert("Aucun document trouvé.");
-    }
+boutonRecherche.addEventListener('click', function () {
+    const saisie = barreRecherche.value.toLowerCase();
+    // Filtrer les données (documents) selon ce qu'on a saisie dans la barre de recherche
+    const documentsFiltre = documents.filter(doc => doc.title.toLowerCase().includes(saisie));
+    // Ajoute
+    resultatDocuments(documentsFiltre);
 });
 
-/*
-bouton.addEventListener('click', () => {
-
-    const filterDocuments = documents.filter(item => {
-        return item.title.toLowerCase().includes(recherche);
-    });
-
-    section.innerHTML = '';
-
-    section.forEach(e => {
-        if(filterDocuments){
-            if(filterDocuments){
-                e.style.display = 'block'
-            }
-        } else {
-        e.style.display ='none'
-        }
-    })
-
-
-    if (filterDocuments.length === 0) {
-        const noResults = document.createElement('p');
-        noResults.textContent = 'Aucun document trouvé.';
-        section.append(noResults);
+// Fonction d'affichage des résultats
+function resultatDocuments(documentsFiltres) {
+    documentations.innerHTML = ""; // Réinitialise les résultats
+    // Si aucun éléments dans la liste de filtre
+    if (documentsFiltres.length === 0) {
+        documentations.innerHTML = "<p>Aucun document trouvé</p>";
+        return;
     }
-
-});
- */
+    // Afficher pour tous les documents dans la liste du filtre
+    documentsFiltres.forEach(doc => {
+        documentations.append(ajoutDocument(doc));
+    });
+}
