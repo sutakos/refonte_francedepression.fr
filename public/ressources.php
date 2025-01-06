@@ -40,7 +40,6 @@ require_once 'header.php';
         <!-- Barre de recherche -->
         <div class="recherche">
             <input id="barrederecherche" type="Search" placeholder="Rechercher">
-            <button id="boutonRecherche"><img src="./images/ressources/loupeRecherche.png"></button>
         </div>
         <!-- Fin Barre de recherche -->
         <!-- Filtre -->

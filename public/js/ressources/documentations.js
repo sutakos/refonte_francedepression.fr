@@ -205,9 +205,7 @@ boutonG.disabled = true;
 
 const barreRecherche = document.getElementById("barrederecherche");
 const documentations = document.querySelector(".documentations");
-const boutonRecherche = document.getElementById("boutonRecherche")
-
-boutonRecherche.addEventListener('click', function () {
+barreRecherche.addEventListener('input', function () {
     const saisie = barreRecherche.value.toLowerCase();
     // Filtrer les données (documents) selon ce qu'on a saisie dans la barre de recherche
     const documentsFiltre = documents.filter(doc => doc.title.toLowerCase().includes(saisie));
@@ -217,7 +215,9 @@ boutonRecherche.addEventListener('click', function () {
 
 // Fonction d'affichage des résultats
 function resultatDocuments(documentsFiltres) {
+
     documentations.innerHTML = ""; // Réinitialise les résultats
+
     // Si aucun éléments dans la liste de filtre
     if (documentsFiltres.length === 0) {
         documentations.innerHTML = "<p>Aucun document trouvé</p>";
@@ -227,4 +227,13 @@ function resultatDocuments(documentsFiltres) {
     documentsFiltres.forEach(doc => {
         documentations.append(ajoutDocument(doc));
     });
+
+    if(barreRecherche.value.length === 0){
+        supprimerDocuments()
+        const debut = groupDoc * 6;
+        const fin = Math.min(debut + 6, documents.length)
+        afficherDocuments(debut, fin)
+
+    }
+
 }
