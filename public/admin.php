@@ -17,15 +17,46 @@ try {
     exit;
 }
 
+$NomRegion = [
+    "nspr" => "Ne souhaite pas répondre",
+    "idf" => "Île-de-France",
+    "hm" => "Haute-Normandie",
+    "l" => "Lorraine",
+    "pt" => "Poitou-Charentes",
+    "ra" => "Rhône-Alpes",
+    "paca" => "Provence-Alpes-Côte d'Azur",
+    "als" => "Alsace",
+    "aqui" => "Aquitaine",
+    "auv" => "Auvergne",
+    "bourg" => "Bourgogne",
+    "bret" => "Bretagne",
+    "cen" => "Centre",
+    "ca" => "Champagne-Ardenne",
+    "cor" => "Corse",
+    "fc" => "Franche-Comté",
+    "lr" => "Languedoc-Roussillon",
+    "mp" => "Midi-Pyrénées",
+    "lim" => "Limousin",
+    "npdc" => "Nord-Pas-de-Calais",
+    "bn" => "Basse-Normandie",
+    "pl" => "Pays de la Loire",
+    "p" => "Picardie",
+];
+
 $data = new dataGraphics($pdo);
 
-
 $statsSexe = json_encode($data->dataHF());
-$statsRegion= json_encode($data->dataR());
+
+$statsRegionFull=[];
+foreach ($data->dataR() as $abbr => $count) { // dataR() retourne les abréviations des régions
+    $regionNom = $NomRegion[$abbr] ?? $abbr; // Si aucune correspondance, garder l'abréviation
+    $statsRegionFull[$regionNom] = $count;
+}
+$statsRegion= json_encode($statsRegionFull);
+
 $statsAge= json_encode($data->dataA());
 
 ?>
-<script src="./js/identification.js" type="module"></script>
  <div class="banniere">
         <img src="images/commun/Bannière.png" class="banniere" alt="Bannière">
     </div>
