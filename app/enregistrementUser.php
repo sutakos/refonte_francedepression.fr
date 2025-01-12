@@ -27,7 +27,7 @@ class enregistrementUser {
             return true;
         }
         catch (AuthentificationException $e) {
-            Messages::goTo($e->getMessage(),$e->getType(),"inscription.php");
+            Messages::goTo($e->getMessage(),$e->getType(),"identification.php");
         }
         return false;
 
@@ -54,7 +54,7 @@ class enregistrementUser {
 
         }
         catch(AuthentificationException $e){
-            Messages::goTo($e->getMessage(),$e->getType(),"connexion.php");
+            Messages::goTo($e->getMessage(),$e->getType(),"identification.php");
         }
         return null;
     }

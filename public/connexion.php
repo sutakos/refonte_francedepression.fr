@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }catch (AuthentificationException $e) {
         $message = $e->getMessage();
         $type = "danger";
-        $redirection = "connexion.php";
+        $redirection = "identification.php";
     }
     Messages::goTo($message, $type, $redirection);
 }
