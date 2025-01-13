@@ -47,7 +47,7 @@
     &quot;accountId&quot;: &quot;a344dbcb-a489-41bb-a5ee-1e2c6a740032&quot;
   }
 }</component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\Program Files\php-8.3.8\php.exe">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
@@ -112,8 +112,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.23339.16" />
-        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.23339.16" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-PS-242.21829.154" />
+        <option value="bundled-php-predefined-a98d8de5180a-4d9f4c849d09-com.jetbrains.php.sharedIndexes-PS-242.21829.154" />
       </set>
     </attachedChunks>
   </component>
@@ -146,6 +146,7 @@
       <workItem from="1736197110501" duration="645000" />
       <workItem from="1736542980186" duration="657000" />
       <workItem from="1736673640991" duration="1269000" />
+      <workItem from="1736778822049" duration="1257000" />
     </task>
     <task id="LOCAL-00001" summary="Dernière modif - Lucie">
       <option name="closed" value="true" />
@@ -443,7 +444,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736084504526</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="FIN DU PROJET MERCI DE VOTRE PARTICIPATION">
+      <option name="closed" value="true" />
+      <created>1736779559387</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1736779559387</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +479,8 @@
     <MESSAGE value="FIN DE BDD (tout fonctionne)&#10;HTML de profil.php" />
     <MESSAGE value="ajout banniere questionnaire.php" />
     <MESSAGE value="responsive page ressource -&gt; documents ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="responsive page ressource -&gt; documents ok" />
+    <MESSAGE value="FIN DU PROJET MERCI DE VOTRE PARTICIPATION" />
+    <option name="LAST_COMMIT_MESSAGE" value="FIN DU PROJET MERCI DE VOTRE PARTICIPATION" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -5,7 +5,7 @@ const boutonDoubleD = document.querySelector('#doubleFlecheD')
 const boutonDoubleG = document.querySelector('#doubleFlecheG')
 
 let count = 1 // valeur initiale
-const max = 2 // permet de changer le nombre maximum de pages sans tout modifier un par un
+const max = 3 // permet de changer le nombre maximum de pages sans tout modifier un par un
 
 elem.textContent = `Page ${count} sur ${max}`
 
