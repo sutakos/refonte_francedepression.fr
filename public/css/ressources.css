@@ -118,10 +118,6 @@
     padding-left: 1em;
 }
 
-.recherche button {
-    border: 1px solid lightgray;
-}
-
 .recherche {
     display: flex;
 }
